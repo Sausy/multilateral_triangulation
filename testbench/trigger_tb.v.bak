@@ -1,0 +1,35 @@
+module IO_time_ctl ( 
+	input clock,
+	input reset,
+	input trigger,
+	input [31:0] time_cnt,
+	output [31:0] time_stamp_US_out,
+	output enable_IO
+); 
+	reg [31:0] ret_val;
+	reg ret_val_IO;
+	reg [31:0] dealy_cnt;
+	
+	always @(posedge clock)
+		if (reset) begin
+			  ret_val <= 32'd0;
+			  dealy_cnt <= 32'd0;
+			  ret_val_IO <= 0;
+		end else begin
+			if(trigger == 1) begin
+				if(dealy_cnt < 1)begin
+					ret_val_IO <= 1;
+					ret_val = time_cnt;
+				end else begin
+					dealy_cnt <= dealy_cnt + 32'd1;
+				end
+			end else begin
+				ret_val_IO <= 0;
+				dealy_cnt <= 32'd0;
+			end
+		end
+	end
+	
+	assign enable_IO = ret_val_IO;
+	assign time_stamp_US_out = ret_val;
+endmodule

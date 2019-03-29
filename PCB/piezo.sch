@@ -1,0 +1,142 @@
+EESchema Schematic File Version 4
+LIBS:acoustic_levitation_main-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 6750 1325 2    50   Output ~ 0
+out_IO
+Text HLabel 6750 1250 2    50   Output ~ 0
+out_Raw
+$Comp
+L Device:C C?
+U 1 1 5C9C819C
+P 3350 3250
+F 0 "C?" V 3098 3250 50  0000 C CNN
+F 1 "C" V 3189 3250 50  0000 C CNN
+F 2 "" H 3388 3100 50  0001 C CNN
+F 3 "~" H 3350 3250 50  0001 C CNN
+	1    3350 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C9C8A36
+P 4900 3250
+F 0 "C?" V 4648 3250 50  0000 C CNN
+F 1 "C" V 4739 3250 50  0000 C CNN
+F 2 "" H 4938 3100 50  0001 C CNN
+F 3 "~" H 4900 3250 50  0001 C CNN
+	1    4900 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C9C915F
+P 4100 2500
+F 0 "C?" V 3848 2500 50  0000 C CNN
+F 1 "C" V 3939 2500 50  0000 C CNN
+F 2 "" H 4138 2350 50  0001 C CNN
+F 3 "~" H 4100 2500 50  0001 C CNN
+	1    4100 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C9C982C
+P 5900 2500
+F 0 "C?" V 5648 2500 50  0000 C CNN
+F 1 "C" V 5739 2500 50  0000 C CNN
+F 2 "" H 5938 2350 50  0001 C CNN
+F 3 "~" H 5900 2500 50  0001 C CNN
+	1    5900 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C9CA233
+P 3725 3250
+F 0 "R?" V 3518 3250 50  0000 C CNN
+F 1 "R" V 3609 3250 50  0000 C CNN
+F 2 "" V 3655 3250 50  0001 C CNN
+F 3 "~" H 3725 3250 50  0001 C CNN
+	1    3725 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C9CAA76
+P 4100 2125
+F 0 "R?" V 3893 2125 50  0000 C CNN
+F 1 "R" V 3984 2125 50  0000 C CNN
+F 2 "" V 4030 2125 50  0001 C CNN
+F 3 "~" H 4100 2125 50  0001 C CNN
+	1    4100 2125
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C9CAEEB
+P 5875 2175
+F 0 "R?" V 5668 2175 50  0000 C CNN
+F 1 "R" V 5759 2175 50  0000 C CNN
+F 2 "" V 5805 2175 50  0001 C CNN
+F 3 "~" H 5875 2175 50  0001 C CNN
+	1    5875 2175
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C9CB38B
+P 5250 3250
+F 0 "R?" V 5043 3250 50  0000 C CNN
+F 1 "R" V 5134 3250 50  0000 C CNN
+F 2 "" V 5180 3250 50  0001 C CNN
+F 3 "~" H 5250 3250 50  0001 C CNN
+	1    5250 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C9CB7DA
+P 6925 3375
+F 0 "R?" H 6855 3329 50  0000 R CNN
+F 1 "R" H 6855 3420 50  0000 R CNN
+F 2 "" V 6855 3375 50  0001 C CNN
+F 3 "~" H 6925 3375 50  0001 C CNN
+	1    6925 3375
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C9CBCDC
+P 7225 3375
+F 0 "C?" H 7110 3329 50  0000 R CNN
+F 1 "C" H 7110 3420 50  0000 R CNN
+F 2 "" H 7263 3225 50  0001 C CNN
+F 3 "~" H 7225 3375 50  0001 C CNN
+	1    7225 3375
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C9CC271
+P 7750 3225
+F 0 "C?" V 8002 3225 50  0000 C CNN
+F 1 "C" V 7911 3225 50  0000 C CNN
+F 2 "" H 7788 3075 50  0001 C CNN
+F 3 "~" H 7750 3225 50  0001 C CNN
+	1    7750 3225
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC

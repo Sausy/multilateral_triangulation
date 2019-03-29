@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at trigger_tb.v(13): always construct contains both blocking and non-blocking assignments File: /home/roboy/BikeToRikshaw/acoustic-levitation/testbench/trigger_tb.v Line: 13

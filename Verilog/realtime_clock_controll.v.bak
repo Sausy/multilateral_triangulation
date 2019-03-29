@@ -1,0 +1,118 @@
+module rtc (//!!!!!! currently 100ns resultion ...could be increased to 20ns or CLK must be increased
+
+	input clk,
+	input reset,
+	
+	// rtc entity
+	//input signed [31:0] rtc_set,
+	input event_trigger,
+	
+	// this is for the avalon interface
+	input [15:0] AVS_address,
+	input AVS_write,
+	input signed [31:0] AVS_writedata,
+	input AVS_read,
+	output signed [31:0] AVS_readdata,
+	output AVS_waitrequest
+  );
+	
+	//definition
+	parameter CLOCK_SPEED_HZ = 50_000_000; //-> 20ns per cloc  ->so the rsolution was choosen 100ns
+	parameter RTC_RESOLUTION = 100;//-> 20ns per cloc  ->so the rsolution was choosen 100ns
+	
+   //reg def
+	reg [31:0] time_cnt;
+	reg [31:0] rtc_data;
+	reg [31:0] rtc_trigger_data;
+	
+	reg AVS_waitFlag;
+	reg [31:0] returnvalue;
+	
+	//wires
+	wire clk_div;
+	
+	
+	//assign reg	
+	assign AVS_readdata = returnvalue;
+	assign AVS_waitrequest = (AVS_waitFlag && AVS_read);
+	
+	
+	//ext moduls
+	clock_divider cd1(clk, reset, clk_div);
+		
+	//RTC count process
+	always @(clk_div, posedge reset) begin: RTC_COUNT //clk_div to count every 100ns
+		if (reset == 1) begin
+			time_cnt <= 0;
+		end else begin
+			time_cnt<=time_cnt+1; 
+		end
+	end
+  
+	  
+	// the following iterface handles read requests via lightweight axi bridge
+	// the upper 8 bit of the read address define which value we want to read
+	// the lower 8 bit of the read address define for which motor	
+	always @(posedge clk, posedge reset) begin: AVALON_READ_INTERFACE
+		reg AVS_waitFlag;
+		if (reset == 1) begin
+			AVS_waitFlag <= 1;
+		end else begin
+			AVS_waitFlag <= 1;
+			if(AVS_read) begin
+				case(AVS_address>>8)
+					8'h00: returnvalue <= time_cnt + rtc_data;
+					8'h01: returnvalue <= rtc_trigger_data;
+					default: returnvalue <= 32'hDEADBEEF;
+				endcase
+				if(AVS_waitFlag==1) begin // next clock cycle the returnvalue should be ready
+					AVS_waitFlag <= 0;
+				end
+			end
+		end
+	end
+	
+	always @(posedge clk, posedge reset) begin: AVALON_WRITE_INTERFACE
+		if (reset == 1) begin
+			rtc_data <=0;
+		end else begin
+			// if we are writing via avalon bus and waitrequest is deasserted, write the respective register
+			if(AVS_write && ~AVS_waitrequest) begin
+				case(AVS_address>>8)
+					8'h00: rtc_data <= AVS_writedata;
+				endcase
+			end
+		end 
+	end
+	
+	always @(posedge event_trigger, posedge reset) begin: IO_time_trigger
+		if (reset == 1) begin
+			rtc_trigger_data <=0;
+		end else begin
+			rtc_trigger_data = time_cnt + rtc_data;
+		end
+	end
+
+endmodule
+
+
+module clock_divider ( 
+	input clock,
+	input reset,
+	output out_clk 
+);
+	reg out_clk_reg;
+	reg [32:0] counter_up;
+
+	always @(posedge clock)
+		if (reset) begin
+			  out_clk_reg <= 1'b0;
+			  counter_up <= 32'd1;
+		end else begin
+			counter_up <= counter_up + 32'd1;
+			if(counter_up == 5) begin	//50Mhz -> 20ns  => clk speed should be 100ns so  100/20 =5
+				counter_up <= 32'd1;
+				out_clk_reg <= ~out_clk_reg;
+			end
+		end
+	assign out_clk = out_clk_reg;
