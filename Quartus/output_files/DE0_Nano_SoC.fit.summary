@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Mar 29 12:12:40 2019
+Fitter Status : Successful - Mon Apr  1 16:28:37 2019
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : DE0_Nano_SoC
 Top-level Entity Name : DE0_Nano_SoC_top_level
 Family : Cyclone V
 Device : 5CSEMA4U23C6
 Timing Models : Final
-Logic utilization (in ALMs) : 6,055 / 15,880 ( 38 % )
-Total registers : 7063
+Logic utilization (in ALMs) : 6,060 / 15,880 ( 38 % )
+Total registers : 7115
 Total pins : 192 / 314 ( 61 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 2,764,800 ( 0 % )

@@ -294,10 +294,6 @@
 				{
 					"name" : "RTC_TRIGGER",
 					"strict" : false
-				},
-				{
-					"name" : "RTC_TRIGGER2",
-					"strict" : false
 				}
 			]
 		}

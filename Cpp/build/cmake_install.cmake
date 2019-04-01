@@ -1,4 +1,4 @@
-# Install script for directory: /home/roboy/BikeToRikshaw/acoustic-levitation/Cpp
+# Install script for directory: /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/build/accustic_levi"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/build" TYPE EXECUTABLE FILES "/home/roboy/BikeToRikshaw/acoustic-levitation/Cpp/build/accustic_levi")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/build" TYPE EXECUTABLE FILES "/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/accustic_levi")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/build/accustic_levi" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/build/accustic_levi")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -56,5 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/roboy/BikeToRikshaw/acoustic-levitation/Cpp/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

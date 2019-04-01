@@ -33,12 +33,12 @@ if (DEFINED "ENV{SOCEDS_DEST_ROOT}")
     # Application
     #==============================================================================
     FILE(GLOB_RECURSE SRC_FILES "src/*.cpp")
-    FILE(GLOB_RECURSE MAIN_SRC_FILES "*.cpp")
+    #FILE(GLOB_RECURSE MAIN_SRC_FILES "*.cpp")
     FILE(GLOB_RECURSE INCLUDE_FILES "lib/*.h*")
 
     add_executable( accustic_levi
         ${SRC_FILES}
-        ${MAIN_SRC_FILES}
+        #${MAIN_SRC_FILES}
         ${INCLUDE_FILES}
         )
     target_link_libraries( accustic_levi -lpthread -lrt -lm)

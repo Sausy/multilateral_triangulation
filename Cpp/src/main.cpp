@@ -37,10 +37,16 @@ int main(int argc, char *argv[]) {
   rtc_ctl.set_time(100);
 
   while (1) {
-    /*rtc_ctl.start_US_out();
-    printf("Start signal out at: %u\n", rtc_ctl.US_start_time);
+    rtc_ctl.start_US_out();
+    printf("\n\nStart signal out at: %u", rtc_ctl.US_start_time);
+    usleep(200000);
+    in_time=rtc_ctl.read_trigger_time();
 
-    //get trigger time
+    usleep(200000);
+
+    rtc_ctl.stop_US_out();
+    usleep(1000000);
+    /*//get trigger time
     rtc_ctl.read_trigger_time();
     current_time = rtc_ctl.read_time();
 
@@ -53,8 +59,13 @@ int main(int argc, char *argv[]) {
 
     usleep(500000);*/
     in_time=rtc_ctl.read_trigger_time();
-    printf("\ntrigger time %u\n", in_time);
+    printf("\ntrigger time %u", in_time);
     usleep(50000);
+    in_time=rtc_ctl.read_trigger_time();
+    printf("\ntrigger time %u", in_time);
+    usleep(50000);
+
+    usleep(1000000);
   }
 
   return 0;

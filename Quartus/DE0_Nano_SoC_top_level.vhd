@@ -73,8 +73,8 @@ entity DE0_Nano_SoC_top_level is
     ENABLE : out std_logic;
 	 
 	 -- rtc trigger
-    RTC_TRIGGER  : in std_logic := '0';
-	 RTC_TRIGGER2 : in std_logic := '0';
+    RTC_TRIGGER : in std_logic := '0';
+	 RTC_TRIGGER2 : in std_logic;
 
     -- GPIO on LTC connector
     HPS_LTC_GPIO          : inout std_logic_vector(3 downto 0);

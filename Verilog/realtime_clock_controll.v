@@ -92,16 +92,11 @@ module rtc (
 		end 
 	end
 	
-	always @(posedge event_trigger,posedge event_trigger2, posedge reset) begin: IO_time_trigger_in
+	always @(posedge event_trigger, posedge reset) begin: IO_time_trigger_in
 		if (reset == 1) begin
-			rtc_trigger_data <=0;
+			rtc_trigger_data <= 32'd0;
 		end else begin
-			if (event_trigger== 1) begin
-				rtc_trigger_data <= 32'd1;
-			end
-			if(event_trigger2==1) begin
-				rtc_trigger_data[7:4] <= 4'b1;	//time_cnt[31:0];
-			end
+			rtc_trigger_data <= time_cnt[31:0];
 		end
 	end
 endmodule
