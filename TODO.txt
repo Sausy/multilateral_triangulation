@@ -1,0 +1,1 @@
+solder pin 14 & 27 for US
