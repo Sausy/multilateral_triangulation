@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(accustic_levi)
+project(triangulation)
 
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu99 -g")
@@ -36,19 +36,19 @@ if (DEFINED "ENV{SOCEDS_DEST_ROOT}")
     #FILE(GLOB_RECURSE MAIN_SRC_FILES "*.cpp")
     FILE(GLOB_RECURSE INCLUDE_FILES "lib/*.h*")
 
-    add_executable( accustic_levi
+    add_executable( triangulation
         ${SRC_FILES}
         #${MAIN_SRC_FILES}
         ${INCLUDE_FILES}
         )
-    target_link_libraries( accustic_levi -lpthread -lrt -lm)
+    target_link_libraries( triangulation -lpthread -lrt -lm)
 
 
     #==============================================================================
     # Installation
     #==============================================================================
     install(TARGETS
-            accustic_levi
+            triangulation
             DESTINATION "build/"
             )
 else ()

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o"
+  "CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o"
   "CMakeFiles/accustic_levi.dir/src/main.cpp.o"
   "CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o"
   "CMakeFiles/accustic_levi.dir/src/peripherals.cpp.o"

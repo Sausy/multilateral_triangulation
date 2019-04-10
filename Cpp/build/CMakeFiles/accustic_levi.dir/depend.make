@@ -34,6 +34,8 @@ CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o: ../lib/config.hpp
 CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o: ../lib/time_controll.hpp
 CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o: ../src/time_controll.cpp
 
+CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o: ../src/time_sync.cpp
+
 CMakeFiles/accustic_levi.dir/src/trap.cpp.o: ../lib/peripherals.h
 CMakeFiles/accustic_levi.dir/src/trap.cpp.o: ../lib/soc_system.h
 CMakeFiles/accustic_levi.dir/src/trap.cpp.o: ../lib/trap.h

@@ -150,7 +150,7 @@ AS_DATA1, DATA1              : AC6       :        :                   :         
 TMS                          : AC7       : input  :                   :         : 3A        :                
 VCC_AUX                      : AC8       : power  :                   : 2.5V    :           :                
 VCC_AUX                      : AC21      : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC22      :        :                   :         : 4A        :                
+RTC_TRIGGER                  : AC22      : input  : 3.3-V LVTTL       :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC23      :        :                   :         : 4A        :                
 RTC_TRIGGER2                 : AC24      : input  : 3.3-V LVTTL       :         : 5A        : Y              
 VCCIO5A                      : AC25      : power  :                   : 3.3V    : 5A        :                
@@ -268,7 +268,7 @@ PIEZO[12]                    : AG24      : output : 3.3-V LVTTL       :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4A        :                
 PIEZO[11]                    : AG26      : output : 3.3-V LVTTL       :         : 4A        : Y              
 GND                          : AG27      : gnd    :                   :         :           :                
-RTC_TRIGGER                  : AG28      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG28      :        :                   :         : 4A        :                
 PIEZO[55]                    : AH2       : output : 3.3-V LVTTL       :         : 3B        : Y              
 PIEZO[54]                    : AH3       : output : 3.3-V LVTTL       :         : 3B        : Y              
 PIEZO[52]                    : AH4       : output : 3.3-V LVTTL       :         : 3B        : Y              

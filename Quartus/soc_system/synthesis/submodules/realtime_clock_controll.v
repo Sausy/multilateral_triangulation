@@ -25,15 +25,8 @@ module rtc (
 	reg [31:0] US_output_time;
 	reg US_out_trigger;
 	
-	reg avalon_slave_waitFlag;
-	reg [31:0] returnvalue;
-	
 	reg waitflag_status;
 	reg waitflag_trigger;
-	
-	//assign reg	
-	assign avalon_slave_readdata = returnvalue;
-	assign avalon_slave_waitrequest = (avalon_slave_waitFlag && avalon_slave_read);
 	
 	//wires
 	wire clock_div;
@@ -57,6 +50,10 @@ module rtc (
 	// the following iterface handles read requests via lightweight axi bridge
 	// the upper 8 bit of the read address define which value we want to read
 	// the lower 8 bit of the read address define for which motor	
+	reg avalon_slave_waitFlag;
+	reg [31:0] returnvalue;
+	assign avalon_slave_readdata = returnvalue;
+	assign avalon_slave_waitrequest = (avalon_slave_waitFlag && avalon_slave_read);
 	always @(posedge clock, posedge reset) begin: AVALON_READ_INTERFACE
 		if (reset == 1) begin
 			avalon_slave_waitFlag <= 1;

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp
+CMAKE_SOURCE_DIR = /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build
+CMAKE_BINARY_DIR = /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,9 +124,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/CMakeFiles /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -302,6 +302,33 @@ src/time_controll.cpp.s:
 	$(MAKE) -f CMakeFiles/accustic_levi.dir/build.make CMakeFiles/accustic_levi.dir/src/time_controll.cpp.s
 .PHONY : src/time_controll.cpp.s
 
+src/time_sync.o: src/time_sync.cpp.o
+
+.PHONY : src/time_sync.o
+
+# target to build an object file
+src/time_sync.cpp.o:
+	$(MAKE) -f CMakeFiles/accustic_levi.dir/build.make CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o
+.PHONY : src/time_sync.cpp.o
+
+src/time_sync.i: src/time_sync.cpp.i
+
+.PHONY : src/time_sync.i
+
+# target to preprocess a source file
+src/time_sync.cpp.i:
+	$(MAKE) -f CMakeFiles/accustic_levi.dir/build.make CMakeFiles/accustic_levi.dir/src/time_sync.cpp.i
+.PHONY : src/time_sync.cpp.i
+
+src/time_sync.s: src/time_sync.cpp.s
+
+.PHONY : src/time_sync.s
+
+# target to generate assembly for a file
+src/time_sync.cpp.s:
+	$(MAKE) -f CMakeFiles/accustic_levi.dir/build.make CMakeFiles/accustic_levi.dir/src/time_sync.cpp.s
+.PHONY : src/time_sync.cpp.s
+
 src/trap.o: src/trap.cpp.o
 
 .PHONY : src/trap.o
@@ -357,6 +384,9 @@ help:
 	@echo "... src/time_controll.o"
 	@echo "... src/time_controll.i"
 	@echo "... src/time_controll.s"
+	@echo "... src/time_sync.o"
+	@echo "... src/time_sync.i"
+	@echo "... src/time_sync.s"
 	@echo "... src/trap.o"
 	@echo "... src/trap.i"
 	@echo "... src/trap.s"

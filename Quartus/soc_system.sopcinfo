@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="soc_system" kind="soc_system" version="1.0" fabric="QSYS">
  <!-- Format version 18.0 614 (Future versions may contain additional information.) -->
- <!-- 2019.04.10.18:07:25 -->
+ <!-- 2019.04.10.19:59:34 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1554912436</value>
+  <value>1554919165</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>

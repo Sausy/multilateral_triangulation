@@ -44,7 +44,7 @@ stdint.h
 peripherals.h
 ../lib/peripherals.h
 
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/fpga_interface.cpp
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/fpga_interface.cpp
 fpga_interface.hpp
 -
 assert.h
@@ -66,9 +66,9 @@ sys/mman.h
 unistd.h
 -
 socal/socal.h
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/socal/socal.h
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/socal/socal.h
 
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/main.cpp
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/main.cpp
 stdio.h
 -
 stdlib.h
@@ -76,15 +76,17 @@ stdlib.h
 string.h
 -
 piezo_ctl.hpp
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/piezo_ctl.hpp
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/piezo_ctl.hpp
 fpga_interface.hpp
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/fpga_interface.hpp
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/fpga_interface.hpp
 time_controll.hpp
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/time_controll.hpp
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/time_controll.hpp
+math.h
+-
 unistd.h
 -
 
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/peripherals.cpp
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/peripherals.cpp
 assert.h
 -
 errno.h
@@ -106,11 +108,11 @@ sys/mman.h
 unistd.h
 -
 socal/socal.h
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/socal/socal.h
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/socal/socal.h
 peripherals.h
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/peripherals.h
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/peripherals.h
 
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/piezo_ctl.cpp
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/piezo_ctl.cpp
 ctype.h
 -
 errno.h
@@ -136,23 +138,27 @@ unistd.h
 piezo_ctl.hpp
 -
 peripherals.h
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/peripherals.h
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/peripherals.h
 trap.h
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/trap.h
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/trap.h
 
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/time_controll.cpp
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/time_controll.cpp
 time_controll.hpp
 -
 stdio.h
 -
 
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/trap.cpp
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/time_sync.cpp
+stdio.h
+-
+
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/trap.cpp
 math.h
 -
 stdint.h
 -
 trap.h
-/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/trap.h
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/trap.h
 
 /home/roboy/intelFPGA/18.0/embedded/ip/altera/hps/altera_hps/hwlib/include/soc_cv_av/socal/hps.h
 

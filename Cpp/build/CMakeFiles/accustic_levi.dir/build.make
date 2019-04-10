@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp
+CMAKE_SOURCE_DIR = /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build
+CMAKE_BINARY_DIR = /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/accustic_levi.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/accustic_levi.dir/flags.make
 
 CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o: CMakeFiles/accustic_levi.dir/flags.make
 CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o: ../src/piezo_ctl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o"
-	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o -c /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/piezo_ctl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o"
+	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o -c /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/piezo_ctl.cpp
 
 CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.i"
-	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/piezo_ctl.cpp > CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.i
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/piezo_ctl.cpp > CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.i
 
 CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.s"
-	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/piezo_ctl.cpp -o CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.s
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/piezo_ctl.cpp -o CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.s
 
 CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o.requires:
 
@@ -81,18 +81,42 @@ CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o.provides: CMakeFiles/accustic_l
 CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o.provides.build: CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o
 
 
+CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o: CMakeFiles/accustic_levi.dir/flags.make
+CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o: ../src/time_sync.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o"
+	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o -c /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/time_sync.cpp
+
+CMakeFiles/accustic_levi.dir/src/time_sync.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/accustic_levi.dir/src/time_sync.cpp.i"
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/time_sync.cpp > CMakeFiles/accustic_levi.dir/src/time_sync.cpp.i
+
+CMakeFiles/accustic_levi.dir/src/time_sync.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/accustic_levi.dir/src/time_sync.cpp.s"
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/time_sync.cpp -o CMakeFiles/accustic_levi.dir/src/time_sync.cpp.s
+
+CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o.requires:
+
+.PHONY : CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o.requires
+
+CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o.provides: CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o.requires
+	$(MAKE) -f CMakeFiles/accustic_levi.dir/build.make CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o.provides.build
+.PHONY : CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o.provides
+
+CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o.provides.build: CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o
+
+
 CMakeFiles/accustic_levi.dir/src/main.cpp.o: CMakeFiles/accustic_levi.dir/flags.make
 CMakeFiles/accustic_levi.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/accustic_levi.dir/src/main.cpp.o"
-	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/main.cpp.o -c /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/accustic_levi.dir/src/main.cpp.o"
+	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/main.cpp.o -c /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/main.cpp
 
 CMakeFiles/accustic_levi.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/accustic_levi.dir/src/main.cpp.i"
-	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/main.cpp > CMakeFiles/accustic_levi.dir/src/main.cpp.i
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/main.cpp > CMakeFiles/accustic_levi.dir/src/main.cpp.i
 
 CMakeFiles/accustic_levi.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/accustic_levi.dir/src/main.cpp.s"
-	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/main.cpp -o CMakeFiles/accustic_levi.dir/src/main.cpp.s
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/main.cpp -o CMakeFiles/accustic_levi.dir/src/main.cpp.s
 
 CMakeFiles/accustic_levi.dir/src/main.cpp.o.requires:
 
@@ -107,16 +131,16 @@ CMakeFiles/accustic_levi.dir/src/main.cpp.o.provides.build: CMakeFiles/accustic_
 
 CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o: CMakeFiles/accustic_levi.dir/flags.make
 CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o: ../src/time_controll.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o"
-	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o -c /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/time_controll.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o"
+	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o -c /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/time_controll.cpp
 
 CMakeFiles/accustic_levi.dir/src/time_controll.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/accustic_levi.dir/src/time_controll.cpp.i"
-	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/time_controll.cpp > CMakeFiles/accustic_levi.dir/src/time_controll.cpp.i
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/time_controll.cpp > CMakeFiles/accustic_levi.dir/src/time_controll.cpp.i
 
 CMakeFiles/accustic_levi.dir/src/time_controll.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/accustic_levi.dir/src/time_controll.cpp.s"
-	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/time_controll.cpp -o CMakeFiles/accustic_levi.dir/src/time_controll.cpp.s
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/time_controll.cpp -o CMakeFiles/accustic_levi.dir/src/time_controll.cpp.s
 
 CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o.requires:
 
@@ -131,16 +155,16 @@ CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/accustic_levi.dir/src/peripherals.cpp.o: CMakeFiles/accustic_levi.dir/flags.make
 CMakeFiles/accustic_levi.dir/src/peripherals.cpp.o: ../src/peripherals.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/accustic_levi.dir/src/peripherals.cpp.o"
-	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/peripherals.cpp.o -c /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/peripherals.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/accustic_levi.dir/src/peripherals.cpp.o"
+	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/peripherals.cpp.o -c /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/peripherals.cpp
 
 CMakeFiles/accustic_levi.dir/src/peripherals.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/accustic_levi.dir/src/peripherals.cpp.i"
-	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/peripherals.cpp > CMakeFiles/accustic_levi.dir/src/peripherals.cpp.i
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/peripherals.cpp > CMakeFiles/accustic_levi.dir/src/peripherals.cpp.i
 
 CMakeFiles/accustic_levi.dir/src/peripherals.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/accustic_levi.dir/src/peripherals.cpp.s"
-	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/peripherals.cpp -o CMakeFiles/accustic_levi.dir/src/peripherals.cpp.s
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/peripherals.cpp -o CMakeFiles/accustic_levi.dir/src/peripherals.cpp.s
 
 CMakeFiles/accustic_levi.dir/src/peripherals.cpp.o.requires:
 
@@ -155,16 +179,16 @@ CMakeFiles/accustic_levi.dir/src/peripherals.cpp.o.provides.build: CMakeFiles/ac
 
 CMakeFiles/accustic_levi.dir/src/trap.cpp.o: CMakeFiles/accustic_levi.dir/flags.make
 CMakeFiles/accustic_levi.dir/src/trap.cpp.o: ../src/trap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/accustic_levi.dir/src/trap.cpp.o"
-	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/trap.cpp.o -c /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/trap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/accustic_levi.dir/src/trap.cpp.o"
+	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/trap.cpp.o -c /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/trap.cpp
 
 CMakeFiles/accustic_levi.dir/src/trap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/accustic_levi.dir/src/trap.cpp.i"
-	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/trap.cpp > CMakeFiles/accustic_levi.dir/src/trap.cpp.i
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/trap.cpp > CMakeFiles/accustic_levi.dir/src/trap.cpp.i
 
 CMakeFiles/accustic_levi.dir/src/trap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/accustic_levi.dir/src/trap.cpp.s"
-	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/trap.cpp -o CMakeFiles/accustic_levi.dir/src/trap.cpp.s
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/trap.cpp -o CMakeFiles/accustic_levi.dir/src/trap.cpp.s
 
 CMakeFiles/accustic_levi.dir/src/trap.cpp.o.requires:
 
@@ -179,16 +203,16 @@ CMakeFiles/accustic_levi.dir/src/trap.cpp.o.provides.build: CMakeFiles/accustic_
 
 CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.o: CMakeFiles/accustic_levi.dir/flags.make
 CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.o: ../src/fpga_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.o"
-	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.o -c /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/fpga_interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.o"
+	/usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.o -c /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/fpga_interface.cpp
 
 CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.i"
-	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/fpga_interface.cpp > CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.i
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/fpga_interface.cpp > CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.i
 
 CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.s"
-	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/src/fpga_interface.cpp -o CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.s
+	/usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/src/fpga_interface.cpp -o CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.s
 
 CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.o.requires:
 
@@ -204,6 +228,7 @@ CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.o.provides.build: CMakeFiles
 # Object files for target accustic_levi
 accustic_levi_OBJECTS = \
 "CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o" \
+"CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o" \
 "CMakeFiles/accustic_levi.dir/src/main.cpp.o" \
 "CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o" \
 "CMakeFiles/accustic_levi.dir/src/peripherals.cpp.o" \
@@ -214,6 +239,7 @@ accustic_levi_OBJECTS = \
 accustic_levi_EXTERNAL_OBJECTS =
 
 accustic_levi: CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o
+accustic_levi: CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o
 accustic_levi: CMakeFiles/accustic_levi.dir/src/main.cpp.o
 accustic_levi: CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o
 accustic_levi: CMakeFiles/accustic_levi.dir/src/peripherals.cpp.o
@@ -221,7 +247,7 @@ accustic_levi: CMakeFiles/accustic_levi.dir/src/trap.cpp.o
 accustic_levi: CMakeFiles/accustic_levi.dir/src/fpga_interface.cpp.o
 accustic_levi: CMakeFiles/accustic_levi.dir/build.make
 accustic_levi: CMakeFiles/accustic_levi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable accustic_levi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable accustic_levi"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/accustic_levi.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -230,6 +256,7 @@ CMakeFiles/accustic_levi.dir/build: accustic_levi
 .PHONY : CMakeFiles/accustic_levi.dir/build
 
 CMakeFiles/accustic_levi.dir/requires: CMakeFiles/accustic_levi.dir/src/piezo_ctl.cpp.o.requires
+CMakeFiles/accustic_levi.dir/requires: CMakeFiles/accustic_levi.dir/src/time_sync.cpp.o.requires
 CMakeFiles/accustic_levi.dir/requires: CMakeFiles/accustic_levi.dir/src/main.cpp.o.requires
 CMakeFiles/accustic_levi.dir/requires: CMakeFiles/accustic_levi.dir/src/time_controll.cpp.o.requires
 CMakeFiles/accustic_levi.dir/requires: CMakeFiles/accustic_levi.dir/src/peripherals.cpp.o.requires
@@ -243,6 +270,6 @@ CMakeFiles/accustic_levi.dir/clean:
 .PHONY : CMakeFiles/accustic_levi.dir/clean
 
 CMakeFiles/accustic_levi.dir/depend:
-	cd /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build /home/roboy/BikeToRikshaw/multilateral_triangulation/Cpp/build/CMakeFiles/accustic_levi.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles/accustic_levi.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/accustic_levi.dir/depend
 
