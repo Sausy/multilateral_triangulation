@@ -16,6 +16,7 @@ class addr_base{
     int32_t *piezo_base_addr;
     int32_t *led_base_addr;
     int32_t *key_base;
+    int32_t *ptp_base;
 
     void *virtual_base=nullptr;
 

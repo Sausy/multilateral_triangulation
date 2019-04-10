@@ -46,4 +46,9 @@ addr_base::addr_base(){
   #else
       key_base = nullptr;
   #endif
+  #ifdef PTP_SIMPLE_US_0_BASE
+      ptp_base = (int32_t*)(virtual_base + ( ( unsigned long  )( ALT_LWFPGASLVS_OFST + PTP_SIMPLE_US_0_BASE ) & ( unsigned long)( HW_REGS_MASK )) );
+  #else
+      ptp_base = nullptr;
+  #endif
 }

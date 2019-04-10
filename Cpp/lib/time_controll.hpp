@@ -27,6 +27,8 @@ class rtc_ctl
     void get_master_time();
     void get_slave_time();
 
+    void allow_input_trigger();
+
 
   private:
     int32_t *rtc_base;
