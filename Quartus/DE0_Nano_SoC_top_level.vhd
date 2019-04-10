@@ -162,6 +162,8 @@ architecture rtl of DE0_Nano_SoC_top_level is
       piezo_controller_piezo_status_export : out   std_logic_vector(2 downto 0);                     -- export
       reset_reset_n                        : in    std_logic                     := 'X';             -- reset_n
 		clock_divider_0_conduit_end_out_clk  : out   std_logic;                                        -- out_clk
+		ptp_piezo_interface0_piezo_interface_out         : out   std_logic;                                        -- us_interface_out
+      ptp_piezo_interface0_piezo_interface_in          : in    std_logic                     := 'X';             -- us_interface_in
 		rtc_0_conduit_end_event_trigger               : in    std_logic                     := 'L';             -- event_trigger
 		rtc_0_conduit_end_event_trigger2              : in    std_logic                     := 'X';              -- event_trigger2
 		rtc_0_conduit_end_piezo_enable                : out   std_logic                                         -- piezo_enable
@@ -170,7 +172,7 @@ architecture rtl of DE0_Nano_SoC_top_level is
 
   signal reset_n         	: std_logic;
   signal piezo_out_0     	: std_logic;
-  signal piezo_enable    	: std_logic;
+  signal piezo_enable_ctl    	: std_logic;
   signal piezo_status    	: std_logic_vector(2 downto 0);
   signal piezo_new_value 	: std_logic;
   signal ctr             	: unsigned(20 downto 0);
@@ -178,6 +180,8 @@ architecture rtl of DE0_Nano_SoC_top_level is
   signal led_avalon      	: std_logic_vector(7 downto 0);
   signal clk_div			 	: std_logic;
   signal piezo_enable_rtc	: std_logic;
+  signal ptp_piezo_enable	: std_logic;
+  signal piezo_enable : std_logic;
 
 begin
 
@@ -263,16 +267,19 @@ begin
     fpga_led_output_export                         => led_avalon,
     piezo_controller_piezo_out_export(59 downto 0) => PIEZO,
     piezo_controller_piezo_out_export(60)          => piezo_out_0,
-    piezo_controller_piezo_enable_export           => piezo_enable,
+    piezo_controller_piezo_enable_export           => piezo_enable_ctl,
     piezo_controller_piezo_status_export           => piezo_status,
-	 piezo_controller_piezo_enable_piezo_enable_in 	=> piezo_enable_rtc,  --.piezo_enable_in
+	 piezo_controller_piezo_enable_piezo_enable_in 	=> piezo_enable,  --.piezo_enable_in
 	 clock_divider_0_conduit_end_out_clk  				=> clk_div,   --   clock_divider_0_conduit_end.out_clk
-	 rtc_0_conduit_end_event_trigger  					=> RTC_TRIGGER, -- realtime_clock_controll_0_conduit_end.event_trigger
-	 rtc_0_conduit_end_event_trigger2              	=> RTC_TRIGGER2,      -- event_trigger2
-	 rtc_0_conduit_end_piezo_enable                	=> piezo_enable_rtc     --.piezo_enable
+	 ptp_piezo_interface0_piezo_interface_out         	=> ptp_piezo_enable,         --          ptp_piezo_interface0.us_interface_out
+	 ptp_piezo_interface0_piezo_interface_in          		=> RTC_TRIGGER,          --                              .us_interface_in
+	 rtc_0_conduit_end_event_trigger  							=> RTC_TRIGGER, -- realtime_clock_controll_0_conduit_end.event_trigger
+	 rtc_0_conduit_end_event_trigger2              		=> RTC_TRIGGER2,      -- event_trigger2
+	 rtc_0_conduit_end_piezo_enable                		=> piezo_enable_rtc     --.piezo_enable
   );
 
-  ENABLE  <= piezo_enable or piezo_enable_rtc;
+  ENABLE  <= piezo_enable_ctl or piezo_enable_rtc or ptp_piezo_enable;
+  piezo_enable <= piezo_enable_rtc or ptp_piezo_enable;
 
   GPIO(0) <= piezo_status(0);                      -- sync
   GPIO(1) <= piezo_status(1);                      -- phase register in use ('0' = A, '1' = B)

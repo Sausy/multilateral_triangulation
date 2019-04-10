@@ -72,8 +72,11 @@
 		.piezo_controller_piezo_enable_piezo_enable_in (<connected-to-piezo_controller_piezo_enable_piezo_enable_in>), //                              .piezo_enable_in
 		.piezo_controller_piezo_out_export             (<connected-to-piezo_controller_piezo_out_export>),             //    piezo_controller_piezo_out.export
 		.piezo_controller_piezo_status_export          (<connected-to-piezo_controller_piezo_status_export>),          // piezo_controller_piezo_status.export
+		.ptp_piezo_interface0_piezo_interface_in       (<connected-to-ptp_piezo_interface0_piezo_interface_in>),       //          ptp_piezo_interface0.piezo_interface_in
+		.ptp_piezo_interface0_piezo_interface_out      (<connected-to-ptp_piezo_interface0_piezo_interface_out>),      //                              .piezo_interface_out
 		.reset_reset_n                                 (<connected-to-reset_reset_n>),                                 //                         reset.reset_n
 		.rtc_0_conduit_end_event_trigger               (<connected-to-rtc_0_conduit_end_event_trigger>),               //             rtc_0_conduit_end.event_trigger
-		.rtc_0_conduit_end_piezo_enable                (<connected-to-rtc_0_conduit_end_piezo_enable>)                 //                              .piezo_enable
+		.rtc_0_conduit_end_piezo_enable                (<connected-to-rtc_0_conduit_end_piezo_enable>),                //                              .piezo_enable
+		.rtc_0_conduit_end_event_trigger2              (<connected-to-rtc_0_conduit_end_event_trigger2>)               //                              .event_trigger2
 	);
 

@@ -77,6 +77,8 @@ module soc_system (
 		input  wire        piezo_controller_piezo_enable_piezo_enable_in, //                              .piezo_enable_in
 		output wire [60:0] piezo_controller_piezo_out_export,             //    piezo_controller_piezo_out.export
 		output wire [2:0]  piezo_controller_piezo_status_export,          // piezo_controller_piezo_status.export
+		input  wire        ptp_piezo_interface0_piezo_interface_in,       //          ptp_piezo_interface0.piezo_interface_in
+		output wire        ptp_piezo_interface0_piezo_interface_out,      //                              .piezo_interface_out
 		input  wire        reset_reset_n,                                 //                         reset.reset_n
 		input  wire        rtc_0_conduit_end_event_trigger,               //             rtc_0_conduit_end.event_trigger
 		output wire        rtc_0_conduit_end_piezo_enable,                //                              .piezo_enable
@@ -125,6 +127,12 @@ module soc_system (
 	wire         mm_interconnect_0_realtime_clock_controll_0_avalon_slave_read;        // mm_interconnect_0:realtime_clock_controll_0_avalon_slave_read -> realtime_clock_controll_0:avalon_slave_read
 	wire         mm_interconnect_0_realtime_clock_controll_0_avalon_slave_write;       // mm_interconnect_0:realtime_clock_controll_0_avalon_slave_write -> realtime_clock_controll_0:avalon_slave_write
 	wire  [31:0] mm_interconnect_0_realtime_clock_controll_0_avalon_slave_writedata;   // mm_interconnect_0:realtime_clock_controll_0_avalon_slave_writedata -> realtime_clock_controll_0:avalon_slave_writedata
+	wire  [31:0] mm_interconnect_0_ptp_simple_us_0_avalon_slave_readdata;              // ptp_simple_us_0:avalon_slave_readdata -> mm_interconnect_0:ptp_simple_us_0_avalon_slave_readdata
+	wire         mm_interconnect_0_ptp_simple_us_0_avalon_slave_waitrequest;           // ptp_simple_us_0:avalon_slave_waitrequest -> mm_interconnect_0:ptp_simple_us_0_avalon_slave_waitrequest
+	wire  [15:0] mm_interconnect_0_ptp_simple_us_0_avalon_slave_address;               // mm_interconnect_0:ptp_simple_us_0_avalon_slave_address -> ptp_simple_us_0:avalon_slave_address
+	wire         mm_interconnect_0_ptp_simple_us_0_avalon_slave_read;                  // mm_interconnect_0:ptp_simple_us_0_avalon_slave_read -> ptp_simple_us_0:avalon_slave_read
+	wire         mm_interconnect_0_ptp_simple_us_0_avalon_slave_write;                 // mm_interconnect_0:ptp_simple_us_0_avalon_slave_write -> ptp_simple_us_0:avalon_slave_write
+	wire  [31:0] mm_interconnect_0_ptp_simple_us_0_avalon_slave_writedata;             // mm_interconnect_0:ptp_simple_us_0_avalon_slave_writedata -> ptp_simple_us_0:avalon_slave_writedata
 	wire         mm_interconnect_0_fpga_key_s1_chipselect;                             // mm_interconnect_0:fpga_key_s1_chipselect -> fpga_key:chipselect
 	wire  [31:0] mm_interconnect_0_fpga_key_s1_readdata;                               // fpga_key:readdata -> mm_interconnect_0:fpga_key_s1_readdata
 	wire   [1:0] mm_interconnect_0_fpga_key_s1_address;                                // mm_interconnect_0:fpga_key_s1_address -> fpga_key:address
@@ -143,7 +151,7 @@ module soc_system (
 	wire         irq_mapper_receiver0_irq;                                             // fpga_key:irq -> irq_mapper:receiver0_irq
 	wire  [31:0] hps_0_f2h_irq0_irq;                                                   // irq_mapper:sender_irq -> hps_0:f2h_irq_p0
 	wire  [31:0] hps_0_f2h_irq1_irq;                                                   // irq_mapper_001:sender_irq -> hps_0:f2h_irq_p1
-	wire         rst_controller_reset_out_reset;                                       // rst_controller:reset_out -> [clock_divider_0:reset, mm_interconnect_0:realtime_clock_controll_0_reset_reset_bridge_in_reset_reset, realtime_clock_controll_0:reset]
+	wire         rst_controller_reset_out_reset;                                       // rst_controller:reset_out -> [clock_divider_0:reset, mm_interconnect_0:realtime_clock_controll_0_reset_reset_bridge_in_reset_reset, ptp_simple_us_0:reset, realtime_clock_controll_0:reset]
 	wire         rst_controller_001_reset_out_reset;                                   // rst_controller_001:reset_out -> [fpga_key:reset_n, fpga_led:reset_n, mm_interconnect_0:fpga_key_reset_reset_bridge_in_reset_reset, piezo_controller_0:reset_n]
 	wire         hps_0_h2f_reset_reset;                                                // hps_0:h2f_rst_n -> [rst_controller_001:reset_in1, rst_controller_002:reset_in0]
 	wire         rst_controller_002_reset_out_reset;                                   // rst_controller_002:reset_out -> mm_interconnect_0:hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset_reset
@@ -304,6 +312,19 @@ module soc_system (
 		.piezo_status    (piezo_controller_piezo_status_export)               // piezo_status.export
 	);
 
+	ptp_sync ptp_simple_us_0 (
+		.reset                    (rst_controller_reset_out_reset),                             //        reset.reset
+		.avalon_slave_address     (mm_interconnect_0_ptp_simple_us_0_avalon_slave_address),     // avalon_slave.address
+		.avalon_slave_write       (mm_interconnect_0_ptp_simple_us_0_avalon_slave_write),       //             .write
+		.avalon_slave_writedata   (mm_interconnect_0_ptp_simple_us_0_avalon_slave_writedata),   //             .writedata
+		.avalon_slave_read        (mm_interconnect_0_ptp_simple_us_0_avalon_slave_read),        //             .read
+		.avalon_slave_readdata    (mm_interconnect_0_ptp_simple_us_0_avalon_slave_readdata),    //             .readdata
+		.avalon_slave_waitrequest (mm_interconnect_0_ptp_simple_us_0_avalon_slave_waitrequest), //             .waitrequest
+		.piezo_interface_in       (ptp_piezo_interface0_piezo_interface_in),                    //  conduit_end.piezo_interface_in
+		.piezo_interface_out      (ptp_piezo_interface0_piezo_interface_out),                   //             .piezo_interface_out
+		.clock                    (clk_clk)                                                     //        clock.clk
+	);
+
 	rtc #(
 		.CLOCK_SPEED_HZ (50000000),
 		.RTC_RESOLUTION (100)
@@ -377,6 +398,12 @@ module soc_system (
 		.piezo_controller_0_s1_read                                          (mm_interconnect_0_piezo_controller_0_s1_read),                         //                                                              .read
 		.piezo_controller_0_s1_readdata                                      (mm_interconnect_0_piezo_controller_0_s1_readdata),                     //                                                              .readdata
 		.piezo_controller_0_s1_writedata                                     (mm_interconnect_0_piezo_controller_0_s1_writedata),                    //                                                              .writedata
+		.ptp_simple_us_0_avalon_slave_address                                (mm_interconnect_0_ptp_simple_us_0_avalon_slave_address),               //                                  ptp_simple_us_0_avalon_slave.address
+		.ptp_simple_us_0_avalon_slave_write                                  (mm_interconnect_0_ptp_simple_us_0_avalon_slave_write),                 //                                                              .write
+		.ptp_simple_us_0_avalon_slave_read                                   (mm_interconnect_0_ptp_simple_us_0_avalon_slave_read),                  //                                                              .read
+		.ptp_simple_us_0_avalon_slave_readdata                               (mm_interconnect_0_ptp_simple_us_0_avalon_slave_readdata),              //                                                              .readdata
+		.ptp_simple_us_0_avalon_slave_writedata                              (mm_interconnect_0_ptp_simple_us_0_avalon_slave_writedata),             //                                                              .writedata
+		.ptp_simple_us_0_avalon_slave_waitrequest                            (mm_interconnect_0_ptp_simple_us_0_avalon_slave_waitrequest),           //                                                              .waitrequest
 		.realtime_clock_controll_0_avalon_slave_address                      (mm_interconnect_0_realtime_clock_controll_0_avalon_slave_address),     //                        realtime_clock_controll_0_avalon_slave.address
 		.realtime_clock_controll_0_avalon_slave_write                        (mm_interconnect_0_realtime_clock_controll_0_avalon_slave_write),       //                                                              .write
 		.realtime_clock_controll_0_avalon_slave_read                         (mm_interconnect_0_realtime_clock_controll_0_avalon_slave_read),        //                                                              .read

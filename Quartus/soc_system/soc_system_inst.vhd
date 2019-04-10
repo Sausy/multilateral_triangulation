@@ -73,9 +73,12 @@
 			piezo_controller_piezo_enable_piezo_enable_in : in    std_logic                     := 'X';             -- piezo_enable_in
 			piezo_controller_piezo_out_export             : out   std_logic_vector(60 downto 0);                    -- export
 			piezo_controller_piezo_status_export          : out   std_logic_vector(2 downto 0);                     -- export
+			ptp_piezo_interface0_piezo_interface_in       : in    std_logic                     := 'X';             -- piezo_interface_in
+			ptp_piezo_interface0_piezo_interface_out      : out   std_logic;                                        -- piezo_interface_out
 			reset_reset_n                                 : in    std_logic                     := 'X';             -- reset_n
 			rtc_0_conduit_end_event_trigger               : in    std_logic                     := 'X';             -- event_trigger
-			rtc_0_conduit_end_piezo_enable                : out   std_logic                                         -- piezo_enable
+			rtc_0_conduit_end_piezo_enable                : out   std_logic;                                        -- piezo_enable
+			rtc_0_conduit_end_event_trigger2              : in    std_logic                     := 'X'              -- event_trigger2
 		);
 	end component soc_system;
 
@@ -154,8 +157,11 @@
 			piezo_controller_piezo_enable_piezo_enable_in => CONNECTED_TO_piezo_controller_piezo_enable_piezo_enable_in, --                              .piezo_enable_in
 			piezo_controller_piezo_out_export             => CONNECTED_TO_piezo_controller_piezo_out_export,             --    piezo_controller_piezo_out.export
 			piezo_controller_piezo_status_export          => CONNECTED_TO_piezo_controller_piezo_status_export,          -- piezo_controller_piezo_status.export
+			ptp_piezo_interface0_piezo_interface_in       => CONNECTED_TO_ptp_piezo_interface0_piezo_interface_in,       --          ptp_piezo_interface0.piezo_interface_in
+			ptp_piezo_interface0_piezo_interface_out      => CONNECTED_TO_ptp_piezo_interface0_piezo_interface_out,      --                              .piezo_interface_out
 			reset_reset_n                                 => CONNECTED_TO_reset_reset_n,                                 --                         reset.reset_n
 			rtc_0_conduit_end_event_trigger               => CONNECTED_TO_rtc_0_conduit_end_event_trigger,               --             rtc_0_conduit_end.event_trigger
-			rtc_0_conduit_end_piezo_enable                => CONNECTED_TO_rtc_0_conduit_end_piezo_enable                 --                              .piezo_enable
+			rtc_0_conduit_end_piezo_enable                => CONNECTED_TO_rtc_0_conduit_end_piezo_enable,                --                              .piezo_enable
+			rtc_0_conduit_end_event_trigger2              => CONNECTED_TO_rtc_0_conduit_end_event_trigger2               --                              .event_trigger2
 		);
 

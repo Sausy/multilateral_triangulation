@@ -73,9 +73,12 @@ module soc_system (
 	piezo_controller_piezo_enable_piezo_enable_in,
 	piezo_controller_piezo_out_export,
 	piezo_controller_piezo_status_export,
+	ptp_piezo_interface0_piezo_interface_in,
+	ptp_piezo_interface0_piezo_interface_out,
 	reset_reset_n,
 	rtc_0_conduit_end_event_trigger,
-	rtc_0_conduit_end_piezo_enable);	
+	rtc_0_conduit_end_piezo_enable,
+	rtc_0_conduit_end_event_trigger2);	
 
 	input		clk_clk;
 	output		clock_divider_0_conduit_end_out_clk;
@@ -150,7 +153,10 @@ module soc_system (
 	input		piezo_controller_piezo_enable_piezo_enable_in;
 	output	[60:0]	piezo_controller_piezo_out_export;
 	output	[2:0]	piezo_controller_piezo_status_export;
+	input		ptp_piezo_interface0_piezo_interface_in;
+	output		ptp_piezo_interface0_piezo_interface_out;
 	input		reset_reset_n;
 	input		rtc_0_conduit_end_event_trigger;
 	output		rtc_0_conduit_end_piezo_enable;
+	input		rtc_0_conduit_end_event_trigger2;
 endmodule
