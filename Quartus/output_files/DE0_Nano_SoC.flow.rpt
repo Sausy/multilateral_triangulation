@@ -1,5 +1,5 @@
 Flow report for DE0_Nano_SoC
-Wed Apr 10 18:15:12 2019
+Wed Apr 10 18:46:10 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Apr 10 18:15:12 2019       ;
+; Flow Status                     ; Successful - Wed Apr 10 18:46:10 2019       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; DE0_Nano_SoC                                ;
 ; Top-level Entity Name           ; DE0_Nano_SoC_top_level                      ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/10/2019 18:11:43 ;
+; Start date & time ; 04/10/2019 18:42:39 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE0_Nano_SoC        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------+--------------------------------------------------------------------------+--------------------------------------+--------------------------------+----------------+
 ; Assignment Name                       ; Value                                                                    ; Default Value                        ; Entity Name                    ; Section Id     ;
 +---------------------------------------+--------------------------------------------------------------------------+--------------------------------------+--------------------------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 84440842494223.155491270014927                                           ; --                                   ; --                             ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 84440842494223.155491455717480                                           ; --                                   ; --                             ; --             ;
 ; ECO_REGENERATE_REPORT                 ; On                                                                       ; Off                                  ; --                             ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT                ; Vhdl                                                                     ; --                                   ; --                             ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                   ; ModelSim-Altera (VHDL)                                                   ; <None>                               ; --                             ; --             ;
@@ -142,8 +142,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:39     ; 1.8                     ; 1389 MB             ; 00:01:12                           ;
-; Total                ; 00:00:39     ; --                      ; --                  ; 00:01:12                           ;
+; Analysis & Synthesis ; 00:00:39     ; 2.1                     ; 1375 MB             ; 00:01:13                           ;
+; Total                ; 00:00:39     ; --                      ; --                  ; 00:01:13                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
