@@ -31,8 +31,16 @@ int main(int argc, char *argv[]) {
   addr_base addr_base;
   piezo_ctl piezo_ctl(addr_base.virtual_base);
   rtc_ctl rtc_ctl(addr_base.rtc_base_addr);
-  //time_sync ptp(addr_base.ptp_base);
+  time_sync ptp(addr_base.ptp_base);
 
+  /*ros::NodeHandle   nh;
+  ros::Subscriber   time_ctl_sub,   module_mode_sub;
+  ros::Publisher    time_pub;
+
+  //subs
+  void get_current_mode(const triangulation_msg::mode_msg::ConstPtr& msg);
+  void start_sync_mode();
+  */
 
   //if (tty) printf("> ");
   piezo_ctl.stop_piezo_out();

@@ -3,7 +3,8 @@
 #include <ros/ros.h>
 #include <vector>
 
-/*
+using namespace std;
+
 struct time {
     vector<double>    sync_time_div;
     vector<double>    time_div;
@@ -29,5 +30,4 @@ class time_sync
   private:
     int32_t *rtc_base;
 };
-*/
 #endif
