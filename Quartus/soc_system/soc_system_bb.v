@@ -78,7 +78,8 @@ module soc_system (
 	reset_reset_n,
 	rtc_0_conduit_end_event_trigger,
 	rtc_0_conduit_end_piezo_enable,
-	rtc_0_conduit_end_event_trigger2);	
+	rtc_0_conduit_end_event_trigger2,
+	id_switch0_sw);	
 
 	input		clk_clk;
 	output		clock_divider_0_conduit_end_out_clk;
@@ -159,4 +160,5 @@ module soc_system (
 	input		rtc_0_conduit_end_event_trigger;
 	output		rtc_0_conduit_end_piezo_enable;
 	input		rtc_0_conduit_end_event_trigger2;
+	input	[3:0]	id_switch0_sw;
 endmodule

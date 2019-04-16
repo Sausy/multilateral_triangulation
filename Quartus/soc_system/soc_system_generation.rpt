@@ -12,6 +12,8 @@ Progress: Adding fpga_led [altera_avalon_pio 18.0]
 Progress: Parameterizing module fpga_led
 Progress: Adding hps_0 [altera_hps 18.0]
 Progress: Parameterizing module hps_0
+Progress: Adding id_switch_0 [id_switch 1.0]
+Progress: Parameterizing module id_switch_0
 Progress: Adding piezo_controller_0 [piezo_controller 1.0]
 Progress: Parameterizing module piezo_controller_0
 Progress: Adding ptp_simple_us_0 [ptp_simple_us 1.0]
@@ -44,6 +46,8 @@ Progress: Adding fpga_led [altera_avalon_pio 18.0]
 Progress: Parameterizing module fpga_led
 Progress: Adding hps_0 [altera_hps 18.0]
 Progress: Parameterizing module hps_0
+Progress: Adding id_switch_0 [id_switch 1.0]
+Progress: Parameterizing module id_switch_0
 Progress: Adding piezo_controller_0 [piezo_controller 1.0]
 Progress: Parameterizing module piezo_controller_0
 Progress: Adding ptp_simple_us_0 [ptp_simple_us 1.0]
@@ -66,11 +70,11 @@ Warning: hps_0.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
 Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
 Info: clock_divider_0: "soc_system" instantiated clock_divider "clock_divider_0"
 Info: fpga_key: Starting RTL generation for module 'soc_system_fpga_key'
-Info: fpga_key:   Generation command is [exec /home/roboy/intelFPGA/18.0/quartus/linux64/perl/bin/perl -I /home/roboy/intelFPGA/18.0/quartus/linux64/perl/lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/europa -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/perl_lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_fpga_key --dir=/tmp/alt7996_1726819696925524236.dir/0034_fpga_key_gen/ --quartus_dir=/home/roboy/intelFPGA/18.0/quartus --verilog --config=/tmp/alt7996_1726819696925524236.dir/0034_fpga_key_gen//soc_system_fpga_key_component_configuration.pl  --do_build_sim=0  ]
+Info: fpga_key:   Generation command is [exec /home/roboy/intelFPGA/18.0/quartus/linux64/perl/bin/perl -I /home/roboy/intelFPGA/18.0/quartus/linux64/perl/lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/europa -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/perl_lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_fpga_key --dir=/tmp/alt8002_1398536088144683829.dir/0008_fpga_key_gen/ --quartus_dir=/home/roboy/intelFPGA/18.0/quartus --verilog --config=/tmp/alt8002_1398536088144683829.dir/0008_fpga_key_gen//soc_system_fpga_key_component_configuration.pl  --do_build_sim=0  ]
 Info: fpga_key: Done RTL generation for module 'soc_system_fpga_key'
 Info: fpga_key: "soc_system" instantiated altera_avalon_pio "fpga_key"
 Info: fpga_led: Starting RTL generation for module 'soc_system_fpga_led'
-Info: fpga_led:   Generation command is [exec /home/roboy/intelFPGA/18.0/quartus/linux64/perl/bin/perl -I /home/roboy/intelFPGA/18.0/quartus/linux64/perl/lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/europa -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/perl_lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_fpga_led --dir=/tmp/alt7996_1726819696925524236.dir/0035_fpga_led_gen/ --quartus_dir=/home/roboy/intelFPGA/18.0/quartus --verilog --config=/tmp/alt7996_1726819696925524236.dir/0035_fpga_led_gen//soc_system_fpga_led_component_configuration.pl  --do_build_sim=0  ]
+Info: fpga_led:   Generation command is [exec /home/roboy/intelFPGA/18.0/quartus/linux64/perl/bin/perl -I /home/roboy/intelFPGA/18.0/quartus/linux64/perl/lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/europa -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin/perl_lib -I /home/roboy/intelFPGA/18.0/quartus/sopc_builder/bin -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/roboy/intelFPGA/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_fpga_led --dir=/tmp/alt8002_1398536088144683829.dir/0009_fpga_led_gen/ --quartus_dir=/home/roboy/intelFPGA/18.0/quartus --verilog --config=/tmp/alt8002_1398536088144683829.dir/0009_fpga_led_gen//soc_system_fpga_led_component_configuration.pl  --do_build_sim=0  ]
 Info: fpga_led: Done RTL generation for module 'soc_system_fpga_led'
 Info: fpga_led: "soc_system" instantiated altera_avalon_pio "fpga_led"
 Info: hps_0: "Running  for module: hps_0"
@@ -79,6 +83,7 @@ Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
 Warning: hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
 Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
 Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
+Info: id_switch_0: "soc_system" instantiated id_switch "id_switch_0"
 Info: piezo_controller_0: "soc_system" instantiated piezo_controller "piezo_controller_0"
 Info: ptp_simple_us_0: "soc_system" instantiated ptp_simple_us "ptp_simple_us_0"
 Info: realtime_clock_controll_0: "soc_system" instantiated realtime_clock_controll "realtime_clock_controll_0"
@@ -87,6 +92,7 @@ Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "soc_system" instantiated altera_irq_mapper "irq_mapper"
 Info: irq_mapper_001: "soc_system" instantiated altera_irq_mapper "irq_mapper_001"
@@ -99,7 +105,7 @@ Info: realtime_clock_controll_0_avalon_slave_agent: "mm_interconnect_0" instanti
 Info: realtime_clock_controll_0_avalon_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "realtime_clock_controll_0_avalon_slave_agent_rsp_fifo"
 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
-Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
+Info: router_007: "mm_interconnect_0" instantiated altera_merlin_router "router_007"
 Info: hps_0_h2f_lw_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "hps_0_h2f_lw_axi_master_wr_limiter"
 Info: Reusing file /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Quartus/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
 Info: realtime_clock_controll_0_avalon_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "realtime_clock_controll_0_avalon_slave_burst_adapter"
@@ -114,10 +120,10 @@ Info: piezo_controller_0_s1_rsp_width_adapter: "mm_interconnect_0" instantiated 
 Info: Reusing file /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Quartus/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
 Info: Reusing file /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Quartus/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
-Info: avalon_st_adapter_004: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_004"
+Info: avalon_st_adapter_005: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_005"
 Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: error_adapter_0: "avalon_st_adapter_004" instantiated error_adapter "error_adapter_0"
-Info: soc_system: Done "soc_system" with 33 modules, 91 files
+Info: error_adapter_0: "avalon_st_adapter_005" instantiated error_adapter "error_adapter_0"
+Info: soc_system: Done "soc_system" with 34 modules, 92 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

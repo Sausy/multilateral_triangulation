@@ -37,7 +37,7 @@ piezo_ctl::piezo_ctl(void *virtual_base){
   printf("Frequency: %.3f kHz\n",PIEZO_FREQ/1000.0);
   printf("Phase resolution: %.3f°\n\n",360.0/PIEZO_PERIOD_CLK);
 
-  for (i=0; i<N; i++) {
+  for (i=0; i<N_PIEZO; i++) {
     piezo_xyz[i].x = 0;
     piezo_xyz[i].y = 0;
     piezo_xyz[i].z = 0;
@@ -66,7 +66,7 @@ void piezo_ctl::stop_piezo_out() {
  void piezo_ctl::set_trap_twin(point_t p, double angle) {
 
    uint16_t i;
-   double focus[N], phase[N];
+   double focus[N_PIEZO], phase[N_PIEZO];
 
    if (angle != twin_angle) {
      twin_angle = angle;
@@ -75,7 +75,7 @@ void piezo_ctl::stop_piezo_out() {
 
    calc_focus(piezo_xyz,p,focus);
 
-   for (i=0; i<N; i++) phase[i] = twin_sig[i]+focus[i];
+   for (i=0; i<N_PIEZO; i++) phase[i] = twin_sig[i]+focus[i];
    set_piezo_phase(REGISTER_A,phase);
 
    set_led_trap(LED_TWIN);

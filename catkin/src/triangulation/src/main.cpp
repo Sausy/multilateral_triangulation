@@ -5,12 +5,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ros/ros.h>
 #include "piezo_ctl.hpp"
 #include "fpga_interface.hpp"
 #include "time_controll.hpp"
+#include "time_sync.hpp"
 #include <math.h>
 
 #include <unistd.h>
+
+using namespace std;
 
 double calc_distance (uint32_t t1, uint32_t t2){
   uint32_t buffer = 0;
@@ -32,6 +36,15 @@ int main(int argc, char *argv[]) {
   piezo_ctl piezo_ctl(addr_base.virtual_base);
   rtc_ctl rtc_ctl(addr_base.rtc_base_addr);
   time_sync ptp(addr_base.ptp_base);
+
+  //init ros
+  if (!ros::isInitialized()){
+    int argc = 0;
+    char **argv = NULL;
+    ros::init(argc, argv, "triangulation system");
+  }
+  ros::NodeHandle n;
+  ros::Rate loop_rate(10);
 
   /*ros::NodeHandle   nh;
   ros::Subscriber   time_ctl_sub,   module_mode_sub;

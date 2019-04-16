@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="SW[3..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+		<bus name="SW[3..0]" direction="Unknown Group" >
+			<member name="SW[3]" />
+			<member name="SW[2]" />
+			<member name="SW[1]" />
+			<member name="SW[0]" />
+		</bus>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

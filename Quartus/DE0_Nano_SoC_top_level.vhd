@@ -15,12 +15,15 @@ use IEEE.numeric_std.all;
 entity DE0_Nano_SoC_top_level is
 
   port(
-
+	
     -- Clock
     FPGA_CLK1_50 : in std_logic;
 
     -- Key
     KEY_N : in std_logic_vector(1 downto 0);
+	 
+	 -- SW
+	 SW : in std_logic_vector (3 downto 0);
 
     -- LED
     LED : out std_logic_vector(7 downto 0);

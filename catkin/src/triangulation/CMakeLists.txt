@@ -22,6 +22,7 @@ if (DEFINED "ENV{SOCEDS_DEST_ROOT}")
     find_package(catkin REQUIRED COMPONENTS
             roscpp
             std_msgs
+            triangulation_msg
     )
     include(findros)
     #find_package(PkgConfig REQUIRED)
@@ -34,6 +35,7 @@ if (DEFINED "ENV{SOCEDS_DEST_ROOT}")
 
     catkin_package(CATKIN_DEPENDS
             message_runtime
+            triangulation_msg
             )
 
     SET(ALT_DEVICE_FAMILY soc_cv_av)
@@ -61,6 +63,7 @@ if (DEFINED "ENV{SOCEDS_DEST_ROOT}")
         #${MAIN_SRC_FILES}
         ${INCLUDE_FILES}
         )
+    #add_dependencies(roboy_plexus triangulation_msg_gencpp)
     target_link_libraries( triangulation -lpthread -lrt -lm ${ros_LIBRARIES})
 
 

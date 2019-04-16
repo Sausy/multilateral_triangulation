@@ -14,7 +14,7 @@
 
 #define WAVE_C  343 // m/s
 #define WAVE_K  (2*M_PI*PIEZO_FREQ/(1000*WAVE_C)) // 1/mm
-#define N       PIEZO_COUNT
+#define N_PIEZO       PIEZO_COUNT
 
 typedef struct {
   double x;

@@ -78,7 +78,8 @@
 			reset_reset_n                                 : in    std_logic                     := 'X';             -- reset_n
 			rtc_0_conduit_end_event_trigger               : in    std_logic                     := 'X';             -- event_trigger
 			rtc_0_conduit_end_piezo_enable                : out   std_logic;                                        -- piezo_enable
-			rtc_0_conduit_end_event_trigger2              : in    std_logic                     := 'X'              -- event_trigger2
+			rtc_0_conduit_end_event_trigger2              : in    std_logic                     := 'X';             -- event_trigger2
+			id_switch0_sw                                 : in    std_logic_vector(3 downto 0)  := (others => 'X')  -- sw
 		);
 	end component soc_system;
 
@@ -162,6 +163,7 @@
 			reset_reset_n                                 => CONNECTED_TO_reset_reset_n,                                 --                         reset.reset_n
 			rtc_0_conduit_end_event_trigger               => CONNECTED_TO_rtc_0_conduit_end_event_trigger,               --             rtc_0_conduit_end.event_trigger
 			rtc_0_conduit_end_piezo_enable                => CONNECTED_TO_rtc_0_conduit_end_piezo_enable,                --                              .piezo_enable
-			rtc_0_conduit_end_event_trigger2              => CONNECTED_TO_rtc_0_conduit_end_event_trigger2               --                              .event_trigger2
+			rtc_0_conduit_end_event_trigger2              => CONNECTED_TO_rtc_0_conduit_end_event_trigger2,              --                              .event_trigger2
+			id_switch0_sw                                 => CONNECTED_TO_id_switch0_sw                                  --                    id_switch0.sw
 		);
 

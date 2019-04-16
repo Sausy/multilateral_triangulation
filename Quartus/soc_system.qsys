@@ -37,7 +37,7 @@
    {
       datum baseAddress
       {
-         value = "524832";
+         value = "786976";
          type = "String";
       }
    }
@@ -53,7 +53,7 @@
    {
       datum baseAddress
       {
-         value = "524800";
+         value = "786944";
          type = "String";
       }
    }
@@ -63,6 +63,22 @@
       {
          value = "1";
          type = "int";
+      }
+   }
+   element id_switch_0
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element id_switch_0.avalon_slave
+   {
+      datum baseAddress
+      {
+         value = "0";
+         type = "String";
       }
    }
    element piezo_controller_0
@@ -77,7 +93,7 @@
    {
       datum baseAddress
       {
-         value = "524288";
+         value = "786432";
          type = "String";
       }
    }
@@ -93,7 +109,7 @@
    {
       datum baseAddress
       {
-         value = "0";
+         value = "262144";
          type = "String";
       }
    }
@@ -109,7 +125,7 @@
    {
       datum baseAddress
       {
-         value = "262144";
+         value = "524288";
          type = "String";
       }
    }
@@ -245,6 +261,11 @@
    type="conduit"
    dir="end" />
  <interface name="hps_io" internal="hps_0.hps_io" type="conduit" dir="end" />
+ <interface
+   name="id_switch0"
+   internal="id_switch_0.conduit_end"
+   type="conduit"
+   dir="end" />
  <interface
    name="piezo_controller_piezo_enable"
    internal="piezo_controller_0.piezo_enable"
@@ -836,6 +857,7 @@
   <parameter name="usb_mp_clk_div" value="0" />
   <parameter name="use_default_mpu_clk" value="true" />
  </module>
+ <module name="id_switch_0" kind="id_switch" version="1.0" enabled="1" />
  <module
    name="piezo_controller_0"
    kind="piezo_controller"
@@ -859,7 +881,7 @@
    start="hps_0.h2f_lw_axi_master"
    end="realtime_clock_controll_0.avalon_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00040000" />
+  <parameter name="baseAddress" value="0x00080000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -867,6 +889,15 @@
    version="18.0"
    start="hps_0.h2f_lw_axi_master"
    end="ptp_simple_us_0.avalon_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00040000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.0"
+   start="hps_0.h2f_lw_axi_master"
+   end="id_switch_0.avalon_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
@@ -877,7 +908,7 @@
    start="hps_0.h2f_lw_axi_master"
    end="fpga_key.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00080220" />
+  <parameter name="baseAddress" value="0x000c0220" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -886,7 +917,7 @@
    start="hps_0.h2f_lw_axi_master"
    end="fpga_led.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00080200" />
+  <parameter name="baseAddress" value="0x000c0200" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -895,7 +926,7 @@
    start="hps_0.h2f_lw_axi_master"
    end="piezo_controller_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00080000" />
+  <parameter name="baseAddress" value="0x000c0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection kind="clock" version="18.0" start="clk_0.clk" end="fpga_key.clk" />
@@ -910,6 +941,7 @@
    version="18.0"
    start="clk_0.clk"
    end="ptp_simple_us_0.clock" />
+ <connection kind="clock" version="18.0" start="clk_0.clk" end="id_switch_0.clock" />
  <connection
    kind="clock"
    version="18.0"
@@ -962,6 +994,11 @@
    version="18.0"
    start="clk_0.clk_reset"
    end="ptp_simple_us_0.reset" />
+ <connection
+   kind="reset"
+   version="18.0"
+   start="clk_0.clk_reset"
+   end="id_switch_0.reset" />
  <connection
    kind="reset"
    version="18.0"

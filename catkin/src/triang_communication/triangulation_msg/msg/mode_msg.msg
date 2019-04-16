@@ -1,4 +1,6 @@
 uint8 id
-bool master
-bool sync_master
+#0 master broadcast, 1 slave broadcast
+bool mode
+#0 sync slave,       1 sync master
+bool sync_mode
 bool sync_enable

@@ -69,6 +69,7 @@
 			hps_io_hps_io_gpio_inst_LOANIO54              : inout std_logic                     := 'X';             -- hps_io_gpio_inst_LOANIO54
 			hps_io_hps_io_gpio_inst_LOANIO64              : inout std_logic                     := 'X';             -- hps_io_gpio_inst_LOANIO64
 			hps_io_hps_io_gpio_inst_LOANIO65              : inout std_logic                     := 'X';             -- hps_io_gpio_inst_LOANIO65
+			id_switch0_sw                                 : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- sw
 			piezo_controller_piezo_enable_export          : out   std_logic;                                        -- export
 			piezo_controller_piezo_enable_piezo_enable_in : in    std_logic                     := 'X';             -- piezo_enable_in
 			piezo_controller_piezo_out_export             : out   std_logic_vector(60 downto 0);                    -- export

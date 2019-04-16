@@ -57,11 +57,11 @@ class piezo_ctl
     char *strword(char **stringp);
 
   private:
-    double vortex_sig[N];
+    double vortex_sig[N_PIEZO];
     uint8_t vortex_helicity = DEFAULT_VORTEX_HELICITY;
-    double twin_sig[N], twin_angle = DEFAULT_TWIN_ANGLE;
-    double bottle_sig[N], bottle_radius = DEFAULT_BOTTLE_RADIUS;
-    point_t piezo_xyz[N];
+    double twin_sig[N_PIEZO], twin_angle = DEFAULT_TWIN_ANGLE;
+    double bottle_sig[N_PIEZO], bottle_radius = DEFAULT_BOTTLE_RADIUS;
+    point_t piezo_xyz[N_PIEZO];
     trap_t trap = TWIN;
     uint16_t n_a = DEFAULT_N, n_b = DEFAULT_N;
     uint8_t tty;

@@ -77,6 +77,7 @@
 		.reset_reset_n                                 (<connected-to-reset_reset_n>),                                 //                         reset.reset_n
 		.rtc_0_conduit_end_event_trigger               (<connected-to-rtc_0_conduit_end_event_trigger>),               //             rtc_0_conduit_end.event_trigger
 		.rtc_0_conduit_end_piezo_enable                (<connected-to-rtc_0_conduit_end_piezo_enable>),                //                              .piezo_enable
-		.rtc_0_conduit_end_event_trigger2              (<connected-to-rtc_0_conduit_end_event_trigger2>)               //                              .event_trigger2
+		.rtc_0_conduit_end_event_trigger2              (<connected-to-rtc_0_conduit_end_event_trigger2>),              //                              .event_trigger2
+		.id_switch0_sw                                 (<connected-to-id_switch0_sw>)                                  //                    id_switch0.sw
 	);
 

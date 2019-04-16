@@ -73,6 +73,7 @@ module soc_system (
 		inout  wire        hps_io_hps_io_gpio_inst_LOANIO54,              //                              .hps_io_gpio_inst_LOANIO54
 		inout  wire        hps_io_hps_io_gpio_inst_LOANIO64,              //                              .hps_io_gpio_inst_LOANIO64
 		inout  wire        hps_io_hps_io_gpio_inst_LOANIO65,              //                              .hps_io_gpio_inst_LOANIO65
+		input  wire [3:0]  id_switch0_sw,                                 //                    id_switch0.sw
 		output wire        piezo_controller_piezo_enable_export,          // piezo_controller_piezo_enable.export
 		input  wire        piezo_controller_piezo_enable_piezo_enable_in, //                              .piezo_enable_in
 		output wire [60:0] piezo_controller_piezo_out_export,             //    piezo_controller_piezo_out.export
@@ -133,6 +134,12 @@ module soc_system (
 	wire         mm_interconnect_0_ptp_simple_us_0_avalon_slave_read;                  // mm_interconnect_0:ptp_simple_us_0_avalon_slave_read -> ptp_simple_us_0:avalon_slave_read
 	wire         mm_interconnect_0_ptp_simple_us_0_avalon_slave_write;                 // mm_interconnect_0:ptp_simple_us_0_avalon_slave_write -> ptp_simple_us_0:avalon_slave_write
 	wire  [31:0] mm_interconnect_0_ptp_simple_us_0_avalon_slave_writedata;             // mm_interconnect_0:ptp_simple_us_0_avalon_slave_writedata -> ptp_simple_us_0:avalon_slave_writedata
+	wire  [31:0] mm_interconnect_0_id_switch_0_avalon_slave_readdata;                  // id_switch_0:avalon_slave_readdata -> mm_interconnect_0:id_switch_0_avalon_slave_readdata
+	wire         mm_interconnect_0_id_switch_0_avalon_slave_waitrequest;               // id_switch_0:avalon_slave_waitrequest -> mm_interconnect_0:id_switch_0_avalon_slave_waitrequest
+	wire  [15:0] mm_interconnect_0_id_switch_0_avalon_slave_address;                   // mm_interconnect_0:id_switch_0_avalon_slave_address -> id_switch_0:avalon_slave_address
+	wire         mm_interconnect_0_id_switch_0_avalon_slave_read;                      // mm_interconnect_0:id_switch_0_avalon_slave_read -> id_switch_0:avalon_slave_read
+	wire         mm_interconnect_0_id_switch_0_avalon_slave_write;                     // mm_interconnect_0:id_switch_0_avalon_slave_write -> id_switch_0:avalon_slave_write
+	wire  [31:0] mm_interconnect_0_id_switch_0_avalon_slave_writedata;                 // mm_interconnect_0:id_switch_0_avalon_slave_writedata -> id_switch_0:avalon_slave_writedata
 	wire         mm_interconnect_0_fpga_key_s1_chipselect;                             // mm_interconnect_0:fpga_key_s1_chipselect -> fpga_key:chipselect
 	wire  [31:0] mm_interconnect_0_fpga_key_s1_readdata;                               // fpga_key:readdata -> mm_interconnect_0:fpga_key_s1_readdata
 	wire   [1:0] mm_interconnect_0_fpga_key_s1_address;                                // mm_interconnect_0:fpga_key_s1_address -> fpga_key:address
@@ -151,7 +158,7 @@ module soc_system (
 	wire         irq_mapper_receiver0_irq;                                             // fpga_key:irq -> irq_mapper:receiver0_irq
 	wire  [31:0] hps_0_f2h_irq0_irq;                                                   // irq_mapper:sender_irq -> hps_0:f2h_irq_p0
 	wire  [31:0] hps_0_f2h_irq1_irq;                                                   // irq_mapper_001:sender_irq -> hps_0:f2h_irq_p1
-	wire         rst_controller_reset_out_reset;                                       // rst_controller:reset_out -> [clock_divider_0:reset, mm_interconnect_0:realtime_clock_controll_0_reset_reset_bridge_in_reset_reset, ptp_simple_us_0:reset, realtime_clock_controll_0:reset]
+	wire         rst_controller_reset_out_reset;                                       // rst_controller:reset_out -> [clock_divider_0:reset, id_switch_0:reset, mm_interconnect_0:realtime_clock_controll_0_reset_reset_bridge_in_reset_reset, ptp_simple_us_0:reset, realtime_clock_controll_0:reset]
 	wire         rst_controller_001_reset_out_reset;                                   // rst_controller_001:reset_out -> [fpga_key:reset_n, fpga_led:reset_n, mm_interconnect_0:fpga_key_reset_reset_bridge_in_reset_reset, piezo_controller_0:reset_n]
 	wire         hps_0_h2f_reset_reset;                                                // hps_0:h2f_rst_n -> [rst_controller_001:reset_in1, rst_controller_002:reset_in0]
 	wire         rst_controller_002_reset_out_reset;                                   // rst_controller_002:reset_out -> mm_interconnect_0:hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset_reset
@@ -296,6 +303,18 @@ module soc_system (
 		.f2h_irq_p1                (hps_0_f2h_irq1_irq)                //          f2h_irq1.irq
 	);
 
+	id_switch id_switch_0 (
+		.reset                    (rst_controller_reset_out_reset),                         //        reset.reset
+		.avalon_slave_address     (mm_interconnect_0_id_switch_0_avalon_slave_address),     // avalon_slave.address
+		.avalon_slave_write       (mm_interconnect_0_id_switch_0_avalon_slave_write),       //             .write
+		.avalon_slave_writedata   (mm_interconnect_0_id_switch_0_avalon_slave_writedata),   //             .writedata
+		.avalon_slave_read        (mm_interconnect_0_id_switch_0_avalon_slave_read),        //             .read
+		.avalon_slave_readdata    (mm_interconnect_0_id_switch_0_avalon_slave_readdata),    //             .readdata
+		.avalon_slave_waitrequest (mm_interconnect_0_id_switch_0_avalon_slave_waitrequest), //             .waitrequest
+		.SW                       (id_switch0_sw),                                          //  conduit_end.sw
+		.clock                    (clk_clk)                                                 //        clock.clk
+	);
+
 	piezo_controller #(
 		.piezo_count (61)
 	) piezo_controller_0 (
@@ -393,6 +412,12 @@ module soc_system (
 		.fpga_led_s1_readdata                                                (mm_interconnect_0_fpga_led_s1_readdata),                               //                                                              .readdata
 		.fpga_led_s1_writedata                                               (mm_interconnect_0_fpga_led_s1_writedata),                              //                                                              .writedata
 		.fpga_led_s1_chipselect                                              (mm_interconnect_0_fpga_led_s1_chipselect),                             //                                                              .chipselect
+		.id_switch_0_avalon_slave_address                                    (mm_interconnect_0_id_switch_0_avalon_slave_address),                   //                                      id_switch_0_avalon_slave.address
+		.id_switch_0_avalon_slave_write                                      (mm_interconnect_0_id_switch_0_avalon_slave_write),                     //                                                              .write
+		.id_switch_0_avalon_slave_read                                       (mm_interconnect_0_id_switch_0_avalon_slave_read),                      //                                                              .read
+		.id_switch_0_avalon_slave_readdata                                   (mm_interconnect_0_id_switch_0_avalon_slave_readdata),                  //                                                              .readdata
+		.id_switch_0_avalon_slave_writedata                                  (mm_interconnect_0_id_switch_0_avalon_slave_writedata),                 //                                                              .writedata
+		.id_switch_0_avalon_slave_waitrequest                                (mm_interconnect_0_id_switch_0_avalon_slave_waitrequest),               //                                                              .waitrequest
 		.piezo_controller_0_s1_address                                       (mm_interconnect_0_piezo_controller_0_s1_address),                      //                                         piezo_controller_0_s1.address
 		.piezo_controller_0_s1_write                                         (mm_interconnect_0_piezo_controller_0_s1_write),                        //                                                              .write
 		.piezo_controller_0_s1_read                                          (mm_interconnect_0_piezo_controller_0_s1_read),                         //                                                              .read
