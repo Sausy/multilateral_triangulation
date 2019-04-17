@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/time_sync_msg.l"
   "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/mode_msg.l"
   "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/time_msg.l"
+  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/system_ctl.l"
   "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/manifest.l"
 )
 

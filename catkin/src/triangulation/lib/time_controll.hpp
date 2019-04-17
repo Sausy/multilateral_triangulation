@@ -29,6 +29,8 @@ class rtc_ctl
 
     void allow_input_trigger();
 
+    bool rdy_to_read();
+
 
   private:
     int32_t *rtc_base;

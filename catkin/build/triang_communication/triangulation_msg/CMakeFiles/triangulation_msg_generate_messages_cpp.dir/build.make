@@ -56,6 +56,7 @@ include triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_gene
 triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_messages_cpp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_sync_msg.h
 triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_messages_cpp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/mode_msg.h
 triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_messages_cpp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_msg.h
+triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_messages_cpp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/system_ctl.h
 
 
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_sync_msg.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
@@ -76,10 +77,17 @@ triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_mes
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from triangulation_msg/time_msg.msg"
 	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg && /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/time_msg.msg -Itriangulation_msg:/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p triangulation_msg -o /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg -e /opt/ros/kinetic/share/gencpp/cmake/..
 
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/system_ctl.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/system_ctl.h: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/system_ctl.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from triangulation_msg/system_ctl.msg"
+	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg && /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg -Itriangulation_msg:/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p triangulation_msg -o /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg -e /opt/ros/kinetic/share/gencpp/cmake/..
+
 triangulation_msg_generate_messages_cpp: triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_messages_cpp
 triangulation_msg_generate_messages_cpp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_sync_msg.h
 triangulation_msg_generate_messages_cpp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/mode_msg.h
 triangulation_msg_generate_messages_cpp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_msg.h
+triangulation_msg_generate_messages_cpp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/system_ctl.h
 triangulation_msg_generate_messages_cpp: triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_messages_cpp.dir/build.make
 
 .PHONY : triangulation_msg_generate_messages_cpp

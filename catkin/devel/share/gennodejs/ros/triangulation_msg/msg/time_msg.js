@@ -19,7 +19,7 @@ class time_msg {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.id = null;
-      this.trigger_time_id = null;
+      this.trigger_time = null;
       this.input_trigger_time = null;
     }
     else {
@@ -29,11 +29,11 @@ class time_msg {
       else {
         this.id = 0;
       }
-      if (initObj.hasOwnProperty('trigger_time_id')) {
-        this.trigger_time_id = initObj.trigger_time_id
+      if (initObj.hasOwnProperty('trigger_time')) {
+        this.trigger_time = initObj.trigger_time
       }
       else {
-        this.trigger_time_id = 0;
+        this.trigger_time = 0;
       }
       if (initObj.hasOwnProperty('input_trigger_time')) {
         this.input_trigger_time = initObj.input_trigger_time
@@ -48,8 +48,8 @@ class time_msg {
     // Serializes a message object of type time_msg
     // Serialize message field [id]
     bufferOffset = _serializer.uint8(obj.id, buffer, bufferOffset);
-    // Serialize message field [trigger_time_id]
-    bufferOffset = _serializer.uint8(obj.trigger_time_id, buffer, bufferOffset);
+    // Serialize message field [trigger_time]
+    bufferOffset = _serializer.uint8(obj.trigger_time, buffer, bufferOffset);
     // Serialize message field [input_trigger_time]
     bufferOffset = _arraySerializer.float32(obj.input_trigger_time, buffer, bufferOffset, null);
     return bufferOffset;
@@ -61,8 +61,8 @@ class time_msg {
     let data = new time_msg(null);
     // Deserialize message field [id]
     data.id = _deserializer.uint8(buffer, bufferOffset);
-    // Deserialize message field [trigger_time_id]
-    data.trigger_time_id = _deserializer.uint8(buffer, bufferOffset);
+    // Deserialize message field [trigger_time]
+    data.trigger_time = _deserializer.uint8(buffer, bufferOffset);
     // Deserialize message field [input_trigger_time]
     data.input_trigger_time = _arrayDeserializer.float32(buffer, bufferOffset, null)
     return data;
@@ -81,14 +81,14 @@ class time_msg {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'a4a8a4d0923ff59d3433b760d36be60e';
+    return 'f3440e0816b525b8e8331d56821e5953';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     uint8 id
-    uint8 trigger_time_id
+    uint8 trigger_time
     float32[] input_trigger_time
     
     `;
@@ -107,11 +107,11 @@ class time_msg {
       resolved.id = 0
     }
 
-    if (msg.trigger_time_id !== undefined) {
-      resolved.trigger_time_id = msg.trigger_time_id;
+    if (msg.trigger_time !== undefined) {
+      resolved.trigger_time = msg.trigger_time;
     }
     else {
-      resolved.trigger_time_id = 0
+      resolved.trigger_time = 0
     }
 
     if (msg.input_trigger_time !== undefined) {

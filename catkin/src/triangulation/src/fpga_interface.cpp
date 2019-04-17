@@ -55,4 +55,9 @@ addr_base::addr_base(){
   #else
       ptp_base = nullptr;
   #endif
+  #ifdef ID_SWITCH_0_BASE
+      sw_base = (int32_t*)(virtual_base + ( ( unsigned long  )( ALT_LWFPGASLVS_OFST + ID_SWITCH_0_BASE ) & ( unsigned long)( HW_REGS_MASK )) );
+  #else
+      sw_base = nullptr;
+  #endif
 }

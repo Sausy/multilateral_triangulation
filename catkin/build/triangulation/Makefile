@@ -234,6 +234,33 @@ src/main.cpp.s:
 	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/mode_ctl.o: src/mode_ctl.cpp.o
+
+.PHONY : src/mode_ctl.o
+
+# target to build an object file
+src/mode_ctl.cpp.o:
+	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o
+.PHONY : src/mode_ctl.cpp.o
+
+src/mode_ctl.i: src/mode_ctl.cpp.i
+
+.PHONY : src/mode_ctl.i
+
+# target to preprocess a source file
+src/mode_ctl.cpp.i:
+	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.i
+.PHONY : src/mode_ctl.cpp.i
+
+src/mode_ctl.s: src/mode_ctl.cpp.s
+
+.PHONY : src/mode_ctl.s
+
+# target to generate assembly for a file
+src/mode_ctl.cpp.s:
+	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.s
+.PHONY : src/mode_ctl.cpp.s
+
 src/peripherals.o: src/peripherals.cpp.o
 
 .PHONY : src/peripherals.o
@@ -389,6 +416,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/mode_ctl.o"
+	@echo "... src/mode_ctl.i"
+	@echo "... src/mode_ctl.s"
 	@echo "... src/peripherals.o"
 	@echo "... src/peripherals.i"
 	@echo "... src/peripherals.s"

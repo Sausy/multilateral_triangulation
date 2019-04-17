@@ -13,9 +13,5 @@
   bool sync_mode
   bool sync_enable
   */
-  #define MODE_MASTER 0
-  #define MODE_SLAVE 1
-  #define SYNC_MASTER 0
-  #define SYNC_SLAVE 1
 
 #endif

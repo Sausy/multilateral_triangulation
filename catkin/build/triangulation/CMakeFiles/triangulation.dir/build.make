@@ -201,9 +201,33 @@ triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o.provides: triangulatio
 triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o.provides.build: triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o
 
 
+triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: triangulation/CMakeFiles/triangulation.dir/flags.make
+triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/src/mode_ctl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o"
+	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o -c /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/src/mode_ctl.cpp
+
+triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/triangulation.dir/src/mode_ctl.cpp.i"
+	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/src/mode_ctl.cpp > CMakeFiles/triangulation.dir/src/mode_ctl.cpp.i
+
+triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/triangulation.dir/src/mode_ctl.cpp.s"
+	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/src/mode_ctl.cpp -o CMakeFiles/triangulation.dir/src/mode_ctl.cpp.s
+
+triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o.requires:
+
+.PHONY : triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o.requires
+
+triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o.provides: triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o.requires
+	$(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o.provides.build
+.PHONY : triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o.provides
+
+triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o.provides.build: triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o
+
+
 triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o: triangulation/CMakeFiles/triangulation.dir/flags.make
 triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/src/fpga_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o"
 	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o -c /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/src/fpga_interface.cpp
 
 triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.i: cmake_force
@@ -233,6 +257,7 @@ triangulation_OBJECTS = \
 "CMakeFiles/triangulation.dir/src/time_controll.cpp.o" \
 "CMakeFiles/triangulation.dir/src/peripherals.cpp.o" \
 "CMakeFiles/triangulation.dir/src/trap.cpp.o" \
+"CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o" \
 "CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o"
 
 # External object files for target triangulation
@@ -244,6 +269,7 @@ triangulation_EXTERNAL_OBJECTS =
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/build.make
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/arm/opt/ros/kinetic/lib/librosconsole.so
@@ -270,7 +296,7 @@ triangulation_EXTERNAL_OBJECTS =
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/arm/lib/arm-linux-gnueabihf/libdl.so.2
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/arm/usr/lib/arm-linux-gnueabihf/libtinyxml.so
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation"
 	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triangulation && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/triangulation.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -284,6 +310,7 @@ triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/tr
 triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o.requires
 triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o.requires
 triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o.requires
+triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o.requires
 triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o.requires
 
 .PHONY : triangulation/CMakeFiles/triangulation.dir/requires

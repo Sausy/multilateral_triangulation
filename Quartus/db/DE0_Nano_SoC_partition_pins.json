@@ -28,174 +28,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "PIEZO[13]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[20]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[27]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[34]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[41]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[48]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[55]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[5]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[0]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[1]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[2]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[7]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[30]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[31]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[32]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[33]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[35]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[36]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[37]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[38]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[39]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[40]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[42]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[43]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[44]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[45]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[46]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[47]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[49]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[50]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[51]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[52]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[53]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[54]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[56]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[57]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[58]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[59]",
-					"strict" : false
-				},
-				{
-					"name" : "PIEZO[60]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[3]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[4]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[6]",
-					"strict" : false
-				},
-				{
 					"name" : "PIEZO[7]",
 					"strict" : false
 				},
@@ -217,6 +49,10 @@
 				},
 				{
 					"name" : "PIEZO[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[13]",
 					"strict" : false
 				},
 				{
@@ -244,6 +80,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "PIEZO[20]",
+					"strict" : false
+				},
+				{
 					"name" : "PIEZO[21]",
 					"strict" : false
 				},
@@ -268,11 +108,171 @@
 					"strict" : false
 				},
 				{
+					"name" : "PIEZO[27]",
+					"strict" : false
+				},
+				{
 					"name" : "PIEZO[28]",
 					"strict" : false
 				},
 				{
 					"name" : "PIEZO[29]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[30]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[31]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[32]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[33]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[34]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[35]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[36]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[37]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[38]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[39]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[40]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[41]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[42]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[43]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[44]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[45]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[46]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[47]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[48]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[49]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[50]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[51]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[52]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[53]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[54]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[55]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[56]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[57]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[58]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[59]",
+					"strict" : false
+				},
+				{
+					"name" : "PIEZO[60]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
 					"strict" : false
 				},
 				{

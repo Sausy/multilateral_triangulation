@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/gennodejs/ros/triangulation_msg/msg/time_sync_msg.js"
   "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/gennodejs/ros/triangulation_msg/msg/mode_msg.js"
   "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/gennodejs/ros/triangulation_msg/msg/time_msg.js"
+  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/gennodejs/ros/triangulation_msg/msg/system_ctl.js"
 )
 
 # Per-language clean rules from dependency scanning.

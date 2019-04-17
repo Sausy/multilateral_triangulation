@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "triangulation_msg: 3 messages, 0 services")
+message(STATUS "triangulation_msg: 4 messages, 0 services")
 
 set(MSG_I_FLAGS "-Itriangulation_msg:/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg")
 
@@ -32,6 +32,11 @@ add_custom_target(_triangulation_msg_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "triangulation_msg" "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/time_msg.msg" ""
 )
 
+get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg" NAME_WE)
+add_custom_target(_triangulation_msg_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "triangulation_msg" "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -56,6 +61,12 @@ _generate_msg_cpp(triangulation_msg
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/triangulation_msg
 )
+_generate_msg_cpp(triangulation_msg
+  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/triangulation_msg
+)
 
 ### Generating Services
 
@@ -76,6 +87,8 @@ add_dependencies(triangulation_msg_generate_messages_cpp _triangulation_msg_gene
 get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/mode_msg.msg" NAME_WE)
 add_dependencies(triangulation_msg_generate_messages_cpp _triangulation_msg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/time_msg.msg" NAME_WE)
+add_dependencies(triangulation_msg_generate_messages_cpp _triangulation_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg" NAME_WE)
 add_dependencies(triangulation_msg_generate_messages_cpp _triangulation_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -105,6 +118,12 @@ _generate_msg_eus(triangulation_msg
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/triangulation_msg
 )
+_generate_msg_eus(triangulation_msg
+  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/triangulation_msg
+)
 
 ### Generating Services
 
@@ -125,6 +144,8 @@ add_dependencies(triangulation_msg_generate_messages_eus _triangulation_msg_gene
 get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/mode_msg.msg" NAME_WE)
 add_dependencies(triangulation_msg_generate_messages_eus _triangulation_msg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/time_msg.msg" NAME_WE)
+add_dependencies(triangulation_msg_generate_messages_eus _triangulation_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg" NAME_WE)
 add_dependencies(triangulation_msg_generate_messages_eus _triangulation_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -154,6 +175,12 @@ _generate_msg_lisp(triangulation_msg
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/triangulation_msg
 )
+_generate_msg_lisp(triangulation_msg
+  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/triangulation_msg
+)
 
 ### Generating Services
 
@@ -174,6 +201,8 @@ add_dependencies(triangulation_msg_generate_messages_lisp _triangulation_msg_gen
 get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/mode_msg.msg" NAME_WE)
 add_dependencies(triangulation_msg_generate_messages_lisp _triangulation_msg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/time_msg.msg" NAME_WE)
+add_dependencies(triangulation_msg_generate_messages_lisp _triangulation_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg" NAME_WE)
 add_dependencies(triangulation_msg_generate_messages_lisp _triangulation_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -203,6 +232,12 @@ _generate_msg_nodejs(triangulation_msg
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/triangulation_msg
 )
+_generate_msg_nodejs(triangulation_msg
+  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/triangulation_msg
+)
 
 ### Generating Services
 
@@ -223,6 +258,8 @@ add_dependencies(triangulation_msg_generate_messages_nodejs _triangulation_msg_g
 get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/mode_msg.msg" NAME_WE)
 add_dependencies(triangulation_msg_generate_messages_nodejs _triangulation_msg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/time_msg.msg" NAME_WE)
+add_dependencies(triangulation_msg_generate_messages_nodejs _triangulation_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg" NAME_WE)
 add_dependencies(triangulation_msg_generate_messages_nodejs _triangulation_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -252,6 +289,12 @@ _generate_msg_py(triangulation_msg
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/triangulation_msg
 )
+_generate_msg_py(triangulation_msg
+  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/triangulation_msg
+)
 
 ### Generating Services
 
@@ -272,6 +315,8 @@ add_dependencies(triangulation_msg_generate_messages_py _triangulation_msg_gener
 get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/mode_msg.msg" NAME_WE)
 add_dependencies(triangulation_msg_generate_messages_py _triangulation_msg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/time_msg.msg" NAME_WE)
+add_dependencies(triangulation_msg_generate_messages_py _triangulation_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg" NAME_WE)
 add_dependencies(triangulation_msg_generate_messages_py _triangulation_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

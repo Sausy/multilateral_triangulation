@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_sync_msg.h"
   "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/mode_msg.h"
   "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_msg.h"
+  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/system_ctl.h"
 )
 
 # Per-language clean rules from dependency scanning.

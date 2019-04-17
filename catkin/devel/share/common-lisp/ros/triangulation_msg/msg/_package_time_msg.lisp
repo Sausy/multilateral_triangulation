@@ -1,8 +1,8 @@
 (cl:in-package triangulation_msg-msg)
 (cl:export '(ID-VAL
           ID
-          TRIGGER_TIME_ID-VAL
-          TRIGGER_TIME_ID
+          TRIGGER_TIME-VAL
+          TRIGGER_TIME
           INPUT_TRIGGER_TIME-VAL
           INPUT_TRIGGER_TIME
 ))

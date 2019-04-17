@@ -25,12 +25,12 @@ struct time_msg_
 
   time_msg_()
     : id(0)
-    , trigger_time_id(0)
+    , trigger_time(0)
     , input_trigger_time()  {
     }
   time_msg_(const ContainerAllocator& _alloc)
     : id(0)
-    , trigger_time_id(0)
+    , trigger_time(0)
     , input_trigger_time(_alloc)  {
   (void)_alloc;
     }
@@ -40,8 +40,8 @@ struct time_msg_
    typedef uint8_t _id_type;
   _id_type id;
 
-   typedef uint8_t _trigger_time_id_type;
-  _trigger_time_id_type trigger_time_id;
+   typedef uint8_t _trigger_time_type;
+  _trigger_time_type trigger_time;
 
    typedef std::vector<float, typename ContainerAllocator::template rebind<float>::other >  _input_trigger_time_type;
   _input_trigger_time_type input_trigger_time;
@@ -124,12 +124,12 @@ struct MD5Sum< ::triangulation_msg::time_msg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "a4a8a4d0923ff59d3433b760d36be60e";
+    return "f3440e0816b525b8e8331d56821e5953";
   }
 
   static const char* value(const ::triangulation_msg::time_msg_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xa4a8a4d0923ff59dULL;
-  static const uint64_t static_value2 = 0x3433b760d36be60eULL;
+  static const uint64_t static_value1 = 0xf3440e0816b525b8ULL;
+  static const uint64_t static_value2 = 0xe8331d56821e5953ULL;
 };
 
 template<class ContainerAllocator>
@@ -149,7 +149,7 @@ struct Definition< ::triangulation_msg::time_msg_<ContainerAllocator> >
   static const char* value()
   {
     return "uint8 id\n\
-uint8 trigger_time_id\n\
+uint8 trigger_time\n\
 float32[] input_trigger_time\n\
 ";
   }
@@ -170,7 +170,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.id);
-      stream.next(m.trigger_time_id);
+      stream.next(m.trigger_time);
       stream.next(m.input_trigger_time);
     }
 
@@ -192,8 +192,8 @@ struct Printer< ::triangulation_msg::time_msg_<ContainerAllocator> >
   {
     s << indent << "id: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.id);
-    s << indent << "trigger_time_id: ";
-    Printer<uint8_t>::stream(s, indent + "  ", v.trigger_time_id);
+    s << indent << "trigger_time: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.trigger_time);
     s << indent << "input_trigger_time[]" << std::endl;
     for (size_t i = 0; i < v.input_trigger_time.size(); ++i)
     {

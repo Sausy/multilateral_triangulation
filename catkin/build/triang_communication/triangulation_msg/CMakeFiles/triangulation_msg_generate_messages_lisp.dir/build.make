@@ -56,6 +56,7 @@ include triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_gene
 triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_messages_lisp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg/time_sync_msg.lisp
 triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_messages_lisp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg/mode_msg.lisp
 triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_messages_lisp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg/time_msg.lisp
+triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_messages_lisp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg/system_ctl.lisp
 
 
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg/time_sync_msg.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
@@ -73,10 +74,16 @@ triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_mes
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from triangulation_msg/time_msg.msg"
 	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triang_communication/triangulation_msg && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/time_msg.msg -Itriangulation_msg:/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p triangulation_msg -o /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg
 
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg/system_ctl.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg/system_ctl.lisp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from triangulation_msg/system_ctl.msg"
+	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triang_communication/triangulation_msg && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg/system_ctl.msg -Itriangulation_msg:/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p triangulation_msg -o /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg
+
 triangulation_msg_generate_messages_lisp: triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_messages_lisp
 triangulation_msg_generate_messages_lisp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg/time_sync_msg.lisp
 triangulation_msg_generate_messages_lisp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg/mode_msg.lisp
 triangulation_msg_generate_messages_lisp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg/time_msg.lisp
+triangulation_msg_generate_messages_lisp: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/common-lisp/ros/triangulation_msg/msg/system_ctl.lisp
 triangulation_msg_generate_messages_lisp: triang_communication/triangulation_msg/CMakeFiles/triangulation_msg_generate_messages_lisp.dir/build.make
 
 .PHONY : triangulation_msg_generate_messages_lisp

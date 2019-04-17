@@ -12,9 +12,9 @@
     :initarg :id
     :type cl:fixnum
     :initform 0)
-   (trigger_time_id
-    :reader trigger_time_id
-    :initarg :trigger_time_id
+   (trigger_time
+    :reader trigger_time
+    :initarg :trigger_time
     :type cl:fixnum
     :initform 0)
    (input_trigger_time
@@ -37,10 +37,10 @@
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader triangulation_msg-msg:id-val is deprecated.  Use triangulation_msg-msg:id instead.")
   (id m))
 
-(cl:ensure-generic-function 'trigger_time_id-val :lambda-list '(m))
-(cl:defmethod trigger_time_id-val ((m <time_msg>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader triangulation_msg-msg:trigger_time_id-val is deprecated.  Use triangulation_msg-msg:trigger_time_id instead.")
-  (trigger_time_id m))
+(cl:ensure-generic-function 'trigger_time-val :lambda-list '(m))
+(cl:defmethod trigger_time-val ((m <time_msg>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader triangulation_msg-msg:trigger_time-val is deprecated.  Use triangulation_msg-msg:trigger_time instead.")
+  (trigger_time m))
 
 (cl:ensure-generic-function 'input_trigger_time-val :lambda-list '(m))
 (cl:defmethod input_trigger_time-val ((m <time_msg>))
@@ -49,7 +49,7 @@
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <time_msg>) ostream)
   "Serializes a message object of type '<time_msg>"
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'id)) ostream)
-  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'trigger_time_id)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'trigger_time)) ostream)
   (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'input_trigger_time))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
@@ -65,7 +65,7 @@
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <time_msg>) istream)
   "Deserializes a message object of type '<time_msg>"
     (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'id)) (cl:read-byte istream))
-    (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'trigger_time_id)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'trigger_time)) (cl:read-byte istream))
   (cl:let ((__ros_arr_len 0))
     (cl:setf (cl:ldb (cl:byte 8 0) __ros_arr_len) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
@@ -90,16 +90,16 @@
   "triangulation_msg/time_msg")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<time_msg>)))
   "Returns md5sum for a message object of type '<time_msg>"
-  "a4a8a4d0923ff59d3433b760d36be60e")
+  "f3440e0816b525b8e8331d56821e5953")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'time_msg)))
   "Returns md5sum for a message object of type 'time_msg"
-  "a4a8a4d0923ff59d3433b760d36be60e")
+  "f3440e0816b525b8e8331d56821e5953")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<time_msg>)))
   "Returns full string definition for message of type '<time_msg>"
-  (cl:format cl:nil "uint8 id~%uint8 trigger_time_id~%float32[] input_trigger_time~%~%~%"))
+  (cl:format cl:nil "uint8 id~%uint8 trigger_time~%float32[] input_trigger_time~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'time_msg)))
   "Returns full string definition for message of type 'time_msg"
-  (cl:format cl:nil "uint8 id~%uint8 trigger_time_id~%float32[] input_trigger_time~%~%~%"))
+  (cl:format cl:nil "uint8 id~%uint8 trigger_time~%float32[] input_trigger_time~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <time_msg>))
   (cl:+ 0
      1
@@ -110,6 +110,6 @@
   "Converts a ROS message object to a list"
   (cl:list 'time_msg
     (cl:cons ':id (id msg))
-    (cl:cons ':trigger_time_id (trigger_time_id msg))
+    (cl:cons ':trigger_time (trigger_time msg))
     (cl:cons ':input_trigger_time (input_trigger_time msg))
 ))

@@ -22,6 +22,22 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/system_ctl.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_msg.h
 string
 -
@@ -10120,6 +10136,24 @@ socal/hps.h
 soc_system.h
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/lib/soc_system.h
 
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/lib/mode_ctl.hpp
+ros/ros.h
+-
+stdint.h
+-
+stdio.h
+-
+time_controll.hpp
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/lib/time_controll.hpp
+triangulation_msg/mode_msg.h
+-
+triangulation_msg/system_ctl.h
+-
+triangulation_msg/time_msg.h
+-
+triangulation_msg/time_sync_msg.h
+-
+
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/lib/peripherals.h
 stdint.h
 -
@@ -10149,10 +10183,14 @@ vector
 -
 triangulation_msg/mode_msg.h
 -
+triangulation_msg/system_ctl.h
+-
 triangulation_msg/time_msg.h
 -
 triangulation_msg/time_sync_msg.h
 -
+mode_ctl.hpp
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/lib/mode_ctl.hpp
 
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/lib/trap.h
 stdint.h
@@ -10204,6 +10242,12 @@ time_sync.hpp
 math.h
 -
 unistd.h
+-
+
+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/src/mode_ctl.cpp
+mode_ctl.hpp
+-
+string
 -
 
 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/src/peripherals.cpp

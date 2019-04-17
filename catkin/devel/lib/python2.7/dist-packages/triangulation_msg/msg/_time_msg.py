@@ -7,14 +7,14 @@ import struct
 
 
 class time_msg(genpy.Message):
-  _md5sum = "a4a8a4d0923ff59d3433b760d36be60e"
+  _md5sum = "f3440e0816b525b8e8331d56821e5953"
   _type = "triangulation_msg/time_msg"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """uint8 id
-uint8 trigger_time_id
+uint8 trigger_time
 float32[] input_trigger_time
 """
-  __slots__ = ['id','trigger_time_id','input_trigger_time']
+  __slots__ = ['id','trigger_time','input_trigger_time']
   _slot_types = ['uint8','uint8','float32[]']
 
   def __init__(self, *args, **kwds):
@@ -25,7 +25,7 @@ float32[] input_trigger_time
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       id,trigger_time_id,input_trigger_time
+       id,trigger_time,input_trigger_time
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -36,13 +36,13 @@ float32[] input_trigger_time
       #message fields cannot be None, assign default values for those that are
       if self.id is None:
         self.id = 0
-      if self.trigger_time_id is None:
-        self.trigger_time_id = 0
+      if self.trigger_time is None:
+        self.trigger_time = 0
       if self.input_trigger_time is None:
         self.input_trigger_time = []
     else:
       self.id = 0
-      self.trigger_time_id = 0
+      self.trigger_time = 0
       self.input_trigger_time = []
 
   def _get_types(self):
@@ -58,7 +58,7 @@ float32[] input_trigger_time
     """
     try:
       _x = self
-      buff.write(_get_struct_2B().pack(_x.id, _x.trigger_time_id))
+      buff.write(_get_struct_2B().pack(_x.id, _x.trigger_time))
       length = len(self.input_trigger_time)
       buff.write(_struct_I.pack(length))
       pattern = '<%sf'%length
@@ -76,7 +76,7 @@ float32[] input_trigger_time
       _x = self
       start = end
       end += 2
-      (_x.id, _x.trigger_time_id,) = _get_struct_2B().unpack(str[start:end])
+      (_x.id, _x.trigger_time,) = _get_struct_2B().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -97,7 +97,7 @@ float32[] input_trigger_time
     """
     try:
       _x = self
-      buff.write(_get_struct_2B().pack(_x.id, _x.trigger_time_id))
+      buff.write(_get_struct_2B().pack(_x.id, _x.trigger_time))
       length = len(self.input_trigger_time)
       buff.write(_struct_I.pack(length))
       pattern = '<%sf'%length
@@ -116,7 +116,7 @@ float32[] input_trigger_time
       _x = self
       start = end
       end += 2
-      (_x.id, _x.trigger_time_id,) = _get_struct_2B().unpack(str[start:end])
+      (_x.id, _x.trigger_time,) = _get_struct_2B().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])

@@ -27,7 +27,7 @@ module id_switch (
 			if(avalon_slave_read) begin
 				case(avalon_slave_address>>8)
 					//8'h00: returnvalue <= SW[31:0];
-					//8'h01: returnvalue <= rtc_trigger_data[31:0];
+					8'h01: returnvalue <= SW[3:0];
 					default: returnvalue <= 32'hDEADBEEF;
 				endcase
 				if(avalon_slave_waitFlag==1) begin // next clock cycle the returnvalue should be ready

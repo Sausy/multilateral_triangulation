@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/triangulation.dir/src/time_controll.cpp.o"
   "CMakeFiles/triangulation.dir/src/peripherals.cpp.o"
   "CMakeFiles/triangulation.dir/src/trap.cpp.o"
+  "CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o"
   "CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o"
   "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation.pdb"
   "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation"

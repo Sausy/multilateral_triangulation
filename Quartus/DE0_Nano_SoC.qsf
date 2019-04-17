@@ -1369,4 +1369,5 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RTC_TRIGGER
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RTC_TRIGGER2
 set_location_assignment PIN_AC22 -to RTC_TRIGGER
 set_global_assignment -name VERILOG_FILE ../Verilog/ptp_via_US.v
+set_global_assignment -name VERILOG_FILE ../Verilog/ID_Switch.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

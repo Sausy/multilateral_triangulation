@@ -12,6 +12,9 @@ uint32_t rtc_ctl::read_time(void) {
 uint32_t rtc_ctl::read_trigger_time(void) {
     return (IORD(rtc_base, (uint32_t)(0x01<<8|0)));
 }
+bool rtc_ctl::rdy_to_read(void) {
+    return (bool)(IORD(rtc_base, (uint32_t)(0x03<<8|0)));
+}
 
 void rtc_ctl::set_time(uint32_t time_data) {
     IOWR(rtc_base, (uint32_t)(0x00<<8|0), time_data);

@@ -19,6 +19,7 @@ add_message_files(
 		mode_msg.msg
     time_msg.msg
     time_sync_msg.msg
+    system_ctl.msg
 )
 
 #add_service_files(

@@ -169,7 +169,8 @@ architecture rtl of DE0_Nano_SoC_top_level is
       ptp_piezo_interface0_piezo_interface_in          : in    std_logic                     := 'X';             -- us_interface_in
 		rtc_0_conduit_end_event_trigger               : in    std_logic                     := 'L';             -- event_trigger
 		rtc_0_conduit_end_event_trigger2              : in    std_logic                     := 'X';              -- event_trigger2
-		rtc_0_conduit_end_piezo_enable                : out   std_logic                                         -- piezo_enable
+		rtc_0_conduit_end_piezo_enable                : out   std_logic ;                                        -- piezo_enable
+		 id_switch0_sw                                 : in    std_logic_vector(3 downto 0)  := (others => 'X')  -- sw
     );
   end component soc_system;
 
@@ -278,7 +279,8 @@ begin
 	 ptp_piezo_interface0_piezo_interface_in          		=> RTC_TRIGGER,          --                              .us_interface_in
 	 rtc_0_conduit_end_event_trigger  							=> RTC_TRIGGER, -- realtime_clock_controll_0_conduit_end.event_trigger
 	 rtc_0_conduit_end_event_trigger2              		=> RTC_TRIGGER2,      -- event_trigger2
-	 rtc_0_conduit_end_piezo_enable                		=> piezo_enable_rtc     --.piezo_enable
+	 rtc_0_conduit_end_piezo_enable                		=> piezo_enable_rtc,     --.piezo_enable
+	 id_switch0_sw (3 downto 0)                               => SW                                  --                    id_switch0.sw
   );
 
   ENABLE  <= piezo_enable_ctl or piezo_enable_rtc or ptp_piezo_enable;

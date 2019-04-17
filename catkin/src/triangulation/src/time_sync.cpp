@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-time_sync::time_sync(int32_t *base_addr_){
+time_sync::time_sync(int32_t *base_addr_, fpga_mode *modef_){
   rtc_base=base_addr_;
 
   if (!ros::isInitialized()) {
@@ -12,14 +12,15 @@ time_sync::time_sync(int32_t *base_addr_){
   }
   nh = ros::NodeHandlePtr(new ros::NodeHandle);
 
-  //TODO: ADD VARIABLE FOR MULTIBLE BOARDS
-  module_mode_sub = nh->subscribe("/triangulation/ID/mode", 1, &time_sync::get_current_mode, this);
-  time_pub        = nh->advertise<triangulation_msg::time_sync_msg>("/triangulation/ID/sync_time", 1);
+  //TODO: set init mode via
+  module_mode_sub = nh->subscribe("/triangulation/" + std::to_string(modef_->id) + "/mode", 1, &time_sync::get_mode, this);
+  time_pub        = nh->advertise<triangulation_msg::time_sync_msg>("/triangulation/" + std::to_string(modef_->id) + "/time_data", 1);
 
 }
 
-void time_sync::get_current_mode(const triangulation_msg::mode_msg::ConstPtr& msg){
+void time_sync::get_mode(const triangulation_msg::mode_msg::ConstPtr& msg){
     ROS_INFO("current mode: %d", msg->mode);
+    ROS_INFO("sync enable: %d", msg->sync_enable);
 }
 
 void time_sync::update_time(Time *time_data){
