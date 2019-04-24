@@ -10,7 +10,7 @@ module id_switch (
 		output signed  [31:0] 	avalon_slave_readdata,
 		output 										avalon_slave_waitrequest,
 		
-		input	[3:0]	SW 
+		input	[3:0]	sw 
 );
 // the following iterface handles read requests via lightweight axi bridge
 	// the upper 8 bit of the read address define which value we want to read
@@ -26,8 +26,8 @@ module id_switch (
 			avalon_slave_waitFlag <= 1;
 			if(avalon_slave_read) begin
 				case(avalon_slave_address>>8)
-					//8'h00: returnvalue <= SW[31:0];
-					//8'h01: returnvalue <= rtc_trigger_data[31:0];
+					8'h00: returnvalue <= sw[3:0];
+					8'h01: returnvalue <= 32'd2; //DELETE DEBUG STUFF
 					default: returnvalue <= 32'hDEADBEEF;
 				endcase
 				if(avalon_slave_waitFlag==1) begin // next clock cycle the returnvalue should be ready

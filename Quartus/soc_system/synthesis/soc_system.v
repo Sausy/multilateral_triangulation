@@ -311,7 +311,7 @@ module soc_system (
 		.avalon_slave_read        (mm_interconnect_0_id_switch_0_avalon_slave_read),        //             .read
 		.avalon_slave_readdata    (mm_interconnect_0_id_switch_0_avalon_slave_readdata),    //             .readdata
 		.avalon_slave_waitrequest (mm_interconnect_0_id_switch_0_avalon_slave_waitrequest), //             .waitrequest
-		.SW                       (id_switch0_sw),                                          //  conduit_end.sw
+		.sw                       (id_switch0_sw),                                          //  conduit_end.sw
 		.clock                    (clk_clk)                                                 //        clock.clk
 	);
 

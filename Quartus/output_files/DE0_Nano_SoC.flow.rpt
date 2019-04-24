@@ -1,5 +1,5 @@
 Flow report for DE0_Nano_SoC
-Tue Apr 16 20:58:56 2019
+Wed Apr 17 11:44:13 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Apr 16 20:58:56 2019       ;
+; Flow Status                     ; Successful - Wed Apr 17 11:44:13 2019       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; DE0_Nano_SoC                                ;
 ; Top-level Entity Name           ; DE0_Nano_SoC_top_level                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA4U23C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 6,335 / 15,880 ( 40 % )                     ;
-; Total registers                 ; 7359                                        ;
+; Logic utilization (in ALMs)     ; 6,405 / 15,880 ( 40 % )                     ;
+; Total registers                 ; 7461                                        ;
 ; Total pins                      ; 196 / 314 ( 62 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 2,764,800 ( 0 % )                       ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/16/2019 20:53:25 ;
+; Start date & time ; 04/17/2019 11:38:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE0_Nano_SoC        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------+--------------------------------------------------------------------------+--------------------------------------+--------------------------------+----------------+
 ; Assignment Name                       ; Value                                                                    ; Default Value                        ; Entity Name                    ; Section Id     ;
 +---------------------------------------+--------------------------------------------------------------------------+--------------------------------------+--------------------------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 84440842494223.155544080216407                                           ; --                                   ; --                             ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 84440842494223.155549391828841                                           ; --                                   ; --                             ; --             ;
 ; ECO_REGENERATE_REPORT                 ; On                                                                       ; Off                                  ; --                             ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT                ; Vhdl                                                                     ; --                                   ; --                             ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                   ; ModelSim-Altera (VHDL)                                                   ; <None>                               ; --                             ; --             ;
@@ -129,7 +129,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY              ; output_files                                                             ; --                                   ; --                             ; --             ;
 ; SLD_FILE                              ; soc_system/synthesis/soc_system.regmap                                   ; --                                   ; --                             ; --             ;
 ; SLD_FILE                              ; soc_system/synthesis/soc_system.debuginfo                                ; --                                   ; --                             ; --             ;
-; SLD_INFO                              ; QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1555425093             ; --                                   ; soc_system                     ; --             ;
+; SLD_INFO                              ; QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1555492715             ; --                                   ; soc_system                     ; --             ;
 ; SOPCINFO_FILE                         ; soc_system/synthesis/../../soc_system.sopcinfo                           ; --                                   ; --                             ; --             ;
 ; SYNTHESIS_ONLY_QIP                    ; On                                                                       ; --                                   ; --                             ; --             ;
 ; TOP_LEVEL_ENTITY                      ; DE0_Nano_SoC_top_level                                                   ; DE0_Nano_SoC                         ; --                             ; --             ;
@@ -142,10 +142,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:37     ; 1.8                     ; 1415 MB             ; 00:01:14                           ;
-; Fitter               ; 00:01:46     ; 1.3                     ; 3073 MB             ; 00:03:23                           ;
-; Assembler            ; 00:00:09     ; 1.0                     ; 1078 MB             ; 00:00:09                           ;
-; Total                ; 00:02:32     ; --                      ; --                  ; 00:04:46                           ;
+; Analysis & Synthesis ; 00:00:37     ; 1.9                     ; 1399 MB             ; 00:01:13                           ;
+; Fitter               ; 00:01:47     ; 1.3                     ; 3074 MB             ; 00:03:24                           ;
+; Assembler            ; 00:00:09     ; 1.0                     ; 1084 MB             ; 00:00:09                           ;
+; Total                ; 00:02:33     ; --                      ; --                  ; 00:04:46                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

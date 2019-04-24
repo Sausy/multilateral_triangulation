@@ -64,6 +64,7 @@ module rtc (
 					8'h00: returnvalue <= time_cnt[31:0];
 					8'h01: returnvalue <= rtc_trigger_data[31:0];
 					8'h02: returnvalue <= US_output_time[31:0];
+					8'h03: returnvalue <= waitflag_status;
 					//8'h04: returnvalue <= waitflag_status;
 					default: returnvalue <= 32'hDEADBEEF;
 				endcase

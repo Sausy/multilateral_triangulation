@@ -32,8 +32,6 @@ int main(int argc, char *argv[]) {
   uint32_t in_time, trave_time;
   double distance;
   Time time_data = {0,0,0};
-  void (fpga_mode::*start_conversation) () = modef.fpga_mode::start_conversation;
-  void (fpga_mode::*conversation) () =  modef.fpga_mode::conversation;
 
   addr_base addr_base;
   piezo_ctl piezo_ctl(addr_base.virtual_base);
@@ -41,6 +39,9 @@ int main(int argc, char *argv[]) {
 
   fpga_mode modef(addr_base.sw_base, &rtc_ctl);
   //time_sync ptp(addr_base.ptp_base, modef);
+
+  //void (fpga_mode::*start_conversation) () = modef.fpga_mode::start_conversation;
+  //void (fpga_mode::*conversation) () =  modef.fpga_mode::conversation;
 
   //init ros
   if (!ros::isInitialized()){
@@ -55,15 +56,14 @@ int main(int argc, char *argv[]) {
   piezo_ctl.stop_piezo_out();
 
   //TODO add PTP time sync
-  printf("set rtc to ini\n\n");
   time_data.sys_time = 100;
+  printf("set rtc to ini\n\n");
   rtc_ctl.set_time(time_data.sys_time);
   //time_sync.update_time(&time_data);
 
-  printf("start loop\n\n");
   while (1) {
-    (modef.*start_conversation)();
-    (modef.*conversation)();
+    modef.start_conversation();
+    modef.conversation();
 
     /*distance = calc_distance(rtc_ctl.US_start_time,in_time);
 
