@@ -14,7 +14,7 @@ time_sync::time_sync(int32_t *base_addr_, uint8_t id){
 
   //TODO: set init mode via
   //module_mode_sub = nh->subscribe("/triangulation/" + std::to_string(modef_->id) + "/mode", 1, &time_sync::get_mode, this);
-  time_pub        = nh->advertise<triangulation_msg::time_sync_msg>("/triangulation/" + std::to_string(id) + "/time_data", 1);
+  time_pub        = nh->advertise<triangulation_msg::time_sync_msg>("/triangulation/" + std::to_string(id) + "/time_sync_data", 1);
 
 }
 

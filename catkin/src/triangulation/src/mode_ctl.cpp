@@ -1,6 +1,5 @@
 #include <mode_ctl.hpp>
 #include <string>
-
 /*
 TODO:
 Testzwecke master ctl via ROS
@@ -58,10 +57,12 @@ fpga_mode::fpga_mode(int32_t *base_addr_,rtc_ctl *pctl_){
 //==============================
 void fpga_mode::start_conversation(){
   if(mode_pub != mode){
-    if(mode == MODE_MASTER)
+      mode = mode_pub;
+    if(mode == MODE_MASTER){
       fp_start_conv = &fpga_mode::master_init;  //default &fpga_mode::slave_init
-    else
+    } else {
       fp_start_conv = &fpga_mode::slave_init;  //default &fpga_mode::slave_init
+    }
 
     ((*this).*(fp_start_conv))();
   }
@@ -75,6 +76,7 @@ void fpga_mode::conversation(){
 //==============================
 void fpga_mode::master_init(){
   std::cout << "\n MASTER Init";
+
   fp_conv = &fpga_mode::master_conv;
   //for(uint8_t id_cnt = 0; id_cnt < MAX_CLIENTS; id_cnt++)
  //    system_sub[id_cnt] = nh->subscribe("/triangulation/" + std::to_string(id_cnt) + "/trigger_time", 1, &fpga_mode::get_slav_time, this);
@@ -94,18 +96,22 @@ void fpga_mode::slave_init(){
 //conversation routin
 //==============================
 void fpga_mode::master_conv(){
-  std::cout << "\nstart master conversation: ";
+  cout << "\nstart master conversation: ";
 
   //enable slave
   system_ctl_msg_pub.enable_slave_input=true;
+  master_pub.publish(system_ctl_msg_pub);
   //TODO: wait for response over ROS;
   //...
   pctl->start_US_out();
 
-  push_vec(system_ctl_msg_pub.trigger_time, pctl->US_start_time);
-  system_pub.publish(system_ctl_msg_pub);
+  push_vec(time_msg_pub.trigger_time, pctl->US_start_time);
+  push_vec(time_msg_pub.master_identifier, id); //master id
 
-  usleep(10000);
+  system_pub.publish(time_msg_pub);
+
+
+  usleep(10000);//Todo optimze this line
   pctl->stop_US_out();
 }
 
@@ -122,6 +128,8 @@ void fpga_mode::slave_conv(){
       break;
 
   push_vec(time_msg_pub.trigger_time, pctl->read_trigger_time());
+  push_vec(time_msg_pub.master_identifier, current_master_id); //master id
+
   system_pub.publish(time_msg_pub);
 }
 
