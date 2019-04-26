@@ -11,6 +11,13 @@
 
 using namespace std;
 
+#ifndef IORD
+  #define IORD(base, reg) (*(((volatile int32_t*)base)+reg))
+#endif
+#ifndef IOWR
+  #define IOWR(base, reg, data) (*(((volatile int32_t*)base)+reg)=data)
+#endif
+
 struct time {
     double    sync_time_div;
     double    sys_time;
@@ -22,12 +29,12 @@ typedef struct time Time;
 class time_sync
 {
   public:
-    time_sync(int32_t *base_addr_ = nullptr,fpga_mode *modef_ = nullptr);
+    time_sync(int32_t *base_addr_ = nullptr, uint8_t id = 0);
 
     uint32_t start_time_sync(bool is_master_mode_);
     uint32_t read_sync_data(bool is_master_mode_);
 
-    struct time time_data = {0,0,0};
+    Time time_data = {0,0,0};
 
     ros::NodeHandlePtr  nh;
     ros::Subscriber     time_ctl_sub,  sync_enable;

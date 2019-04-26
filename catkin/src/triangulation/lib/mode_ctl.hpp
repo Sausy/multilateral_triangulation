@@ -10,6 +10,7 @@
 #include <triangulation_msg/system_ctl.h>
 #include <triangulation_msg/time_msg.h>
 #include <triangulation_msg/time_sync_msg.h>
+#include <triangulation_msg/master_list.h>
 
 using namespace std;
 
@@ -31,13 +32,14 @@ using namespace std;
 class fpga_mode{
   public:
     fpga_mode(int32_t *base_addr_ = nullptr,rtc_ctl *pctl_ = nullptr);
+    uint8_t   current_master_id = 0;
     uint8_t   id, master_id;
     uint8_t   mode;
     bool      sync_mode, sync_enable;
 
     ros::NodeHandlePtr  nh;
-    ros::Subscriber     system_sub[MAX_CLIENTS + 1], module_mode_sub;
-    ros::Publisher      system_pub;
+    ros::Subscriber     system_sub;//module_mode_sub; //system_sub[MAX_CLIENTS + 1]
+    ros::Publisher      system_pub, master_pub;
 
     void start_conversation();
     void conversation();
@@ -62,9 +64,10 @@ class fpga_mode{
     //subs
     void get_slav_time(const triangulation_msg::time_msg::ConstPtr& msg);
     void get_syst_ctl(const triangulation_msg::system_ctl::ConstPtr& msg);
-    void get_mode(const triangulation_msg::mode_msg::ConstPtr& msg);
+    //void get_mode(const triangulation_msg::mode_msg::ConstPtr& msg);
 
     //ring bufferd vector push
     void push_vec(vector<float>& vec, float data);
+    void push_vec(vector<uint32_t>& vec, uint32_t data);
 };
 #endif

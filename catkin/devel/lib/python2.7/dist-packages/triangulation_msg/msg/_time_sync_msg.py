@@ -7,16 +7,16 @@ import struct
 
 
 class time_sync_msg(genpy.Message):
-  _md5sum = "8fc40ceccbea84cbac12bd27ca06f4f3"
+  _md5sum = "963dc06e81680d3ee0cea4e612516646"
   _type = "triangulation_msg/time_sync_msg"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """uint8 id
 float32[] sync_time_div
-float32[] time_div
+uint32[] cycle_cnt
 float32[] sys_time
 """
-  __slots__ = ['id','sync_time_div','time_div','sys_time']
-  _slot_types = ['uint8','float32[]','float32[]','float32[]']
+  __slots__ = ['id','sync_time_div','cycle_cnt','sys_time']
+  _slot_types = ['uint8','float32[]','uint32[]','float32[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -26,7 +26,7 @@ float32[] sys_time
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       id,sync_time_div,time_div,sys_time
+       id,sync_time_div,cycle_cnt,sys_time
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -39,14 +39,14 @@ float32[] sys_time
         self.id = 0
       if self.sync_time_div is None:
         self.sync_time_div = []
-      if self.time_div is None:
-        self.time_div = []
+      if self.cycle_cnt is None:
+        self.cycle_cnt = []
       if self.sys_time is None:
         self.sys_time = []
     else:
       self.id = 0
       self.sync_time_div = []
-      self.time_div = []
+      self.cycle_cnt = []
       self.sys_time = []
 
   def _get_types(self):
@@ -66,10 +66,10 @@ float32[] sys_time
       buff.write(_struct_I.pack(length))
       pattern = '<%sf'%length
       buff.write(struct.pack(pattern, *self.sync_time_div))
-      length = len(self.time_div)
+      length = len(self.cycle_cnt)
       buff.write(_struct_I.pack(length))
-      pattern = '<%sf'%length
-      buff.write(struct.pack(pattern, *self.time_div))
+      pattern = '<%sI'%length
+      buff.write(struct.pack(pattern, *self.cycle_cnt))
       length = len(self.sys_time)
       buff.write(_struct_I.pack(length))
       pattern = '<%sf'%length
@@ -97,10 +97,10 @@ float32[] sys_time
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%sf'%length
+      pattern = '<%sI'%length
       start = end
       end += struct.calcsize(pattern)
-      self.time_div = struct.unpack(pattern, str[start:end])
+      self.cycle_cnt = struct.unpack(pattern, str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -125,10 +125,10 @@ float32[] sys_time
       buff.write(_struct_I.pack(length))
       pattern = '<%sf'%length
       buff.write(self.sync_time_div.tostring())
-      length = len(self.time_div)
+      length = len(self.cycle_cnt)
       buff.write(_struct_I.pack(length))
-      pattern = '<%sf'%length
-      buff.write(self.time_div.tostring())
+      pattern = '<%sI'%length
+      buff.write(self.cycle_cnt.tostring())
       length = len(self.sys_time)
       buff.write(_struct_I.pack(length))
       pattern = '<%sf'%length
@@ -157,10 +157,10 @@ float32[] sys_time
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%sf'%length
+      pattern = '<%sI'%length
       start = end
       end += struct.calcsize(pattern)
-      self.time_div = numpy.frombuffer(str[start:end], dtype=numpy.float32, count=length)
+      self.cycle_cnt = numpy.frombuffer(str[start:end], dtype=numpy.uint32, count=length)
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])

@@ -20,7 +20,7 @@ class time_sync_msg {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.id = null;
       this.sync_time_div = null;
-      this.time_div = null;
+      this.cycle_cnt = null;
       this.sys_time = null;
     }
     else {
@@ -36,11 +36,11 @@ class time_sync_msg {
       else {
         this.sync_time_div = [];
       }
-      if (initObj.hasOwnProperty('time_div')) {
-        this.time_div = initObj.time_div
+      if (initObj.hasOwnProperty('cycle_cnt')) {
+        this.cycle_cnt = initObj.cycle_cnt
       }
       else {
-        this.time_div = [];
+        this.cycle_cnt = [];
       }
       if (initObj.hasOwnProperty('sys_time')) {
         this.sys_time = initObj.sys_time
@@ -57,8 +57,8 @@ class time_sync_msg {
     bufferOffset = _serializer.uint8(obj.id, buffer, bufferOffset);
     // Serialize message field [sync_time_div]
     bufferOffset = _arraySerializer.float32(obj.sync_time_div, buffer, bufferOffset, null);
-    // Serialize message field [time_div]
-    bufferOffset = _arraySerializer.float32(obj.time_div, buffer, bufferOffset, null);
+    // Serialize message field [cycle_cnt]
+    bufferOffset = _arraySerializer.uint32(obj.cycle_cnt, buffer, bufferOffset, null);
     // Serialize message field [sys_time]
     bufferOffset = _arraySerializer.float32(obj.sys_time, buffer, bufferOffset, null);
     return bufferOffset;
@@ -72,8 +72,8 @@ class time_sync_msg {
     data.id = _deserializer.uint8(buffer, bufferOffset);
     // Deserialize message field [sync_time_div]
     data.sync_time_div = _arrayDeserializer.float32(buffer, bufferOffset, null)
-    // Deserialize message field [time_div]
-    data.time_div = _arrayDeserializer.float32(buffer, bufferOffset, null)
+    // Deserialize message field [cycle_cnt]
+    data.cycle_cnt = _arrayDeserializer.uint32(buffer, bufferOffset, null)
     // Deserialize message field [sys_time]
     data.sys_time = _arrayDeserializer.float32(buffer, bufferOffset, null)
     return data;
@@ -82,7 +82,7 @@ class time_sync_msg {
   static getMessageSize(object) {
     let length = 0;
     length += 4 * object.sync_time_div.length;
-    length += 4 * object.time_div.length;
+    length += 4 * object.cycle_cnt.length;
     length += 4 * object.sys_time.length;
     return length + 13;
   }
@@ -94,7 +94,7 @@ class time_sync_msg {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '8fc40ceccbea84cbac12bd27ca06f4f3';
+    return '963dc06e81680d3ee0cea4e612516646';
   }
 
   static messageDefinition() {
@@ -102,7 +102,7 @@ class time_sync_msg {
     return `
     uint8 id
     float32[] sync_time_div
-    float32[] time_div
+    uint32[] cycle_cnt
     float32[] sys_time
     
     `;
@@ -128,11 +128,11 @@ class time_sync_msg {
       resolved.sync_time_div = []
     }
 
-    if (msg.time_div !== undefined) {
-      resolved.time_div = msg.time_div;
+    if (msg.cycle_cnt !== undefined) {
+      resolved.cycle_cnt = msg.cycle_cnt;
     }
     else {
-      resolved.time_div = []
+      resolved.cycle_cnt = []
     }
 
     if (msg.sys_time !== undefined) {

@@ -3,6 +3,6 @@
           ID
           TRIGGER_TIME-VAL
           TRIGGER_TIME
-          INPUT_TRIGGER_TIME-VAL
-          INPUT_TRIGGER_TIME
+          MASTER_IDENTIFIER-VAL
+          MASTER_IDENTIFIER
 ))

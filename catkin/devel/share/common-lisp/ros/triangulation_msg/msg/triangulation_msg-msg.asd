@@ -4,6 +4,8 @@
 (defsystem "triangulation_msg-msg"
   :depends-on (:roslisp-msg-protocol :roslisp-utils )
   :components ((:file "_package")
+    (:file "master_list" :depends-on ("_package_master_list"))
+    (:file "_package_master_list" :depends-on ("_package"))
     (:file "mode_msg" :depends-on ("_package_mode_msg"))
     (:file "_package_mode_msg" :depends-on ("_package"))
     (:file "system_ctl" :depends-on ("_package_system_ctl"))

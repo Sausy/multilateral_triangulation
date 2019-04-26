@@ -36,8 +36,8 @@ void time_sync::update_time(bool is_master_mode_){
 
 
 uint32_t time_sync::start_time_sync(bool is_master_mode_){
-  set_sync_mode();
-  IOWR(rtc_base, (uint32_t)(0x00<<8|0), 0);
+  set_sync_mode(is_master_mode_);
+  IOWR(time_sync_base, (uint32_t)(0x00<<8|0), 0);
 
   //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   //!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -53,7 +53,7 @@ uint32_t time_sync::read_sync_data(bool is_master_mode_){
 }
 void time_sync::set_sync_mode(bool is_master_mode_){
   if(is_master_mode_)
-    IOWR(rtc_base, (uint32_t)(0x00<<8|0), 1);
+    IOWR(time_sync_base, (uint32_t)(0x00<<8|0), 1);
   else
-    IOWR(rtc_base, (uint32_t)(0x00<<8|0), 0);
+    IOWR(time_sync_base, (uint32_t)(0x00<<8|0), 0);
 }

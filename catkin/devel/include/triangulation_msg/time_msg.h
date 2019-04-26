@@ -25,13 +25,13 @@ struct time_msg_
 
   time_msg_()
     : id(0)
-    , trigger_time(0)
-    , input_trigger_time()  {
+    , trigger_time()
+    , master_identifier()  {
     }
   time_msg_(const ContainerAllocator& _alloc)
     : id(0)
-    , trigger_time(0)
-    , input_trigger_time(_alloc)  {
+    , trigger_time(_alloc)
+    , master_identifier(_alloc)  {
   (void)_alloc;
     }
 
@@ -40,11 +40,11 @@ struct time_msg_
    typedef uint8_t _id_type;
   _id_type id;
 
-   typedef uint8_t _trigger_time_type;
+   typedef std::vector<float, typename ContainerAllocator::template rebind<float>::other >  _trigger_time_type;
   _trigger_time_type trigger_time;
 
-   typedef std::vector<float, typename ContainerAllocator::template rebind<float>::other >  _input_trigger_time_type;
-  _input_trigger_time_type input_trigger_time;
+   typedef std::vector<uint32_t, typename ContainerAllocator::template rebind<uint32_t>::other >  _master_identifier_type;
+  _master_identifier_type master_identifier;
 
 
 
@@ -81,7 +81,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'triangulation_msg': ['/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
+// {'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'triangulation_msg': ['/home/sausy/Projects/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
@@ -124,12 +124,12 @@ struct MD5Sum< ::triangulation_msg::time_msg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "f3440e0816b525b8e8331d56821e5953";
+    return "0cd6fad2df199d47f2910a60b352e54d";
   }
 
   static const char* value(const ::triangulation_msg::time_msg_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xf3440e0816b525b8ULL;
-  static const uint64_t static_value2 = 0xe8331d56821e5953ULL;
+  static const uint64_t static_value1 = 0x0cd6fad2df199d47ULL;
+  static const uint64_t static_value2 = 0xf2910a60b352e54dULL;
 };
 
 template<class ContainerAllocator>
@@ -148,10 +148,10 @@ struct Definition< ::triangulation_msg::time_msg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "uint8 id\n\
-uint8 trigger_time\n\
-float32[] input_trigger_time\n\
-";
+    return "uint8 id\n"
+"float32[] trigger_time\n"
+"uint32[] master_identifier\n"
+;
   }
 
   static const char* value(const ::triangulation_msg::time_msg_<ContainerAllocator>&) { return value(); }
@@ -171,7 +171,7 @@ namespace serialization
     {
       stream.next(m.id);
       stream.next(m.trigger_time);
-      stream.next(m.input_trigger_time);
+      stream.next(m.master_identifier);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -192,13 +192,17 @@ struct Printer< ::triangulation_msg::time_msg_<ContainerAllocator> >
   {
     s << indent << "id: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.id);
-    s << indent << "trigger_time: ";
-    Printer<uint8_t>::stream(s, indent + "  ", v.trigger_time);
-    s << indent << "input_trigger_time[]" << std::endl;
-    for (size_t i = 0; i < v.input_trigger_time.size(); ++i)
+    s << indent << "trigger_time[]" << std::endl;
+    for (size_t i = 0; i < v.trigger_time.size(); ++i)
     {
-      s << indent << "  input_trigger_time[" << i << "]: ";
-      Printer<float>::stream(s, indent + "  ", v.input_trigger_time[i]);
+      s << indent << "  trigger_time[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.trigger_time[i]);
+    }
+    s << indent << "master_identifier[]" << std::endl;
+    for (size_t i = 0; i < v.master_identifier.size(); ++i)
+    {
+      s << indent << "  master_identifier[" << i << "]: ";
+      Printer<uint32_t>::stream(s, indent + "  ", v.master_identifier[i]);
     }
   }
 };

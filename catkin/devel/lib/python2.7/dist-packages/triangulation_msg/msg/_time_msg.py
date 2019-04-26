@@ -7,15 +7,15 @@ import struct
 
 
 class time_msg(genpy.Message):
-  _md5sum = "f3440e0816b525b8e8331d56821e5953"
+  _md5sum = "0cd6fad2df199d47f2910a60b352e54d"
   _type = "triangulation_msg/time_msg"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """uint8 id
-uint8 trigger_time
-float32[] input_trigger_time
+float32[] trigger_time
+uint32[] master_identifier
 """
-  __slots__ = ['id','trigger_time','input_trigger_time']
-  _slot_types = ['uint8','uint8','float32[]']
+  __slots__ = ['id','trigger_time','master_identifier']
+  _slot_types = ['uint8','float32[]','uint32[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -25,7 +25,7 @@ float32[] input_trigger_time
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       id,trigger_time,input_trigger_time
+       id,trigger_time,master_identifier
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -37,13 +37,13 @@ float32[] input_trigger_time
       if self.id is None:
         self.id = 0
       if self.trigger_time is None:
-        self.trigger_time = 0
-      if self.input_trigger_time is None:
-        self.input_trigger_time = []
+        self.trigger_time = []
+      if self.master_identifier is None:
+        self.master_identifier = []
     else:
       self.id = 0
-      self.trigger_time = 0
-      self.input_trigger_time = []
+      self.trigger_time = []
+      self.master_identifier = []
 
   def _get_types(self):
     """
@@ -57,12 +57,15 @@ float32[] input_trigger_time
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self
-      buff.write(_get_struct_2B().pack(_x.id, _x.trigger_time))
-      length = len(self.input_trigger_time)
+      buff.write(_get_struct_B().pack(self.id))
+      length = len(self.trigger_time)
       buff.write(_struct_I.pack(length))
       pattern = '<%sf'%length
-      buff.write(struct.pack(pattern, *self.input_trigger_time))
+      buff.write(struct.pack(pattern, *self.trigger_time))
+      length = len(self.master_identifier)
+      buff.write(_struct_I.pack(length))
+      pattern = '<%sI'%length
+      buff.write(struct.pack(pattern, *self.master_identifier))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -73,17 +76,23 @@ float32[] input_trigger_time
     """
     try:
       end = 0
-      _x = self
       start = end
-      end += 2
-      (_x.id, _x.trigger_time,) = _get_struct_2B().unpack(str[start:end])
+      end += 1
+      (self.id,) = _get_struct_B().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
       pattern = '<%sf'%length
       start = end
       end += struct.calcsize(pattern)
-      self.input_trigger_time = struct.unpack(pattern, str[start:end])
+      self.trigger_time = struct.unpack(pattern, str[start:end])
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      pattern = '<%sI'%length
+      start = end
+      end += struct.calcsize(pattern)
+      self.master_identifier = struct.unpack(pattern, str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -96,12 +105,15 @@ float32[] input_trigger_time
     :param numpy: numpy python module
     """
     try:
-      _x = self
-      buff.write(_get_struct_2B().pack(_x.id, _x.trigger_time))
-      length = len(self.input_trigger_time)
+      buff.write(_get_struct_B().pack(self.id))
+      length = len(self.trigger_time)
       buff.write(_struct_I.pack(length))
       pattern = '<%sf'%length
-      buff.write(self.input_trigger_time.tostring())
+      buff.write(self.trigger_time.tostring())
+      length = len(self.master_identifier)
+      buff.write(_struct_I.pack(length))
+      pattern = '<%sI'%length
+      buff.write(self.master_identifier.tostring())
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -113,17 +125,23 @@ float32[] input_trigger_time
     """
     try:
       end = 0
-      _x = self
       start = end
-      end += 2
-      (_x.id, _x.trigger_time,) = _get_struct_2B().unpack(str[start:end])
+      end += 1
+      (self.id,) = _get_struct_B().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
       pattern = '<%sf'%length
       start = end
       end += struct.calcsize(pattern)
-      self.input_trigger_time = numpy.frombuffer(str[start:end], dtype=numpy.float32, count=length)
+      self.trigger_time = numpy.frombuffer(str[start:end], dtype=numpy.float32, count=length)
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      pattern = '<%sI'%length
+      start = end
+      end += struct.calcsize(pattern)
+      self.master_identifier = numpy.frombuffer(str[start:end], dtype=numpy.uint32, count=length)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -132,9 +150,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2B = None
-def _get_struct_2B():
-    global _struct_2B
-    if _struct_2B is None:
-        _struct_2B = struct.Struct("<2B")
-    return _struct_2B
+_struct_B = None
+def _get_struct_B():
+    global _struct_B
+    if _struct_B is None:
+        _struct_B = struct.Struct("<B")
+    return _struct_B

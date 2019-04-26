@@ -26,13 +26,13 @@ struct time_sync_msg_
   time_sync_msg_()
     : id(0)
     , sync_time_div()
-    , time_div()
+    , cycle_cnt()
     , sys_time()  {
     }
   time_sync_msg_(const ContainerAllocator& _alloc)
     : id(0)
     , sync_time_div(_alloc)
-    , time_div(_alloc)
+    , cycle_cnt(_alloc)
     , sys_time(_alloc)  {
   (void)_alloc;
     }
@@ -45,8 +45,8 @@ struct time_sync_msg_
    typedef std::vector<float, typename ContainerAllocator::template rebind<float>::other >  _sync_time_div_type;
   _sync_time_div_type sync_time_div;
 
-   typedef std::vector<float, typename ContainerAllocator::template rebind<float>::other >  _time_div_type;
-  _time_div_type time_div;
+   typedef std::vector<uint32_t, typename ContainerAllocator::template rebind<uint32_t>::other >  _cycle_cnt_type;
+  _cycle_cnt_type cycle_cnt;
 
    typedef std::vector<float, typename ContainerAllocator::template rebind<float>::other >  _sys_time_type;
   _sys_time_type sys_time;
@@ -86,7 +86,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'triangulation_msg': ['/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
+// {'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'triangulation_msg': ['/home/sausy/Projects/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
@@ -129,12 +129,12 @@ struct MD5Sum< ::triangulation_msg::time_sync_msg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "8fc40ceccbea84cbac12bd27ca06f4f3";
+    return "963dc06e81680d3ee0cea4e612516646";
   }
 
   static const char* value(const ::triangulation_msg::time_sync_msg_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x8fc40ceccbea84cbULL;
-  static const uint64_t static_value2 = 0xac12bd27ca06f4f3ULL;
+  static const uint64_t static_value1 = 0x963dc06e81680d3eULL;
+  static const uint64_t static_value2 = 0xe0cea4e612516646ULL;
 };
 
 template<class ContainerAllocator>
@@ -153,11 +153,11 @@ struct Definition< ::triangulation_msg::time_sync_msg_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "uint8 id\n\
-float32[] sync_time_div\n\
-float32[] time_div\n\
-float32[] sys_time\n\
-";
+    return "uint8 id\n"
+"float32[] sync_time_div\n"
+"uint32[] cycle_cnt\n"
+"float32[] sys_time\n"
+;
   }
 
   static const char* value(const ::triangulation_msg::time_sync_msg_<ContainerAllocator>&) { return value(); }
@@ -177,7 +177,7 @@ namespace serialization
     {
       stream.next(m.id);
       stream.next(m.sync_time_div);
-      stream.next(m.time_div);
+      stream.next(m.cycle_cnt);
       stream.next(m.sys_time);
     }
 
@@ -205,11 +205,11 @@ struct Printer< ::triangulation_msg::time_sync_msg_<ContainerAllocator> >
       s << indent << "  sync_time_div[" << i << "]: ";
       Printer<float>::stream(s, indent + "  ", v.sync_time_div[i]);
     }
-    s << indent << "time_div[]" << std::endl;
-    for (size_t i = 0; i < v.time_div.size(); ++i)
+    s << indent << "cycle_cnt[]" << std::endl;
+    for (size_t i = 0; i < v.cycle_cnt.size(); ++i)
     {
-      s << indent << "  time_div[" << i << "]: ";
-      Printer<float>::stream(s, indent + "  ", v.time_div[i]);
+      s << indent << "  cycle_cnt[" << i << "]: ";
+      Printer<uint32_t>::stream(s, indent + "  ", v.cycle_cnt[i]);
     }
     s << indent << "sys_time[]" << std::endl;
     for (size_t i = 0; i < v.sys_time.size(); ++i)

@@ -20,6 +20,7 @@ add_message_files(
     time_msg.msg
     time_sync_msg.msg
     system_ctl.msg
+    master_list.msg
 )
 
 #add_service_files(

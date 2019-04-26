@@ -20,7 +20,7 @@ class time_msg {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.id = null;
       this.trigger_time = null;
-      this.input_trigger_time = null;
+      this.master_identifier = null;
     }
     else {
       if (initObj.hasOwnProperty('id')) {
@@ -33,13 +33,13 @@ class time_msg {
         this.trigger_time = initObj.trigger_time
       }
       else {
-        this.trigger_time = 0;
+        this.trigger_time = [];
       }
-      if (initObj.hasOwnProperty('input_trigger_time')) {
-        this.input_trigger_time = initObj.input_trigger_time
+      if (initObj.hasOwnProperty('master_identifier')) {
+        this.master_identifier = initObj.master_identifier
       }
       else {
-        this.input_trigger_time = [];
+        this.master_identifier = [];
       }
     }
   }
@@ -49,9 +49,9 @@ class time_msg {
     // Serialize message field [id]
     bufferOffset = _serializer.uint8(obj.id, buffer, bufferOffset);
     // Serialize message field [trigger_time]
-    bufferOffset = _serializer.uint8(obj.trigger_time, buffer, bufferOffset);
-    // Serialize message field [input_trigger_time]
-    bufferOffset = _arraySerializer.float32(obj.input_trigger_time, buffer, bufferOffset, null);
+    bufferOffset = _arraySerializer.float32(obj.trigger_time, buffer, bufferOffset, null);
+    // Serialize message field [master_identifier]
+    bufferOffset = _arraySerializer.uint32(obj.master_identifier, buffer, bufferOffset, null);
     return bufferOffset;
   }
 
@@ -62,16 +62,17 @@ class time_msg {
     // Deserialize message field [id]
     data.id = _deserializer.uint8(buffer, bufferOffset);
     // Deserialize message field [trigger_time]
-    data.trigger_time = _deserializer.uint8(buffer, bufferOffset);
-    // Deserialize message field [input_trigger_time]
-    data.input_trigger_time = _arrayDeserializer.float32(buffer, bufferOffset, null)
+    data.trigger_time = _arrayDeserializer.float32(buffer, bufferOffset, null)
+    // Deserialize message field [master_identifier]
+    data.master_identifier = _arrayDeserializer.uint32(buffer, bufferOffset, null)
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
-    length += 4 * object.input_trigger_time.length;
-    return length + 6;
+    length += 4 * object.trigger_time.length;
+    length += 4 * object.master_identifier.length;
+    return length + 9;
   }
 
   static datatype() {
@@ -81,15 +82,15 @@ class time_msg {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'f3440e0816b525b8e8331d56821e5953';
+    return '0cd6fad2df199d47f2910a60b352e54d';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     uint8 id
-    uint8 trigger_time
-    float32[] input_trigger_time
+    float32[] trigger_time
+    uint32[] master_identifier
     
     `;
   }
@@ -111,14 +112,14 @@ class time_msg {
       resolved.trigger_time = msg.trigger_time;
     }
     else {
-      resolved.trigger_time = 0
+      resolved.trigger_time = []
     }
 
-    if (msg.input_trigger_time !== undefined) {
-      resolved.input_trigger_time = msg.input_trigger_time;
+    if (msg.master_identifier !== undefined) {
+      resolved.master_identifier = msg.master_identifier;
     }
     else {
-      resolved.input_trigger_time = []
+      resolved.master_identifier = []
     }
 
     return resolved;

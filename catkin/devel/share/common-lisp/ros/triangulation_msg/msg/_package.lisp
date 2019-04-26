@@ -1,6 +1,8 @@
 (cl:defpackage triangulation_msg-msg
   (:use )
   (:export
+   "<MASTER_LIST>"
+   "MASTER_LIST"
    "<MODE_MSG>"
    "MODE_MSG"
    "<SYSTEM_CTL>"

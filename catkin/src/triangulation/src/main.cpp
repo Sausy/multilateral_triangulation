@@ -5,6 +5,11 @@
 
  /*
 TODO List;
+Also der distance berechner wird nicht auf den fpgas laufen sondern auf dem raspberry
+D.H.>
+*) es wird eine Ros Msg gepublished die den aktuellen mode jeder id beinhaltet
+ und die reihenfolge welche id zum master wird. (die msg dafuer ist inst master_list)
+
 *)PTP time sync in quartus noch so erweitern
 das die system clock cnt syncronisiert wird
 
@@ -15,6 +20,9 @@ das die system clock cnt syncronisiert wird
  *) Ueberpruefen ob der hdl code von ptp passt, denn bei der simulation
  gab es unterschiede zwischen master und slave sync um 2 cyclen
 
+
+ *) start_US_out sollte ohne stop_US_out funktionieren d.h.: hdl code abaendern
+    das max 4Takte das Signal uebertragen werden
 
 
  Ueberarbeitung des ablauf schematas
@@ -80,10 +88,9 @@ int main(int argc, char *argv[]) {
   piezo_ctl.stop_piezo_out();
 
   //init time should be given via ntp ...
-  time_sync.time_data.sys_time = 100;
+  ptp.time_data.sys_time = 100;
   printf("set rtc to ini\n\n");
-  rtc_ctl.set_time(time_sync.time_data.sys_time);
-  //time_sync.update_time(&time_data);
+  rtc_ctl.set_time(ptp.time_data.sys_time);
 
   while (1) {
     cout << "\n\n=====================================";
@@ -95,11 +102,11 @@ int main(int argc, char *argv[]) {
 
     //ros tells the master to ptp sync
     if(modef.sync_enable){
-      time_sync.update_time(modef.id == MASTER);
+      ptp.update_time(modef.id == MASTER);
     }
-    cout << "\nCurrentSysTime: " << time_sync.time_data.sys_time;
-    cout << "\nCurrentClkCycleCntTime: " << time_sync.time_data.cycle_cnt;
-    cout << "\nCurrentSyncDivTime: " << time_sync.time_data.sync_time_div;
+    cout << "\nCurrentSysTime: " << ptp.time_data.sys_time;
+    cout << "\nCurrentClkCycleCntTime: " << ptp.time_data.cycle_cnt;
+    cout << "\nCurrentSyncDivTime: " << ptp.time_data.sync_time_div;
     /*distance = calc_distance(rtc_ctl.US_start_time,in_time);
 
     printf("\ncurrent distance is %lf", distance);

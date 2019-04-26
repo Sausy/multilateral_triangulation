@@ -24,7 +24,31 @@ fpga_mode::fpga_mode(int32_t *base_addr_,rtc_ctl *pctl_){
   }
   nh = ros::NodeHandlePtr(new ros::NodeHandle);
 
-  module_mode_sub = nh->subscribe("/triangulation/" + std::to_string(modef_->id) + "/mode", 1, &fpga_mode::get_mode, this);
+  /////------ROS ---PUBS ////
+  system_pub  = nh->advertise<triangulation_msg::time_msg>("/triangulation/" + std::to_string(id) + "/time_data", 1);
+  master_pub  = nh->advertise<triangulation_msg::system_ctl>("/triangulation/" + std::to_string(id) + "/ctl", 1);
+
+  time_msg_pub.id=id;
+  push_vec(time_msg_pub.trigger_time, 0);
+  push_vec(time_msg_pub.master_identifier, current_master_id); //master id
+
+  system_ctl_msg_pub.master_id=id;
+  system_ctl_msg_pub.enable_slave_input=false;
+  push_vec(system_ctl_msg_pub.trigger_time, 0);
+
+
+  system_pub.publish(time_msg_pub);
+  master_pub.publish(system_ctl_msg_pub);
+
+  /////------ROS ---SUBS ////
+  //Todo it is useless if system is current master
+  system_sub = nh->subscribe("/triangulation/" + std::to_string(current_master_id) + "/ctl", 1, &fpga_mode::get_syst_ctl, this);
+
+  //TODO :: system sub soll sich die master liste von master_list.msg ziehen
+  //system_sub = nh->subscribe("/triangulation/" + std::to_string(id) + "/mode", 1, &fpga_mode::get_mode, this);
+
+  //TODO sync_enable must be a sub that is controlled by the raspberrypi master
+  sync_enable=false;
 
   pctl->stop_US_out();
 }
@@ -52,32 +76,18 @@ void fpga_mode::conversation(){
 void fpga_mode::master_init(){
   std::cout << "\n MASTER Init";
   fp_conv = &fpga_mode::master_conv;
+  //for(uint8_t id_cnt = 0; id_cnt < MAX_CLIENTS; id_cnt++)
+ //    system_sub[id_cnt] = nh->subscribe("/triangulation/" + std::to_string(id_cnt) + "/trigger_time", 1, &fpga_mode::get_slav_time, this);
 
-  system_ctl_msg_pub.master_id=id;
-  system_ctl_msg_pub.enable_slave_input=false;
-  push_vec(system_ctl_msg_pub.trigger_time, 20);
-
-  system_pub  = nh->advertise<triangulation_msg::system_ctl>("/triangulation/all/ctl", 1);
-
-  for(uint8_t id_cnt = 0; id_cnt < MAX_CLIENTS; id_cnt++)
-    system_sub[id_cnt] = nh->subscribe("/triangulation/" + std::to_string(id_cnt) + "/trigger_time", 1, &fpga_mode::get_slav_time, this);
-
-  system_pub.publish(system_ctl_msg_pub);
+  //system_pub.publish(system_ctl_msg_pub);
 }
 
 void fpga_mode::slave_init(){
   std::cout << "\nSLAVE Init";
   fp_conv = &fpga_mode::slave_conv;
-
-  time_msg_pub.id=id;
-  time_msg_pub.trigger_time=0;
-  push_vec(time_msg_pub.input_trigger_time, 123);
-
-  system_pub  = nh->advertise<triangulation_msg::time_msg>("/triangulation/" + std::to_string(id) + "/time_data", 1);
-
-  system_sub[MAX_CLIENTS] = nh->subscribe("/triangulation/all/ctl", 1, &fpga_mode::get_syst_ctl, this); //Todo add sub function
-
-  system_pub.publish(time_msg_pub);
+  //system_pub  = nh->advertise<triangulation_msg::time_msg>("/triangulation/" + std::to_string(id) + "/time_data", 1);
+  //system_sub[MAX_CLIENTS] = nh->subscribe("/triangulation/all/ctl", 1, &fpga_mode::get_syst_ctl, this); //Todo add sub function
+  //system_pub.publish(time_msg_pub);
 }
 
 //==============================
@@ -94,6 +104,9 @@ void fpga_mode::master_conv(){
 
   push_vec(system_ctl_msg_pub.trigger_time, pctl->US_start_time);
   system_pub.publish(system_ctl_msg_pub);
+
+  usleep(10000);
+  pctl->stop_US_out();
 }
 
 //-------------------------------
@@ -103,12 +116,12 @@ void fpga_mode::slave_conv(){
   //TODO: wait till slave allow;
   //....
 
-  pctl->allow_input_trigger();
+  pctl->allow_input_trigger(); //TODO ... do it via ros
   for(;;)
     if(pctl->rdy_to_read())
       break;
 
-  push_vec(time_msg_pub.input_trigger_time, pctl->read_trigger_time());
+  push_vec(time_msg_pub.trigger_time, pctl->read_trigger_time());
   system_pub.publish(time_msg_pub);
 }
 
@@ -116,13 +129,17 @@ void fpga_mode::slave_conv(){
 //==============================
 //common routin for ros
 //==============================
-void fpga_mode::get_mode(const triangulation_msg::mode_msg::ConstPtr& msg){
+/*void fpga_mode::get_mode(const triangulation_msg::master_list::ConstPtr& msg){
+    .... msg->master_id_list;
+
+
     ROS_INFO("current mode: %d", msg->mode);
     mode_pub = msg->mode;
     sync_mode = msg->sync_mode;
     sync_enable = msg->sync_enable;
     ROS_INFO("sync enable: %d", msg->sync_enable);
-}
+
+}*/
 
 void fpga_mode::get_slav_time(const triangulation_msg::time_msg::ConstPtr& msg){
   std::cout << "\n" << msg->id;
@@ -133,6 +150,24 @@ void fpga_mode::get_syst_ctl(const triangulation_msg::system_ctl::ConstPtr& msg)
 
 //ring bufferd vector push
 void fpga_mode::push_vec(vector<float>& vec, float data){
+  for (uint8_t vec_cnt = 0; vec_cnt < vec.size()/2; vec_cnt++){
+    int buff;
+    buff = vec[vec.size()-1-vec_cnt];
+    vec[vec.size()-1-vec_cnt]=vec[vec_cnt];
+    vec[vec_cnt]=buff;
+  }
+  vec.resize(MAX_TIME_STAMPS);
+  for (uint8_t vec_cnt = 0; vec_cnt < vec.size()/2; vec_cnt++){
+    int buff;
+    buff = vec[vec.size()-1-vec_cnt];
+    vec[vec.size()-1-vec_cnt]=vec[vec_cnt];
+    vec[vec_cnt]=buff;
+  }
+
+  vec.push_back(data);
+}
+
+void fpga_mode::push_vec(vector<uint32_t>& vec, uint32_t data){
   for (uint8_t vec_cnt = 0; vec_cnt < vec.size()/2; vec_cnt++){
     int buff;
     buff = vec[vec.size()-1-vec_cnt];

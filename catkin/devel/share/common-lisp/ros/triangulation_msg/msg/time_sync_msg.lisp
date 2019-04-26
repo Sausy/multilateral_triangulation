@@ -17,11 +17,11 @@
     :initarg :sync_time_div
     :type (cl:vector cl:float)
    :initform (cl:make-array 0 :element-type 'cl:float :initial-element 0.0))
-   (time_div
-    :reader time_div
-    :initarg :time_div
-    :type (cl:vector cl:float)
-   :initform (cl:make-array 0 :element-type 'cl:float :initial-element 0.0))
+   (cycle_cnt
+    :reader cycle_cnt
+    :initarg :cycle_cnt
+    :type (cl:vector cl:integer)
+   :initform (cl:make-array 0 :element-type 'cl:integer :initial-element 0))
    (sys_time
     :reader sys_time
     :initarg :sys_time
@@ -47,10 +47,10 @@
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader triangulation_msg-msg:sync_time_div-val is deprecated.  Use triangulation_msg-msg:sync_time_div instead.")
   (sync_time_div m))
 
-(cl:ensure-generic-function 'time_div-val :lambda-list '(m))
-(cl:defmethod time_div-val ((m <time_sync_msg>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader triangulation_msg-msg:time_div-val is deprecated.  Use triangulation_msg-msg:time_div instead.")
-  (time_div m))
+(cl:ensure-generic-function 'cycle_cnt-val :lambda-list '(m))
+(cl:defmethod cycle_cnt-val ((m <time_sync_msg>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader triangulation_msg-msg:cycle_cnt-val is deprecated.  Use triangulation_msg-msg:cycle_cnt instead.")
+  (cycle_cnt m))
 
 (cl:ensure-generic-function 'sys_time-val :lambda-list '(m))
 (cl:defmethod sys_time-val ((m <time_sync_msg>))
@@ -70,17 +70,16 @@
     (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)))
    (cl:slot-value msg 'sync_time_div))
-  (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'time_div))))
+  (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'cycle_cnt))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_arr_len) ostream))
-  (cl:map cl:nil #'(cl:lambda (ele) (cl:let ((bits (roslisp-utils:encode-single-float-bits ele)))
-    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)))
-   (cl:slot-value msg 'time_div))
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:write-byte (cl:ldb (cl:byte 8 0) ele) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 8) ele) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 16) ele) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 24) ele) ostream))
+   (cl:slot-value msg 'cycle_cnt))
   (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'sys_time))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
@@ -115,15 +114,13 @@
     (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 16) __ros_arr_len) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 24) __ros_arr_len) (cl:read-byte istream))
-  (cl:setf (cl:slot-value msg 'time_div) (cl:make-array __ros_arr_len))
-  (cl:let ((vals (cl:slot-value msg 'time_div)))
+  (cl:setf (cl:slot-value msg 'cycle_cnt) (cl:make-array __ros_arr_len))
+  (cl:let ((vals (cl:slot-value msg 'cycle_cnt)))
     (cl:dotimes (i __ros_arr_len)
-    (cl:let ((bits 0))
-      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
-    (cl:setf (cl:aref vals i) (roslisp-utils:decode-single-float-bits bits))))))
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:aref vals i)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) (cl:aref vals i)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 16) (cl:aref vals i)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 24) (cl:aref vals i)) (cl:read-byte istream)))))
   (cl:let ((__ros_arr_len 0))
     (cl:setf (cl:ldb (cl:byte 8 0) __ros_arr_len) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
@@ -148,21 +145,21 @@
   "triangulation_msg/time_sync_msg")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<time_sync_msg>)))
   "Returns md5sum for a message object of type '<time_sync_msg>"
-  "8fc40ceccbea84cbac12bd27ca06f4f3")
+  "963dc06e81680d3ee0cea4e612516646")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'time_sync_msg)))
   "Returns md5sum for a message object of type 'time_sync_msg"
-  "8fc40ceccbea84cbac12bd27ca06f4f3")
+  "963dc06e81680d3ee0cea4e612516646")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<time_sync_msg>)))
   "Returns full string definition for message of type '<time_sync_msg>"
-  (cl:format cl:nil "uint8 id~%float32[] sync_time_div~%float32[] time_div~%float32[] sys_time~%~%~%"))
+  (cl:format cl:nil "uint8 id~%float32[] sync_time_div~%uint32[] cycle_cnt~%float32[] sys_time~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'time_sync_msg)))
   "Returns full string definition for message of type 'time_sync_msg"
-  (cl:format cl:nil "uint8 id~%float32[] sync_time_div~%float32[] time_div~%float32[] sys_time~%~%~%"))
+  (cl:format cl:nil "uint8 id~%float32[] sync_time_div~%uint32[] cycle_cnt~%float32[] sys_time~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <time_sync_msg>))
   (cl:+ 0
      1
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'sync_time_div) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
-     4 (cl:reduce #'cl:+ (cl:slot-value msg 'time_div) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
+     4 (cl:reduce #'cl:+ (cl:slot-value msg 'cycle_cnt) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'sys_time) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <time_sync_msg>))
@@ -170,6 +167,6 @@
   (cl:list 'time_sync_msg
     (cl:cons ':id (id msg))
     (cl:cons ':sync_time_div (sync_time_div msg))
-    (cl:cons ':time_div (time_div msg))
+    (cl:cons ':cycle_cnt (cycle_cnt msg))
     (cl:cons ':sys_time (sys_time msg))
 ))
