@@ -1,10 +1,17 @@
 #include <mode_ctl.hpp>
 #include <string>
 
+/*
+TODO:
+Testzwecke master ctl via ROS
+zu ueberlegen, auto master zu slave bzw slave zu master um schneller mehr daten zu bekommen
+*/
+
 fpga_mode::fpga_mode(int32_t *base_addr_,rtc_ctl *pctl_){
 
   id = (uint8_t)(IORD(base_addr_, (uint32_t)(0x00<<8|0)));
-  mode = id;
+  mode_pub = id;
+  mode = mode_pub + 1; //has to be different to init as new mode
   pctl = pctl_;
 
   printf("\nID: %d", id);
@@ -17,17 +24,23 @@ fpga_mode::fpga_mode(int32_t *base_addr_,rtc_ctl *pctl_){
   }
   nh = ros::NodeHandlePtr(new ros::NodeHandle);
 
-  pctl->stop_US_out();
+  module_mode_sub = nh->subscribe("/triangulation/" + std::to_string(modef_->id) + "/mode", 1, &fpga_mode::get_mode, this);
 
-  if(mode == MODE_MASTER)
-    fp_start_conv = &fpga_mode::master_init;  //default &fpga_mode::slave_init
+  pctl->stop_US_out();
 }
 
 //==============================
 //Interface
 //==============================
 void fpga_mode::start_conversation(){
-  ((*this).*(fp_start_conv))();
+  if(mode_pub != mode){
+    if(mode == MODE_MASTER)
+      fp_start_conv = &fpga_mode::master_init;  //default &fpga_mode::slave_init
+    else
+      fp_start_conv = &fpga_mode::slave_init;  //default &fpga_mode::slave_init
+
+    ((*this).*(fp_start_conv))();
+  }
 }
 void fpga_mode::conversation(){
   ((*this).*(fp_conv))();
@@ -103,6 +116,14 @@ void fpga_mode::slave_conv(){
 //==============================
 //common routin for ros
 //==============================
+void fpga_mode::get_mode(const triangulation_msg::mode_msg::ConstPtr& msg){
+    ROS_INFO("current mode: %d", msg->mode);
+    mode_pub = msg->mode;
+    sync_mode = msg->sync_mode;
+    sync_enable = msg->sync_enable;
+    ROS_INFO("sync enable: %d", msg->sync_enable);
+}
+
 void fpga_mode::get_slav_time(const triangulation_msg::time_msg::ConstPtr& msg){
   std::cout << "\n" << msg->id;
 }

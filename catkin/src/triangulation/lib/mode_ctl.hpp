@@ -31,13 +31,12 @@ using namespace std;
 class fpga_mode{
   public:
     fpga_mode(int32_t *base_addr_ = nullptr,rtc_ctl *pctl_ = nullptr);
-    uint8_t id;
-    uint8_t master_id;
-    uint8_t mode;
-    bool sync_mode;
+    uint8_t   id, master_id;
+    uint8_t   mode;
+    bool      sync_mode, sync_enable;
 
     ros::NodeHandlePtr  nh;
-    ros::Subscriber     system_sub[MAX_CLIENTS + 1];
+    ros::Subscriber     system_sub[MAX_CLIENTS + 1], module_mode_sub;
     ros::Publisher      system_pub;
 
     void start_conversation();
@@ -45,6 +44,8 @@ class fpga_mode{
 
   private:
     rtc_ctl *pctl;
+
+    uint8_t mode_pub;
 
     void (fpga_mode::*fp_start_conv)() = &fpga_mode::slave_init;
     void (fpga_mode::*fp_conv)();
@@ -58,8 +59,10 @@ class fpga_mode{
     triangulation_msg::system_ctl   system_ctl_msg_pub;
     triangulation_msg::time_msg     time_msg_pub;
 
+    //subs
     void get_slav_time(const triangulation_msg::time_msg::ConstPtr& msg);
     void get_syst_ctl(const triangulation_msg::system_ctl::ConstPtr& msg);
+    void get_mode(const triangulation_msg::mode_msg::ConstPtr& msg);
 
     //ring bufferd vector push
     void push_vec(vector<float>& vec, float data);

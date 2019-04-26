@@ -1,17 +1,12 @@
 #ifndef CONFIG_HPP_
 #define CONFIG_HPP_
-  #define SLAVE_CNT 1
 
-  #define SOUND_SPEED 340 //m/s
-  #define DISTANCE_FACTOR  (1/FPGA_LED_FREQ)
+#define FPGA_CLK_FRQ      50000000
+#define FPGA_CLK_T        (double)( 1. / FPGA_CLK_FRQ)
 
-  /*mode_msg.msg
-  uint8 id
-  #0 master broadcast, 1 slave broadcast
-  bool mode
-  #0 sync slave,       1 sync master
-  bool sync_mode
-  bool sync_enable
-  */
+#define SOUND_SPEED       340. //m/s
+#define DISTANCE_FACTOR   FPGA_CLK_T
+
+  #define MASTER 0
 
 #endif

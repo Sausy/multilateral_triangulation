@@ -2,6 +2,34 @@
  * main.cpp
  * Author       : Michael Sausmikat
  */
+
+ /*
+TODO List;
+*)PTP time sync in quartus noch so erweitern
+das die system clock cnt syncronisiert wird
+
+*)time_sync muss noch ein Warteflag hinzu gefuegt werden
+ sowie add in quartus read enable flag to wait till ptp conv is finished
+
+
+ *) Ueberpruefen ob der hdl code von ptp passt, denn bei der simulation
+ gab es unterschiede zwischen master und slave sync um 2 cyclen
+
+
+
+ Ueberarbeitung des ablauf schematas
+ Master sendet impuls; und pushed die master time auf ros setzt sich
+ daraufhin als master
+
+ ros published die reihenfolge der Folgenden Masters
+ (solte sich eventuell dauerhaft random aendern)
+ ein slave der zum master wird wartet auf empfangs impuls, published auf ros
+ und setzt sich zum master
+
+ (dieser ablauf sollte zunaechst noch auf dem ARM core umgesetzt werden nich auf der FPGA)
+
+
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -19,26 +47,22 @@ using namespace std;
 double calc_distance (uint32_t t1, uint32_t t2){
   uint32_t buffer = 0;
   uint32_t div_time = abs(t2 - t1);
-  double ret;
 
-  ret = 1. / 50000000.;
+
   buffer = SOUND_SPEED * div_time;
-  ret *= buffer;
-
-  return ret;
+  return(DISTANCE_FACTOR * buffer);
 }
 
 int main(int argc, char *argv[]) {
   uint32_t in_time, trave_time;
   double distance;
-  Time time_data = {0,0,0};
 
   addr_base addr_base;
+
   piezo_ctl piezo_ctl(addr_base.virtual_base);
   rtc_ctl rtc_ctl(addr_base.rtc_base_addr);
-
   fpga_mode modef(addr_base.sw_base, &rtc_ctl);
-  //time_sync ptp(addr_base.ptp_base, modef);
+  time_sync ptp(addr_base.ptp_base, modef.id);  //todo
 
   //void (fpga_mode::*start_conversation) () = modef.fpga_mode::start_conversation;
   //void (fpga_mode::*conversation) () =  modef.fpga_mode::conversation;
@@ -55,16 +79,27 @@ int main(int argc, char *argv[]) {
 
   piezo_ctl.stop_piezo_out();
 
-  //TODO add PTP time sync
-  time_data.sys_time = 100;
+  //init time should be given via ntp ...
+  time_sync.time_data.sys_time = 100;
   printf("set rtc to ini\n\n");
-  rtc_ctl.set_time(time_data.sys_time);
+  rtc_ctl.set_time(time_sync.time_data.sys_time);
   //time_sync.update_time(&time_data);
 
   while (1) {
-    modef.start_conversation();
+    cout << "\n\n=====================================";
+    cout << "\n\n  start loop";
+    cout << "\n\n=====================================";
+
+    modef.start_conversation(); //only does something if master changes
     modef.conversation();
 
+    //ros tells the master to ptp sync
+    if(modef.sync_enable){
+      time_sync.update_time(modef.id == MASTER);
+    }
+    cout << "\nCurrentSysTime: " << time_sync.time_data.sys_time;
+    cout << "\nCurrentClkCycleCntTime: " << time_sync.time_data.cycle_cnt;
+    cout << "\nCurrentSyncDivTime: " << time_sync.time_data.sync_time_div;
     /*distance = calc_distance(rtc_ctl.US_start_time,in_time);
 
     printf("\ncurrent distance is %lf", distance);

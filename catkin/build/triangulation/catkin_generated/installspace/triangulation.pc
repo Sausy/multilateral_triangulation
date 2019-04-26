@@ -1,8 +1,0 @@
-prefix=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/install
-
-Name: triangulation
-Description: Description of triangulation
-Version: 0.0.1
-Cflags: 
-Libs: -L/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/install/lib 
-Requires: message_runtime triangulation_msg
