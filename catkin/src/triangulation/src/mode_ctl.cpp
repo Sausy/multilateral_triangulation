@@ -19,13 +19,13 @@ fpga_mode::fpga_mode(int32_t *base_addr_,rtc_ctl *pctl_){
   if (!ros::isInitialized()) {
     int argc = 0;
     char **argv = NULL;
-    ros::init(argc, argv, "mode");
+    ros::init(argc, argv, "mode" + std::to_string(id));
   }
   nh = ros::NodeHandlePtr(new ros::NodeHandle);
 
   /////------ROS ---PUBS ////
-  system_pub  = nh->advertise<triangulation_msg::time_msg>("/triangulation/" + std::to_string(id) + "/time_data", 1);
-  master_pub  = nh->advertise<triangulation_msg::system_ctl>("/triangulation/" + std::to_string(id) + "/ctl", 1);
+  system_pub  = nh->advertise<triangulation_msg::time_msg>("/triangulation/" + std::to_string(id) + "ID/time_data", 1);
+  master_pub  = nh->advertise<triangulation_msg::system_ctl>("/triangulation/" + std::to_string(id) + "ID/ctl", 1);
 
   time_msg_pub.id=id;
   push_vec(time_msg_pub.trigger_time, 0);
@@ -41,7 +41,7 @@ fpga_mode::fpga_mode(int32_t *base_addr_,rtc_ctl *pctl_){
 
   /////------ROS ---SUBS ////
   //Todo it is useless if system is current master
-  system_sub = nh->subscribe("/triangulation/" + std::to_string(current_master_id) + "/ctl", 1, &fpga_mode::get_syst_ctl, this);
+  system_sub = nh->subscribe("/triangulation/" + std::to_string(current_master_id) + "ID/ctl", 1, &fpga_mode::get_syst_ctl, this);
 
   //TODO :: system sub soll sich die master liste von master_list.msg ziehen
   //system_sub = nh->subscribe("/triangulation/" + std::to_string(id) + "/mode", 1, &fpga_mode::get_mode, this);
@@ -123,9 +123,10 @@ void fpga_mode::slave_conv(){
   //....
 
   pctl->allow_input_trigger(); //TODO ... do it via ros
-  for(;;)
+  for(int time_out_cnt = 0; time_out_cnt <= 4294967294; time_out_cnt++){
     if(pctl->rdy_to_read())
       break;
+  }
 
   push_vec(time_msg_pub.trigger_time, pctl->read_trigger_time());
   push_vec(time_msg_pub.master_identifier, current_master_id); //master id

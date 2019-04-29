@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
   if (!ros::isInitialized()){
     int argc = 0;
     char **argv = NULL;
-    ros::init(argc, argv, "triangulation system");
+    ros::init(argc, argv, "triangulation system" + std::to_string(modef.id));
   }
   ros::NodeHandle n;
   ros::Rate loop_rate(10);
@@ -92,11 +92,11 @@ int main(int argc, char *argv[]) {
   printf("set rtc to ini\n\n");
   rtc_ctl.set_time(ptp.time_data.sys_time);
 
-  while (1) {
-    cout << "\n\n=====================================";
-    cout << "\n\n  start loop";
-    cout << "\n\n=====================================";
+  cout << "\n\n=====================================";
+  cout << "\n\n  start loop";
+  cout << "\n\n=====================================";
 
+  while (1) {
     modef.start_conversation(); //only does something if master changes
     modef.conversation();
 

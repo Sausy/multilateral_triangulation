@@ -8,13 +8,13 @@ time_sync::time_sync(int32_t *base_addr_, uint8_t id){
   if (!ros::isInitialized()) {
     int argc = 0;
     char **argv = NULL;
-    ros::init(argc, argv, "time_sync");
+    ros::init(argc, argv, "time_sync"+ std::to_string(id));
   }
   nh = ros::NodeHandlePtr(new ros::NodeHandle);
 
   //TODO: set init mode via
   //module_mode_sub = nh->subscribe("/triangulation/" + std::to_string(modef_->id) + "/mode", 1, &time_sync::get_mode, this);
-  time_pub        = nh->advertise<triangulation_msg::time_sync_msg>("/triangulation/" + std::to_string(id) + "/time_sync_data", 1);
+  time_pub        = nh->advertise<triangulation_msg::time_sync_msg>("/triangulation/" + std::to_string(id) + "ID/time_sync_data", 1);
 
 }
 
