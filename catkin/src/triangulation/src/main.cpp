@@ -69,6 +69,7 @@ int main(int argc, char *argv[]) {
 
   piezo_ctl piezo_ctl(addr_base.virtual_base);
   rtc_ctl rtc_ctl(addr_base.rtc_base_addr);
+  rtc_ctl.piezo_set_burst_cycles(3);
   fpga_mode modef(addr_base.sw_base, &rtc_ctl);
   time_sync ptp(addr_base.ptp_base, modef.id);  //todo
 
@@ -102,6 +103,7 @@ int main(int argc, char *argv[]) {
 
     //ros tells the master to ptp sync
     if(modef.sync_enable){
+      modef.sync_enable = false;
       ptp.update_time(modef.id == MASTER);
     }
     cout << "\nCurrentSysTime: " << ptp.time_data.sys_time;

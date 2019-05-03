@@ -35,7 +35,8 @@ class fpga_mode{
     uint8_t   current_master_id = 0;
     uint8_t   id, master_id;
     uint8_t   mode;
-    bool      sync_mode, sync_enable;
+    bool      sync_mode, sync_enable = 0;
+    std::vector<int> master_list;
 
     ros::NodeHandlePtr  nh;
     ros::Subscriber     system_sub;//module_mode_sub; //system_sub[MAX_CLIENTS + 1]

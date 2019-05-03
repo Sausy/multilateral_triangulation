@@ -1,2 +1,0 @@
-triang_communication/triangulation_msg:triangulation
--DCATKIN_DEVEL_PREFIX=/home/sausy/Projects/multilateral_triangulation/catkin/devel -DCMAKE_INSTALL_PREFIX=/home/sausy/Projects/multilateral_triangulation/catkin/install -G Unix Makefiles

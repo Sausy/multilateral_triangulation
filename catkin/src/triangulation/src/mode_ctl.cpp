@@ -42,12 +42,12 @@ fpga_mode::fpga_mode(int32_t *base_addr_,rtc_ctl *pctl_){
   /////------ROS ---SUBS ////
   //Todo it is useless if system is current master
   system_sub = nh->subscribe("/triangulation/" + std::to_string(current_master_id) + "ID/ctl", 1, &fpga_mode::get_syst_ctl, this);
+  //start ptp time sync
+  time_sync_sub = nh->subscribe("/triangulation/all/master_list", 1, &fpga_mode::time_sync_enable, this);
 
   //TODO :: system sub soll sich die master liste von master_list.msg ziehen
   //system_sub = nh->subscribe("/triangulation/" + std::to_string(id) + "/mode", 1, &fpga_mode::get_mode, this);
 
-  //TODO sync_enable must be a sub that is controlled by the raspberrypi master
-  sync_enable=false;
 
   pctl->stop_US_out();
 }
@@ -103,7 +103,8 @@ void fpga_mode::master_conv(){
   master_pub.publish(system_ctl_msg_pub);
   //TODO: wait for response over ROS;
   //...
-  pctl->start_US_out();
+  //pctl->start_US_out();
+  pctl->piezo_burst_out();
 
   push_vec(time_msg_pub.trigger_time, pctl->US_start_time);
   push_vec(time_msg_pub.master_identifier, id); //master id
@@ -155,6 +156,10 @@ void fpga_mode::get_slav_time(const triangulation_msg::time_msg::ConstPtr& msg){
 }
 void fpga_mode::get_syst_ctl(const triangulation_msg::system_ctl::ConstPtr& msg){
   std::cout << "\nmaster ID: " << msg->master_id;
+}
+void fpga_mode::time_sync_enable(const triangulation_msg::master_list::ConstPtr& msg){
+  sync_enable=msg->start_ptp_sync;
+  master_list = msg -> master_id_list;
 }
 
 //ring bufferd vector push
