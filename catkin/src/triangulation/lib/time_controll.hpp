@@ -21,8 +21,8 @@ class rtc_ctl
 
     void start_US_out();
     void stop_US_out();
-    void piezo_burst_out(uint32_t cycle_amont);
-    void piezo_set_burst_cycles();
+    void piezo_burst_out();
+    void piezo_set_burst_cycles(uint32_t cycle_amont);
 
     uint32_t US_start_time;
 

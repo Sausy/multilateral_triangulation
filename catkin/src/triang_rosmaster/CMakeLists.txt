@@ -6,6 +6,10 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g")
 
 SET(CMAKE_BUILD_TYPE Debug)
 
+set(CMAKE_SYSTEM_NAME Linux)
+set(compiler_path /usr/bin)
+set(CMAKE_CXX_COMPILER ${compiler_path}/arm-linux-gnueabihf-g++-5)
+
 #==============================================================================
 # Dependencies
 #==============================================================================
@@ -14,6 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
             std_msgs
             triangulation_msg
         )
+include(findros)
 
 catkin_package(CATKIN_DEPENDS
         message_runtime

@@ -158,8 +158,9 @@ void fpga_mode::get_syst_ctl(const triangulation_msg::system_ctl::ConstPtr& msg)
   std::cout << "\nmaster ID: " << msg->master_id;
 }
 void fpga_mode::time_sync_enable(const triangulation_msg::master_list::ConstPtr& msg){
-  sync_enable=msg->start_ptp_sync;
-  master_list = msg -> master_id_list;
+  sync_enable = msg->start_ptp_sync;
+  //TODO readout list
+  //master_list = msg->master_id_list;
 }
 
 //ring bufferd vector push

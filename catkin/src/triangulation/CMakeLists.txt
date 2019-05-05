@@ -10,7 +10,7 @@ if (DEFINED "ENV{SOCEDS_DEST_ROOT}")
     message(STATUS "cross compiling for arm")
     # we are cross compiling for arm (make sure to be in embedded_command_shell.sh)
     set(CMAKE_SYSTEM_NAME Linux)
-    set(CMAKE_SYSTEM_PROCESSOR armv7l)
+     
 
     set(compiler_path /usr/bin)
     set(CMAKE_C_COMPILER ${compiler_path}/arm-linux-gnueabihf-gcc-5)

@@ -4,6 +4,8 @@
 #include <ros/ros.h>
 #include <math.h>
 
+#include "menu.hpp"
+#include "master_list.hpp"
 #include "common.hpp"
 
 #include <unistd.h>

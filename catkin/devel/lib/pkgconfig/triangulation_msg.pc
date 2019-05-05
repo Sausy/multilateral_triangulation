@@ -1,0 +1,8 @@
+prefix=/home/sausy/Projects/multilateral_triangulation/catkin/devel
+
+Name: triangulation_msg
+Description: Description of triangulation_msg
+Version: 0.0.1
+Cflags: -I/home/sausy/Projects/multilateral_triangulation/catkin/devel/include -I/home/sausy/Projects/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/include
+Libs: -L/home/sausy/Projects/multilateral_triangulation/catkin/devel/lib 
+Requires: roscpp message_runtime message_generation

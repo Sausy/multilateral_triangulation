@@ -39,11 +39,13 @@ class fpga_mode{
     std::vector<int> master_list;
 
     ros::NodeHandlePtr  nh;
-    ros::Subscriber     system_sub;//module_mode_sub; //system_sub[MAX_CLIENTS + 1]
+    ros::Subscriber     system_sub, time_sync_sub;//module_mode_sub; //system_sub[MAX_CLIENTS + 1]
     ros::Publisher      system_pub, master_pub;
 
     void start_conversation();
     void conversation();
+
+    void time_sync_enable(const triangulation_msg::master_list::ConstPtr& msg);
 
   private:
     rtc_ctl *pctl;
