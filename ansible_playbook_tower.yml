@@ -1,0 +1,11 @@
+- hosts: triang
+  remote_user: root
+  tasks:
+  - name: copy multitriangulation programm to hosts
+    copy:
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
+      mode: "{{item.mode}}"
+    with_items:
+      - { src: '~/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation',dest: '~', mode: '0777'}
+

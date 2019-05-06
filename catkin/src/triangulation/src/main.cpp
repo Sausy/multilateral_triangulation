@@ -69,7 +69,6 @@ int main(int argc, char *argv[]) {
 
   piezo_ctl piezo_ctl(addr_base.virtual_base);
   rtc_ctl rtc_ctl(addr_base.rtc_base_addr);
-  rtc_ctl.piezo_set_burst_cycles(3);
   fpga_mode modef(addr_base.sw_base, &rtc_ctl);
   time_sync ptp(addr_base.ptp_base, modef.id);  //todo
 

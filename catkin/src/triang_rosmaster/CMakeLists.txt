@@ -6,34 +6,40 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g")
 
 SET(CMAKE_BUILD_TYPE Debug)
 
-set(CMAKE_SYSTEM_NAME Linux)
-set(compiler_path /usr/bin)
-set(CMAKE_CXX_COMPILER ${compiler_path}/arm-linux-gnueabihf-g++-5)
-
 #==============================================================================
 # Dependencies
 #==============================================================================
 find_package(catkin REQUIRED COMPONENTS
             roscpp
+            nodelet
             std_msgs
+            message_generation
             triangulation_msg
         )
-include(findros)
+find_package(Curses REQUIRED)
 
 catkin_package(CATKIN_DEPENDS
         message_runtime
         triangulation_msg
         )
+
+include_directories(
+        lib/
+        include/
+        ${catkin_INCLUDE_DIRS}
+        ${CURSES_INCLUDE_DIR}
+      )
 #==============================================================================
 # Application
 #==============================================================================
+
 FILE(GLOB SRC_FILES src/*.cpp)
-FILE(GLOB INCLUDE_FILES include/*.hpp)
+FILE(GLOB INCLUDE_FILES lib/*.hpp)
 
 add_executable( triangulation_master
         ${SRC_FILES}
         ${INCLUDE_FILES}
         )
 
-#add_dependencies(triangulation_master roboy_control_msgs_gencpp)
-target_link_libraries( triangulation_master -lpthread -lrt -lm ${ros_LIBRARIES})
+add_dependencies(triangulation_master triangulation_msg_gencpp)
+target_link_libraries( triangulation_master -lpthread -lrt -lm ${catkin_LIBRARIES} ${CURSES_LIBRARIES})

@@ -159,6 +159,10 @@ void fpga_mode::get_syst_ctl(const triangulation_msg::system_ctl::ConstPtr& msg)
 }
 void fpga_mode::time_sync_enable(const triangulation_msg::master_list::ConstPtr& msg){
   sync_enable = msg->start_ptp_sync;
+  pctl->piezo_set_burst_cycles(msg->burst_cycles);
+  if(msg->start_burst==true);
+    pctl->piezo_burst_out();
+
   //TODO readout list
   //master_list = msg->master_id_list;
 }

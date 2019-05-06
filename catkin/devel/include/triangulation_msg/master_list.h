@@ -25,10 +25,14 @@ struct master_list_
 
   master_list_()
     : start_ptp_sync(false)
+    , start_burst(false)
+    , burst_cycles(0)
     , master_id_list()  {
     }
   master_list_(const ContainerAllocator& _alloc)
     : start_ptp_sync(false)
+    , start_burst(false)
+    , burst_cycles(0)
     , master_id_list(_alloc)  {
   (void)_alloc;
     }
@@ -37,6 +41,12 @@ struct master_list_
 
    typedef uint8_t _start_ptp_sync_type;
   _start_ptp_sync_type start_ptp_sync;
+
+   typedef uint8_t _start_burst_type;
+  _start_burst_type start_burst;
+
+   typedef uint32_t _burst_cycles_type;
+  _burst_cycles_type burst_cycles;
 
    typedef std::vector<uint32_t, typename ContainerAllocator::template rebind<uint32_t>::other >  _master_id_list_type;
   _master_id_list_type master_id_list;
@@ -76,7 +86,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'triangulation_msg': ['/home/sausy/Projects/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg']}
+// {'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'triangulation_msg': ['/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
@@ -119,12 +129,12 @@ struct MD5Sum< ::triangulation_msg::master_list_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "a369acace6dc8a37ac48941231b00c0c";
+    return "cf7b414f4c61d1db6ce0d1fd4a255466";
   }
 
   static const char* value(const ::triangulation_msg::master_list_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xa369acace6dc8a37ULL;
-  static const uint64_t static_value2 = 0xac48941231b00c0cULL;
+  static const uint64_t static_value1 = 0xcf7b414f4c61d1dbULL;
+  static const uint64_t static_value2 = 0x6ce0d1fd4a255466ULL;
 };
 
 template<class ContainerAllocator>
@@ -143,9 +153,11 @@ struct Definition< ::triangulation_msg::master_list_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "bool start_ptp_sync\n"
-"uint32[] master_id_list\n"
-;
+    return "bool start_ptp_sync\n\
+bool start_burst\n\
+uint32 burst_cycles\n\
+uint32[] master_id_list\n\
+";
   }
 
   static const char* value(const ::triangulation_msg::master_list_<ContainerAllocator>&) { return value(); }
@@ -164,6 +176,8 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.start_ptp_sync);
+      stream.next(m.start_burst);
+      stream.next(m.burst_cycles);
       stream.next(m.master_id_list);
     }
 
@@ -185,6 +199,10 @@ struct Printer< ::triangulation_msg::master_list_<ContainerAllocator> >
   {
     s << indent << "start_ptp_sync: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.start_ptp_sync);
+    s << indent << "start_burst: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.start_burst);
+    s << indent << "burst_cycles: ";
+    Printer<uint32_t>::stream(s, indent + "  ", v.burst_cycles);
     s << indent << "master_id_list[]" << std::endl;
     for (size_t i = 0; i < v.master_id_list.size(); ++i)
     {

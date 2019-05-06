@@ -1,7 +1,7 @@
 # CMake generated Testfile for 
-# Source directory: /usr/src/googletest
-# Build directory: /home/sausy/Projects/multilateral_triangulation/catkin/build/gtest
+# Source directory: /usr/src/gmock
+# Build directory: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/gtest
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-subdirs("googlemock")
+subdirs(gtest)
