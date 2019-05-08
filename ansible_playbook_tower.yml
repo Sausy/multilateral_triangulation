@@ -8,4 +8,4 @@
       mode: "{{item.mode}}"
     with_items:
       - { src: '~/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation',dest: '~', mode: '0777'}
-
+      - { src: '~/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Quartus/output_files/soc_system.rbf',dest: '/mnt/mp1/soc_system.rbf', mode: '0777'}

@@ -27,10 +27,11 @@ void rtc_ctl::start_US_out() {
 }
 
 void rtc_ctl::piezo_set_burst_cycles(uint32_t cycle_amont) {
-    IOWR(rtc_base, (uint32_t)(0x04<<8|0), cycle_amont);
+    IOWR(rtc_base, (uint32_t)(0x04<<8|0), cycle_amont*BURSTCYCLE_OFFSET);
 }
 void rtc_ctl::piezo_burst_out() {
-    IOWR(rtc_base, (uint32_t)(0x05<<8|0), 1);
+    IOWR(rtc_base, (uint32_t)(0x05<<8|0), 0xff);
+    US_start_time = IORD(rtc_base, (uint32_t)(0x02<<8|0));
 }
 
 

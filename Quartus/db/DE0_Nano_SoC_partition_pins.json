@@ -24,10 +24,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "LED[5]",
-					"strict" : false
-				},
-				{
 					"name" : "PIEZO[6]",
 					"strict" : false
 				},
@@ -248,6 +244,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "LED[5]",
+					"strict" : false
+				},
+				{
 					"name" : "LED[0]",
 					"strict" : false
 				},
@@ -257,10 +257,6 @@
 				},
 				{
 					"name" : "LED[2]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[7]",
 					"strict" : false
 				},
 				{
@@ -276,11 +272,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "LED[7]",
+					"strict" : false
+				},
+				{
 					"name" : "ENABLE",
 					"strict" : false
 				},
 				{
 					"name" : "FPGA_CLK1_50",
+					"strict" : false
+				},
+				{
+					"name" : "RTC_TRIGGER",
 					"strict" : false
 				},
 				{
@@ -305,10 +309,6 @@
 				},
 				{
 					"name" : "SW[3]",
-					"strict" : false
-				},
-				{
-					"name" : "RTC_TRIGGER",
 					"strict" : false
 				}
 			]

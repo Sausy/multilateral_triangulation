@@ -13,6 +13,8 @@ module rtc (
 	// trigger out
 	output wire piezo_enable
 );
+
+//TODO add two regs one for the amount of cycles to be bursted out and one enable a burst
 	
 	//definition
 	parameter CLOCK_SPEED_HZ = 50_000_000; //-> 20ns per cloc  ->so the rsolution was choosen 100ns
@@ -25,8 +27,15 @@ module rtc (
 	reg [31:0] US_output_time;
 	reg US_out_trigger;
 	
+	reg [31:0] burst_cycles_def;
+	reg [31:0] burst_cycles_cnt;
+	reg burst_enable;
+	
 	reg waitflag_status;
 	reg waitflag_trigger;
+	
+	wire piezo_output_enable;
+	assign piezo_output_enable = US_out_trigger | burst_enable;
 	
 	//wires
 	wire clock_div;
@@ -40,7 +49,7 @@ module rtc (
 	
 	//ext moduls
 	clock_divider cd1(clock, reset, clock_div);
-	IO_time_ctl tim1(clock, reset, US_out_trigger, time_cnt, time_stamp_US_out, piezo_enable);//detects trigger event starts output and matches it with the current time stamp 
+	IO_time_ctl tim1(clock, reset, piezo_output_enable, time_cnt, time_stamp_US_out, piezo_enable);//detects trigger event starts output and matches it with the current time stamp 
 	
 	always @(posedge piezo_enable) begin : start_US
 		US_output_time <= time_stamp_US_out[31:0]; 
@@ -81,10 +90,14 @@ module rtc (
 		if (reset == 1) begin
 			waitflag_trigger <= 0;
 			time_cnt <= 0;
+			burst_cycles_cnt <= 0;
 			write_delay_cnt <= 0;
+
+			burst_cycles_def <= 32'd10000;
 		end else begin
 			// if we are writing via avalon bus and waitrequest is deasserted, write the respective register
 			time_cnt <= time_cnt + 32'd1; 
+			burst_cycles_cnt <= 0;
 			write_delay_cnt <= write_delay_cnt + 2'd1;
 			if (time_cnt == 4294967295) begin
 				time_cnt <= 32'd0;
@@ -93,11 +106,20 @@ module rtc (
 				waitflag_trigger <= 0;
 				write_delay_cnt <= 0;
 			end
+			if (burst_enable == 1) begin
+				burst_cycles_cnt <= burst_cycles_cnt + 32'd1;
+				if(burst_cycles_cnt >= burst_cycles_def) begin
+					burst_enable <= 0;
+					burst_cycles_cnt <= 32'd0;
+				end
+			end
 			if(avalon_slave_write && ~avalon_slave_waitrequest) begin
 				case(avalon_slave_address>>8)
 					8'h00: time_cnt <= avalon_slave_writedata[31:0];
 					8'h02: waitflag_trigger <= (avalon_slave_writedata!=0);
 					8'h03: US_out_trigger <= (avalon_slave_writedata!=0);
+					8'h04: burst_cycles_def <= avalon_slave_writedata[31:0];
+					8'h05: burst_enable <= (avalon_slave_writedata!=0);
 				endcase
 			end
 		end 

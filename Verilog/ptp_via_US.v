@@ -18,13 +18,14 @@
 	
 reg enable_time_sync_mode;
 reg enable_master;
+reg hps_reset;
 
 wire ptp_slave_clk;
 wire ptp_master_clk;
 
 assign ptp_slave_clk 			= 	(~ enable_master) & clock & enable_time_sync_mode;
 assign ptp_master_clk 		= 	enable_master  & clock  & enable_time_sync_mode;
-assign ptp_master_reset 	= 	~enable_master ;
+//assign ptp_master_reset 	= 	~enable_master ;
 
 wire [31:0] startsync_cnt;
 wire [31:0] travel_time_cnt_master;
@@ -32,15 +33,17 @@ wire [31:0] travel_time_cnt_slave;
 
 wire output_interface0;
 wire output_interface1;
+wire wire_reset;
 
-assign us_interface_out 		= 	output_interface0 | output_interface1;
+assign wire_reset = reset | hps_reset;
+assign piezo_interface_out 	= 	output_interface0 | output_interface1;
 
-assign travel_time_slave 	= 	travel_time_cnt_slave[31:0];
-assign travel_time_master = 	travel_time_cnt_master[31:0];
+//assign travel_time_slave 	= 	travel_time_cnt_slave[31:0];
+//assign travel_time_master = 	travel_time_cnt_master[31:0];
 
 
-PTP_master ptpmaster0(ptp_master_clk,reset, us_inteface_in, output_interface0,startsync_cnt, travel_time_cnt_master);
-PTP_slave ptpslave0(ptp_slave_clk,reset, us_inteface_in, output_interface1, travel_time_cnt_slave);
+PTP_master ptpmaster0(ptp_master_clk,wire_reset, piezo_interface_in, output_interface0,startsync_cnt, travel_time_cnt_master);
+PTP_slave ptpslave0(ptp_slave_clk,wire_reset, piezo_interface_in, output_interface1, travel_time_cnt_slave);
 	
 	
 	// the following iterface handles read requests via lightweight axi bridge
@@ -74,12 +77,15 @@ PTP_slave ptpslave0(ptp_slave_clk,reset, us_inteface_in, output_interface1, trav
 		if (reset == 1) begin
 			enable_master <= 0;
 			enable_time_sync_mode <= 0;
+			hps_reset <= 0;
 		end else begin
+			hps_reset <= 0;
 			// if we are writing via avalon bus and waitrequest is deasserted, write the respective register
 			if(avalon_slave_write && ~avalon_slave_waitrequest) begin
 				case(avalon_slave_address>>8)
 					8'h00: enable_master 						<= (avalon_slave_writedata!=0);
 					8'h01: enable_time_sync_mode <= (avalon_slave_writedata!=0);
+					8'h02: hps_reset <= (avalon_slave_writedata!=0);
 				endcase
 			end
 		end 
@@ -124,10 +130,10 @@ module PTP_slave(
 			if(waitflag_output == 0) begin
 					waitflag_output <= 1;
 					waitflag_input 	<= 0;
-					if(delay_cnt <= 20) begin
+					if(delay_cnt <= 5000) begin
 						output_interface_reg <= 1;
 					end
-					if(delay_cnt <= 50) begin
+					if(delay_cnt <= 7000) begin
 						waitflag_output <= 0;
 						waitflag_input 	<= 1;
 					end
@@ -148,7 +154,7 @@ module PTP_slave(
 			end
 			
 			if (delay_cnt == 4294967295) begin
-				delay_cnt <= 32'd0;
+				delay_cnt <= 32'd8000;
 			end	
 		end
 	end
@@ -188,10 +194,10 @@ module PTP_master(
 			if(waitflag_output == 0) begin
 				waitflag_output 		<= 1;
 				waitflag_input 			<= 0;
-				if(delay_cnt <= 2000) begin
+				if(delay_cnt <= 5000) begin
 					output_interface_reg <= 1;
 				end
-				if(delay_cnt <= 50) begin
+				if(delay_cnt <= 7000) begin
 					waitflag_output <= 0;
 					waitflag_input 	<= 1;
 				end
@@ -206,7 +212,7 @@ module PTP_master(
 			end
 			
 			if (delay_cnt == 4294967295) begin
-				delay_cnt <= 32'd0;
+				delay_cnt <= 32'd8000;
 			end	
 		end
 	end

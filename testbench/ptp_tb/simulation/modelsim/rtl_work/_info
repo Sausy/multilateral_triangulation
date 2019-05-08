@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/simulation/modelsim
+vPTP_master
+Z1 !s110 1557309481
+!i10b 1
+!s100 aJoW53W7WTj1e4S;SM_6D3
+IRmfz5`CUKcH6TKP?H?[ZF0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1557309458
+Z4 8/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v
+Z5 F/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v
+L0 165
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1557309481.000000
+Z8 !s107 /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v|
+Z9 !s90 -reportprogress|300|-work|work|/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@p@t@p_master
+vPTP_slave
+R1
+!i10b 1
+!s100 ;D^gU95_]MEf=7G]Z3gO^0
+I:C^a96jkdWWUB_nH;do3j2
+R2
+R0
+R3
+R4
+R5
+L0 99
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@p@t@p_slave
+vptp_tb
+R1
+!i10b 1
+!s100 6@aEY<GNfje]FdJgBJOl63
+IadGS@[X6ONfNm[gU?VUNV2
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vtb_write_on_avalon
+R1
+!i10b 1
+!s100 ^QZNFYM9[Kh0eW@Y`3N4U0
+Iak1RYZKBP6Z9cmmS=SCCe2
+R2
+R0
+R3
+R4
+R5
+L0 225
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

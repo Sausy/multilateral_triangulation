@@ -35,7 +35,7 @@ class fpga_mode{
     uint8_t   current_master_id = 0;
     uint8_t   id, master_id;
     uint8_t   mode;
-    bool      sync_mode, sync_enable = 0;
+    bool      sync_mode, sync_enable, burst_enable;
     std::vector<int> master_list;
 
     ros::NodeHandlePtr  nh;
@@ -44,8 +44,6 @@ class fpga_mode{
 
     void start_conversation();
     void conversation();
-
-    void time_sync_enable(const triangulation_msg::master_list::ConstPtr& msg);
 
   private:
     rtc_ctl *pctl;
@@ -67,6 +65,7 @@ class fpga_mode{
     //subs
     void get_slav_time(const triangulation_msg::time_msg::ConstPtr& msg);
     void get_syst_ctl(const triangulation_msg::system_ctl::ConstPtr& msg);
+    void master_ctl(const triangulation_msg::master_list::ConstPtr& msg);
     //void get_mode(const triangulation_msg::mode_msg::ConstPtr& msg);
 
     //ring bufferd vector push

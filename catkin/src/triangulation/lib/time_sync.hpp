@@ -2,12 +2,16 @@
 #define TIME_SYNC_HPP_
 #include <ros/ros.h>
 #include <vector>
+#include <stdio.h>
+#include <stdlib.h>
 #include <triangulation_msg/mode_msg.h>
 #include <triangulation_msg/system_ctl.h>
 #include <triangulation_msg/time_msg.h>
 #include <triangulation_msg/time_sync_msg.h>
 #include "mode_ctl.hpp"
 #include "config.hpp"
+
+#include <unistd.h>
 
 using namespace std;
 
