@@ -48,7 +48,7 @@ void master_gen::time_sync_tgl(bool is_enable_){
 void master_gen::start_burst_mode(){
   master_list.start_continiouse_mode = false;
   master_list.start_ptp_sync=false;
-  master_list.start_burst = true;
+  master_list.start_burst = !master_list.start_burst;
   master_pub.publish(master_list);
 }
 

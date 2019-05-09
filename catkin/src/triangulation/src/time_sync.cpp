@@ -43,11 +43,24 @@ void time_sync::update_time(bool is_master_mode_){
 uint32_t time_sync::start_time_sync(bool is_master_mode_){
 
   uint8_t interface_buffer = ((is_master_mode_ << 1)|(1))& 0xff;
+  uint32_t ret = 0;
+
   printf("\ninterface_buffer: %d", interface_buffer);
   IOWR(time_sync_base, (uint32_t)(0x03<<8|0), interface_buffer);
   cout << "\nstart sync";
 
 
-  interface_buffer = ((0x00 | !is_master_mode_) << 8)|0;
-  return(IORD(time_sync_base, (uint32_t)(interface_buffer)));
+  interface_buffer = (0x02<< 8)|0;
+  ret = IORD(time_sync_base, (uint32_t)(interface_buffer));
+  printf("\nis ready: %d", ret);
+
+  interface_buffer = (0x00<< 8)|0;
+  ret = IORD(time_sync_base, (uint32_t)(interface_buffer));
+  printf("\nmaster count: %d", ret);
+
+  interface_buffer = (0x01 << 8)|0;
+  ret = IORD(time_sync_base, (uint32_t)(interface_buffer));
+  printf("\nslave count: %d", ret);
+  printf("\nslave count: %g", ret *FPGA_CLK_T);
+  return(ret);
 }

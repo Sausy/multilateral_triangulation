@@ -26,7 +26,8 @@ reg default_def;
 reg start_delay;
 reg [1:0]start_ptp;
 
-reg test_avalon;
+//reg test_avalon;
+//reg test_avalon2;
 	
 reg enable_time_sync_mode;
 reg enable_master;
@@ -59,8 +60,8 @@ wire conv_finished_slave;
 reg conv_finished;
 
 assign wire_reset = reset | hps_reset;
-assign output_interface_test = test_avalon;
-assign piezo_interface_out 	= 	output_interface0 | output_interface1| output_interface_test;
+//assign output_interface_test = test_avalon2;
+assign piezo_interface_out 	= 	output_interface0 | output_interface1;//output_interface_test;//output_interface0 | output_interface1| output_interface_test;
 
 //assign travel_time_slave 	= 	travel_time_cnt_slave[31:0];
 //assign travel_time_master = 	travel_time_cnt_master[31:0];
@@ -105,6 +106,7 @@ PTP_ctl ptpslave0(
 				case(avalon_slave_address>>8)
 					8'h00: returnvalue 	<= travel_time_cnt_master[31:0];
 					8'h01: returnvalue 	<= travel_time_cnt_slave[31:0];
+					8'h02: returnvalue 	<= {31'd0,conv_finished}; 
 					default: returnvalue <= 32'hDEADBEEF;
 				endcase
 				if(avalon_slave_waitFlag==1) begin // next clock cycle the returnvalue should be ready
@@ -124,13 +126,25 @@ PTP_ctl ptpslave0(
 			conv_finished 	<= 0;
 			start_ptp <= 0;
 			start_delay <= 0;
-			test_avalon <=0;
+			//test_avalon <=0;
+			//test_avalon2<=0;
 		end else begin
 			hps_reset <= 0;
-			start_ptp[0] <= 0;
 			conv_finished<= conv_finished_master| conv_finished_slave;
 			if(conv_finished == 1)begin
 				enable_time_sync_mode<= 0;
+			end
+			if(start_ptp[0] == 1 )begin				
+				enable_master <= start_ptp[1]; 
+				start_ptp[0] <= 0;
+				//test_avalon <= start_ptp[1]; 
+				enable_time_sync_mode<= 0;
+				hps_reset <= 1;
+				start_delay <= 1;
+			end
+			if(start_delay == 1)begin
+				start_delay<=0;
+				enable_time_sync_mode<= 1;
 			end
 			// if we are writing via avalon bus and waitrequest is deasserted, write the respective register
 			if(avalon_slave_write && ~avalon_slave_waitrequest) begin
@@ -142,17 +156,7 @@ PTP_ctl ptpslave0(
 					8'h04: test_avalon <=  avalon_slave_writedata[0];
 				endcase
 			end
-			if(start_ptp[0] == 1 )begin				
-				enable_master <= start_ptp[1]; 
-				//test_avalon <= start_ptp[1]; 
-				enable_time_sync_mode<= 0;
-				hps_reset <= 1;
-				start_delay <= 1;
-			end
-			if(start_delay == 1)begin
-				start_delay<=0;
-				enable_time_sync_mode<= 1;
-			end
+
 		end 
 	end
 	
@@ -194,7 +198,7 @@ module PTP_ctl(
 		if (reset == 1) begin
 			delay_cnt 								<= 32'd0;
 			conv_cnt 								<= {31'd0,~mode_select};
-			travel_time_cnt_reg		<= 0;
+			travel_time_cnt_reg		<= 1;
 			FLAG_is_master				<= mode_select;
 			FLAG_first_impuls			<= 0;
 			conv_finished_reg			<= 0;
@@ -211,7 +215,7 @@ module PTP_ctl(
 					if(delay_cnt <= `INIT_WAIT_DELAY) begin
 						output_interface_reg 	<= 1;
 					end
-					if(delay_cnt <= `WAIT_DELAY) begin
+					if(delay_cnt >= `WAIT_DELAY) begin
 						FLAG_is_master				<= 1;
 					end
 			end else begin

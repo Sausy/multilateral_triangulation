@@ -124,10 +124,21 @@ PTP_ctl ptpslave0(
 			test_avalon <=0;
 		end else begin
 			hps_reset <= 0;
-			start_ptp[0] <= 0;
 			conv_finished<= conv_finished_master| conv_finished_slave;
 			if(conv_finished == 1)begin
 				enable_time_sync_mode<= 0;
+			end
+			if(start_ptp[0] == 1 )begin
+				start_ptp[0] <= 0;
+				//test_avalon <= 1;
+				enable_master <= start_ptp[1]; 
+				enable_time_sync_mode<= 0;
+				hps_reset <= 1;
+				start_delay <= 1;
+			end
+			if(start_delay == 1)begin
+				start_delay<=0;
+				enable_time_sync_mode<= 1;
 			end
 			// if we are writing via avalon bus and waitrequest is deasserted, write the respective register
 			if(avalon_slave_write && ~avalon_slave_waitrequest) begin
@@ -139,17 +150,7 @@ PTP_ctl ptpslave0(
 					8'h04: test_avalon <=  avalon_slave_writedata[0];
 				endcase
 			end
-			if(start_ptp[0] == 1 )begin
-				test_avalon <= 1;
-				enable_master <= start_ptp[1]; 
-				enable_time_sync_mode<= 0;
-				hps_reset <= 1;
-				start_delay <= 1;
-			end
-			if(start_delay == 1)begin
-				start_delay<=0;
-				enable_time_sync_mode<= 1;
-			end
+
 		end 
 	end
 	
@@ -231,7 +232,7 @@ module PTP_ctl(
 							travel_time_cnt_reg <= travel_time_cnt_reg;
 					end
 			end
-			if (delay_cnt == `MAX_WAIT_CYCLES) begin
+			if (delay_cnt == 60) begin
 				delay_cnt 								<= 32'd0;
 				output_interface_reg 	<= 0;
 			end	

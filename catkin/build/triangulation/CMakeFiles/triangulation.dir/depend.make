@@ -81,6 +81,11 @@ triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o: /home/roboy
 triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o: /home/roboy/intelFPGA/18.0/embedded/ip/altera/hps/altera_hps/hwlib/include/soc_cv_av/socal/hps.h
 triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o: /home/roboy/intelFPGA/18.0/embedded/ip/altera/hps/altera_hps/hwlib/include/soc_cv_av/socal/socal.h
 
+triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/master_list.h
+triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/mode_msg.h
+triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/system_ctl.h
+triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_msg.h
+triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_sync_msg.h
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/arm/usr/include/_G_config.h
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/arm/usr/include/alloca.h
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/arm/usr/include/arm-linux-gnueabihf/asm/errno.h
@@ -1082,6 +1087,7 @@ triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /opt/ros/kinetic/incl
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /opt/ros/kinetic/include/ros/message.h
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /opt/ros/kinetic/include/ros/message_event.h
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /opt/ros/kinetic/include/ros/message_forward.h
+triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /opt/ros/kinetic/include/ros/message_operations.h
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /opt/ros/kinetic/include/ros/message_traits.h
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /opt/ros/kinetic/include/ros/names.h
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /opt/ros/kinetic/include/ros/node_handle.h
@@ -1122,7 +1128,9 @@ triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /opt/ros/kinetic/incl
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 
+triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/master_list.h
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/mode_msg.h
+triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/system_ctl.h
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_msg.h
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_sync_msg.h
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/arm/usr/include/_G_config.h
@@ -2119,6 +2127,7 @@ triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /opt/ros/kinetic/
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /opt/ros/kinetic/include/ros/message.h
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /opt/ros/kinetic/include/ros/message_event.h
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /opt/ros/kinetic/include/ros/message_forward.h
+triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /opt/ros/kinetic/include/ros/message_operations.h
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /opt/ros/kinetic/include/ros/message_traits.h
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /opt/ros/kinetic/include/ros/names.h
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /opt/ros/kinetic/include/ros/node_handle.h
@@ -2384,7 +2393,9 @@ triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o: /home/roboy/
 triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/lib/time_controll.hpp
 triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/src/time_controll.cpp
 
+triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/master_list.h
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/mode_msg.h
+triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/system_ctl.h
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_msg.h
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/include/triangulation_msg/time_sync_msg.h
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/arm/usr/include/_G_config.h
@@ -3382,6 +3393,7 @@ triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /opt/ros/kinetic
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /opt/ros/kinetic/include/ros/message.h
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /opt/ros/kinetic/include/ros/message_event.h
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /opt/ros/kinetic/include/ros/message_forward.h
+triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /opt/ros/kinetic/include/ros/message_operations.h
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /opt/ros/kinetic/include/ros/message_traits.h
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /opt/ros/kinetic/include/ros/names.h
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /opt/ros/kinetic/include/ros/node_handle.h
