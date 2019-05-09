@@ -3,6 +3,8 @@
           START_PTP_SYNC
           START_BURST-VAL
           START_BURST
+          START_CONTINIOUSE_MODE-VAL
+          START_CONTINIOUSE_MODE
           BURST_CYCLES-VAL
           BURST_CYCLES
           MASTER_ID_LIST-VAL

@@ -76,6 +76,8 @@
 			piezo_controller_piezo_status_export          : out   std_logic_vector(2 downto 0);                     -- export
 			ptp_piezo_interface0_piezo_interface_in       : in    std_logic                     := 'X';             -- piezo_interface_in
 			ptp_piezo_interface0_piezo_interface_out      : out   std_logic;                                        -- piezo_interface_out
+			ptp_piezo_interface0_time_data_master         : out   std_logic_vector(31 downto 0);                    -- time_data_master
+			ptp_piezo_interface0_time_data_slave          : out   std_logic_vector(31 downto 0);                    -- time_data_slave
 			reset_reset_n                                 : in    std_logic                     := 'X';             -- reset_n
 			rtc_0_conduit_end_event_trigger               : in    std_logic                     := 'X';             -- event_trigger
 			rtc_0_conduit_end_piezo_enable                : out   std_logic;                                        -- piezo_enable

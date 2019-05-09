@@ -69,8 +69,6 @@
 #define PIEZO_CONTROLLER_0_PHASE_B_COUNT_REG_OFST 0x6
 #define PIEZO_CONTROLLER_0_PHASE_B_REG_OFST 0x110
 #define PIEZO_CONTROLLER_0_FREQ 50000000
-#define PIEZO_CONTROLLER_0_PIEZO_COUNT 89
-
 /*
  * Macros for device 'fpga_led', class 'altera_avalon_pio'
  * The macros are prefixed with 'FPGA_LED_'.

@@ -20,6 +20,7 @@ class master_list {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.start_ptp_sync = null;
       this.start_burst = null;
+      this.start_continiouse_mode = null;
       this.burst_cycles = null;
       this.master_id_list = null;
     }
@@ -35,6 +36,12 @@ class master_list {
       }
       else {
         this.start_burst = false;
+      }
+      if (initObj.hasOwnProperty('start_continiouse_mode')) {
+        this.start_continiouse_mode = initObj.start_continiouse_mode
+      }
+      else {
+        this.start_continiouse_mode = false;
       }
       if (initObj.hasOwnProperty('burst_cycles')) {
         this.burst_cycles = initObj.burst_cycles
@@ -57,6 +64,8 @@ class master_list {
     bufferOffset = _serializer.bool(obj.start_ptp_sync, buffer, bufferOffset);
     // Serialize message field [start_burst]
     bufferOffset = _serializer.bool(obj.start_burst, buffer, bufferOffset);
+    // Serialize message field [start_continiouse_mode]
+    bufferOffset = _serializer.bool(obj.start_continiouse_mode, buffer, bufferOffset);
     // Serialize message field [burst_cycles]
     bufferOffset = _serializer.uint32(obj.burst_cycles, buffer, bufferOffset);
     // Serialize message field [master_id_list]
@@ -72,6 +81,8 @@ class master_list {
     data.start_ptp_sync = _deserializer.bool(buffer, bufferOffset);
     // Deserialize message field [start_burst]
     data.start_burst = _deserializer.bool(buffer, bufferOffset);
+    // Deserialize message field [start_continiouse_mode]
+    data.start_continiouse_mode = _deserializer.bool(buffer, bufferOffset);
     // Deserialize message field [burst_cycles]
     data.burst_cycles = _deserializer.uint32(buffer, bufferOffset);
     // Deserialize message field [master_id_list]
@@ -82,7 +93,7 @@ class master_list {
   static getMessageSize(object) {
     let length = 0;
     length += 4 * object.master_id_list.length;
-    return length + 10;
+    return length + 11;
   }
 
   static datatype() {
@@ -92,7 +103,7 @@ class master_list {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'cf7b414f4c61d1db6ce0d1fd4a255466';
+    return '7221ac257d3cfe640d16dee9b326535d';
   }
 
   static messageDefinition() {
@@ -100,6 +111,7 @@ class master_list {
     return `
     bool start_ptp_sync
     bool start_burst
+    bool start_continiouse_mode
     uint32 burst_cycles
     uint32[] master_id_list
     
@@ -124,6 +136,13 @@ class master_list {
     }
     else {
       resolved.start_burst = false
+    }
+
+    if (msg.start_continiouse_mode !== undefined) {
+      resolved.start_continiouse_mode = msg.start_continiouse_mode;
+    }
+    else {
+      resolved.start_continiouse_mode = false
     }
 
     if (msg.burst_cycles !== undefined) {

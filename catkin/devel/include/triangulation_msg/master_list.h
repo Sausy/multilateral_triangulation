@@ -26,12 +26,14 @@ struct master_list_
   master_list_()
     : start_ptp_sync(false)
     , start_burst(false)
+    , start_continiouse_mode(false)
     , burst_cycles(0)
     , master_id_list()  {
     }
   master_list_(const ContainerAllocator& _alloc)
     : start_ptp_sync(false)
     , start_burst(false)
+    , start_continiouse_mode(false)
     , burst_cycles(0)
     , master_id_list(_alloc)  {
   (void)_alloc;
@@ -44,6 +46,9 @@ struct master_list_
 
    typedef uint8_t _start_burst_type;
   _start_burst_type start_burst;
+
+   typedef uint8_t _start_continiouse_mode_type;
+  _start_continiouse_mode_type start_continiouse_mode;
 
    typedef uint32_t _burst_cycles_type;
   _burst_cycles_type burst_cycles;
@@ -129,12 +134,12 @@ struct MD5Sum< ::triangulation_msg::master_list_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "cf7b414f4c61d1db6ce0d1fd4a255466";
+    return "7221ac257d3cfe640d16dee9b326535d";
   }
 
   static const char* value(const ::triangulation_msg::master_list_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xcf7b414f4c61d1dbULL;
-  static const uint64_t static_value2 = 0x6ce0d1fd4a255466ULL;
+  static const uint64_t static_value1 = 0x7221ac257d3cfe64ULL;
+  static const uint64_t static_value2 = 0x0d16dee9b326535dULL;
 };
 
 template<class ContainerAllocator>
@@ -155,6 +160,7 @@ struct Definition< ::triangulation_msg::master_list_<ContainerAllocator> >
   {
     return "bool start_ptp_sync\n\
 bool start_burst\n\
+bool start_continiouse_mode\n\
 uint32 burst_cycles\n\
 uint32[] master_id_list\n\
 ";
@@ -177,6 +183,7 @@ namespace serialization
     {
       stream.next(m.start_ptp_sync);
       stream.next(m.start_burst);
+      stream.next(m.start_continiouse_mode);
       stream.next(m.burst_cycles);
       stream.next(m.master_id_list);
     }
@@ -201,6 +208,8 @@ struct Printer< ::triangulation_msg::master_list_<ContainerAllocator> >
     Printer<uint8_t>::stream(s, indent + "  ", v.start_ptp_sync);
     s << indent << "start_burst: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.start_burst);
+    s << indent << "start_continiouse_mode: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.start_continiouse_mode);
     s << indent << "burst_cycles: ";
     Printer<uint32_t>::stream(s, indent + "  ", v.burst_cycles);
     s << indent << "master_id_list[]" << std::endl;

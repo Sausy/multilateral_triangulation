@@ -7,16 +7,17 @@ import struct
 
 
 class master_list(genpy.Message):
-  _md5sum = "cf7b414f4c61d1db6ce0d1fd4a255466"
+  _md5sum = "7221ac257d3cfe640d16dee9b326535d"
   _type = "triangulation_msg/master_list"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """bool start_ptp_sync
 bool start_burst
+bool start_continiouse_mode
 uint32 burst_cycles
 uint32[] master_id_list
 """
-  __slots__ = ['start_ptp_sync','start_burst','burst_cycles','master_id_list']
-  _slot_types = ['bool','bool','uint32','uint32[]']
+  __slots__ = ['start_ptp_sync','start_burst','start_continiouse_mode','burst_cycles','master_id_list']
+  _slot_types = ['bool','bool','bool','uint32','uint32[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -26,7 +27,7 @@ uint32[] master_id_list
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       start_ptp_sync,start_burst,burst_cycles,master_id_list
+       start_ptp_sync,start_burst,start_continiouse_mode,burst_cycles,master_id_list
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -39,6 +40,8 @@ uint32[] master_id_list
         self.start_ptp_sync = False
       if self.start_burst is None:
         self.start_burst = False
+      if self.start_continiouse_mode is None:
+        self.start_continiouse_mode = False
       if self.burst_cycles is None:
         self.burst_cycles = 0
       if self.master_id_list is None:
@@ -46,6 +49,7 @@ uint32[] master_id_list
     else:
       self.start_ptp_sync = False
       self.start_burst = False
+      self.start_continiouse_mode = False
       self.burst_cycles = 0
       self.master_id_list = []
 
@@ -62,7 +66,7 @@ uint32[] master_id_list
     """
     try:
       _x = self
-      buff.write(_get_struct_2BI().pack(_x.start_ptp_sync, _x.start_burst, _x.burst_cycles))
+      buff.write(_get_struct_3BI().pack(_x.start_ptp_sync, _x.start_burst, _x.start_continiouse_mode, _x.burst_cycles))
       length = len(self.master_id_list)
       buff.write(_struct_I.pack(length))
       pattern = '<%sI'%length
@@ -79,10 +83,11 @@ uint32[] master_id_list
       end = 0
       _x = self
       start = end
-      end += 6
-      (_x.start_ptp_sync, _x.start_burst, _x.burst_cycles,) = _get_struct_2BI().unpack(str[start:end])
+      end += 7
+      (_x.start_ptp_sync, _x.start_burst, _x.start_continiouse_mode, _x.burst_cycles,) = _get_struct_3BI().unpack(str[start:end])
       self.start_ptp_sync = bool(self.start_ptp_sync)
       self.start_burst = bool(self.start_burst)
+      self.start_continiouse_mode = bool(self.start_continiouse_mode)
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -103,7 +108,7 @@ uint32[] master_id_list
     """
     try:
       _x = self
-      buff.write(_get_struct_2BI().pack(_x.start_ptp_sync, _x.start_burst, _x.burst_cycles))
+      buff.write(_get_struct_3BI().pack(_x.start_ptp_sync, _x.start_burst, _x.start_continiouse_mode, _x.burst_cycles))
       length = len(self.master_id_list)
       buff.write(_struct_I.pack(length))
       pattern = '<%sI'%length
@@ -121,10 +126,11 @@ uint32[] master_id_list
       end = 0
       _x = self
       start = end
-      end += 6
-      (_x.start_ptp_sync, _x.start_burst, _x.burst_cycles,) = _get_struct_2BI().unpack(str[start:end])
+      end += 7
+      (_x.start_ptp_sync, _x.start_burst, _x.start_continiouse_mode, _x.burst_cycles,) = _get_struct_3BI().unpack(str[start:end])
       self.start_ptp_sync = bool(self.start_ptp_sync)
       self.start_burst = bool(self.start_burst)
+      self.start_continiouse_mode = bool(self.start_continiouse_mode)
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -140,9 +146,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2BI = None
-def _get_struct_2BI():
-    global _struct_2BI
-    if _struct_2BI is None:
-        _struct_2BI = struct.Struct("<2BI")
-    return _struct_2BI
+_struct_3BI = None
+def _get_struct_3BI():
+    global _struct_3BI
+    if _struct_3BI is None:
+        _struct_3BI = struct.Struct("<3BI")
+    return _struct_3BI

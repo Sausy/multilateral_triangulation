@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ptp_tb
-Wed May  8 11:57:07 2019
+Thu May  9 18:52:31 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -16,10 +16,11 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   8. General Register Statistics
   9. Inverted Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "PTP_master:ptpmaster0"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 11. Port Connectivity Checks: "PTP_ctl:ptpslave0"
+ 12. Port Connectivity Checks: "PTP_ctl:ptpmaster0"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -45,14 +46,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May  8 11:57:07 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu May  9 18:52:31 2019       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; ptp_tb                                      ;
 ; Top-level Entity Name           ; ptp_tb                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 171                                         ;
-; Total pins                      ; 87                                          ;
+; Total registers                 ; 305                                         ;
+; Total pins                      ; 151                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -183,37 +184,37 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 108        ;
+; Estimate of Logic utilization (ALMs needed) ; 177        ;
 ;                                             ;            ;
-; Combinational ALUT usage for logic          ; 147        ;
-;     -- 7 input functions                    ; 2          ;
-;     -- 6 input functions                    ; 54         ;
-;     -- 5 input functions                    ; 9          ;
-;     -- 4 input functions                    ; 6          ;
-;     -- <=3 input functions                  ; 76         ;
+; Combinational ALUT usage for logic          ; 237        ;
+;     -- 7 input functions                    ; 1          ;
+;     -- 6 input functions                    ; 35         ;
+;     -- 5 input functions                    ; 47         ;
+;     -- 4 input functions                    ; 1          ;
+;     -- <=3 input functions                  ; 153        ;
 ;                                             ;            ;
-; Dedicated logic registers                   ; 171        ;
+; Dedicated logic registers                   ; 305        ;
 ;                                             ;            ;
-; I/O pins                                    ; 87         ;
+; I/O pins                                    ; 151        ;
 ;                                             ;            ;
 ; Total DSP Blocks                            ; 0          ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; wire_reset ;
-; Maximum fan-out                             ; 71         ;
-; Total fan-out                               ; 1260       ;
-; Average fan-out                             ; 2.56       ;
+; Maximum fan-out                             ; 200        ;
+; Total fan-out                               ; 2130       ;
+; Average fan-out                             ; 2.52       ;
 +---------------------------------------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                              ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+-------------+--------------+
-; |ptp_tb                    ; 147 (54)            ; 171 (36)                  ; 0                 ; 0          ; 87   ; 0            ; |ptp_tb                       ; ptp_tb      ; work         ;
-;    |PTP_master:ptpmaster0| ; 46 (46)             ; 67 (67)                   ; 0                 ; 0          ; 0    ; 0            ; |ptp_tb|PTP_master:ptpmaster0 ; PTP_master  ; work         ;
-;    |PTP_slave:ptpslave0|   ; 47 (47)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |ptp_tb|PTP_slave:ptpslave0   ; PTP_slave   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+; |ptp_tb                    ; 237 (61)            ; 305 (105)                 ; 0                 ; 0          ; 151  ; 0            ; |ptp_tb                    ; ptp_tb      ; work         ;
+;    |PTP_ctl:ptpmaster0|    ; 88 (88)             ; 100 (100)                 ; 0                 ; 0          ; 0    ; 0            ; |ptp_tb|PTP_ctl:ptpmaster0 ; PTP_ctl     ; work         ;
+;    |PTP_ctl:ptpslave0|     ; 88 (88)             ; 100 (100)                 ; 0                 ; 0          ; 0    ; 0            ; |ptp_tb|PTP_ctl:ptpslave0  ; PTP_ctl     ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -222,12 +223,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 171   ;
+; Total registers                              ; 305   ;
 ; Number of registers using Synchronous Clear  ; 64    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 75    ;
+; Number of registers using Asynchronous Clear ; 209   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 96    ;
+; Number of registers using Clock Enable       ; 224   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -238,30 +239,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; avalon_slave_waitFlag                  ; 2       ;
-; PTP_master:ptpmaster0|waitflag_input   ; 5       ;
-; PTP_slave:ptpslave0|waitflag_output    ; 6       ;
+; PTP_ctl:ptpslave0|FLAG_is_master       ; 7       ;
+; PTP_ctl:ptpmaster0|conv_cnt[0]         ; 2       ;
 ; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |ptp_tb|PTP_master:ptpmaster0|delay_cnt[14] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |ptp_tb|PTP_slave:ptpslave0|delay_cnt[17]   ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |ptp_tb|returnvalue[1]                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |ptp_tb|PTP_ctl:ptpmaster0|delay_cnt[29] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |ptp_tb|PTP_ctl:ptpslave0|delay_cnt[26]  ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |ptp_tb|returnvalue[1]                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PTP_master:ptpmaster0"                                                                       ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; startsync_cnt ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PTP_ctl:ptpslave0"                                                                                                                                                                           ;
++-----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port            ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; mode_select     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; mode_select[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PTP_ctl:ptpmaster0"                                                                                                                                                                          ;
++-----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port            ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; mode_select     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; mode_select[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -269,25 +281,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 171                         ;
-;     CLR               ; 11                          ;
+; arriav_ff             ; 305                         ;
+;     CLR               ; 17                          ;
 ;     CLR SCLR          ; 64                          ;
 ;     ENA               ; 96                          ;
-; arriav_lcell_comb     ; 147                         ;
-;     arith             ; 64                          ;
-;         1 data inputs ; 64                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 81                          ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 6                           ;
-;         5 data inputs ; 9                           ;
-;         6 data inputs ; 54                          ;
-; boundary_port         ; 87                          ;
+;     ENA CLR           ; 128                         ;
+; arriav_lcell_comb     ; 237                         ;
+;     arith             ; 126                         ;
+;         1 data inputs ; 124                         ;
+;         2 data inputs ; 2                           ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 110                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 47                          ;
+;         6 data inputs ; 35                          ;
+; boundary_port         ; 151                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.41                        ;
+; Average LUT depth     ; 2.47                        ;
 +-----------------------+-----------------------------+
 
 
@@ -306,30 +321,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Wed May  8 11:56:58 2019
+    Info: Processing started: Thu May  9 18:52:23 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ptp_tb -c ptp_tb
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 4 design units, including 4 entities, in source file ptp_tb.v
-    Info (12023): Found entity 1: ptp_tb File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 1
-    Info (12023): Found entity 2: PTP_slave File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 99
-    Info (12023): Found entity 3: PTP_master File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 165
-    Info (12023): Found entity 4: tb_write_on_avalon File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 225
+    Info (12023): Found entity 1: ptp_tb File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 5
+    Info (12023): Found entity 2: PTP_ctl File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 159
+    Info (12023): Found entity 3: tb_write_on_avalon File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 244
+    Info (12023): Found entity 4: tb_easy_acces File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 742
+Info (12021): Found 3 design units, including 3 entities, in source file legacy_ptp.v
+    Info (12023): Found entity 1: ptp_sync File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/legacy_ptp.v Line: 1
+    Info (12023): Found entity 2: PTP_slave File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/legacy_ptp.v Line: 114
+    Info (12023): Found entity 3: PTP_master File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/legacy_ptp.v Line: 184
 Info (12127): Elaborating entity "ptp_tb" for the top level hierarchy
-Info (12128): Elaborating entity "PTP_master" for hierarchy "PTP_master:ptpmaster0" File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 45
-Warning (10034): Output port "startsync_cnt" at ptp_tb.v(172) has no driver File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 172
-Info (12128): Elaborating entity "PTP_slave" for hierarchy "PTP_slave:ptpslave0" File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 46
+Info (12128): Elaborating entity "PTP_ctl" for hierarchy "PTP_ctl:ptpmaster0" File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 75
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v Line: 182
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 299 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 517 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 53 input pins
-    Info (21059): Implemented 34 output pins
-    Info (21061): Implemented 212 logic cells
+    Info (21059): Implemented 98 output pins
+    Info (21061): Implemented 366 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 1044 megabytes
-    Info: Processing ended: Wed May  8 11:57:07 2019
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 1046 megabytes
+    Info: Processing ended: Thu May  9 18:52:31 2019
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

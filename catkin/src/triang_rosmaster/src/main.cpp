@@ -46,6 +46,11 @@ int main(int argc, char *argv[]) {
         cout<<"\nstart ptp sync";
         masterctl.time_sync_tgl(true);
         break;
+      case '4':
+          //start ptp sync
+          cout<<"\nstart continouse mode";
+          masterctl.tgl_continiouse_mode();
+          break;
       default:
         break;
     }

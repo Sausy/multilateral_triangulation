@@ -23,6 +23,7 @@ class master_gen{
     void push_vec(vector<uint32_t>& vec, uint32_t data);
     void add_list_member();
     void start_burst_mode();
+    void tgl_continiouse_mode();
     //std::vector<int> master_list;
 
     ros::NodeHandlePtr  nh;

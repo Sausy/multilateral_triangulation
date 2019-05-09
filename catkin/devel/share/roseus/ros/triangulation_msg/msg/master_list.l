@@ -14,19 +14,21 @@
 
 (defclass triangulation_msg::master_list
   :super ros::object
-  :slots (_start_ptp_sync _start_burst _burst_cycles _master_id_list ))
+  :slots (_start_ptp_sync _start_burst _start_continiouse_mode _burst_cycles _master_id_list ))
 
 (defmethod triangulation_msg::master_list
   (:init
    (&key
     ((:start_ptp_sync __start_ptp_sync) nil)
     ((:start_burst __start_burst) nil)
+    ((:start_continiouse_mode __start_continiouse_mode) nil)
     ((:burst_cycles __burst_cycles) 0)
     ((:master_id_list __master_id_list) (make-array 0 :initial-element 0 :element-type :integer))
     )
    (send-super :init)
    (setq _start_ptp_sync __start_ptp_sync)
    (setq _start_burst __start_burst)
+   (setq _start_continiouse_mode __start_continiouse_mode)
    (setq _burst_cycles (round __burst_cycles))
    (setq _master_id_list __master_id_list)
    self)
@@ -36,6 +38,9 @@
   (:start_burst
    (&optional __start_burst)
    (if __start_burst (setq _start_burst __start_burst)) _start_burst)
+  (:start_continiouse_mode
+   (&optional __start_continiouse_mode)
+   (if __start_continiouse_mode (setq _start_continiouse_mode __start_continiouse_mode)) _start_continiouse_mode)
   (:burst_cycles
    (&optional __burst_cycles)
    (if __burst_cycles (setq _burst_cycles __burst_cycles)) _burst_cycles)
@@ -48,6 +53,8 @@
     ;; bool _start_ptp_sync
     1
     ;; bool _start_burst
+    1
+    ;; bool _start_continiouse_mode
     1
     ;; uint32 _burst_cycles
     4
@@ -62,6 +69,8 @@
        (if _start_ptp_sync (write-byte -1 s) (write-byte 0 s))
      ;; bool _start_burst
        (if _start_burst (write-byte -1 s) (write-byte 0 s))
+     ;; bool _start_continiouse_mode
+       (if _start_continiouse_mode (write-byte -1 s) (write-byte 0 s))
      ;; uint32 _burst_cycles
        (write-long _burst_cycles s)
      ;; uint32[] _master_id_list
@@ -77,6 +86,8 @@
      (setq _start_ptp_sync (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;; bool _start_burst
      (setq _start_burst (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
+   ;; bool _start_continiouse_mode
+     (setq _start_continiouse_mode (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;; uint32 _burst_cycles
      (setq _burst_cycles (sys::peek buf ptr- :integer)) (incf ptr- 4)
    ;; uint32[] _master_id_list
@@ -90,11 +101,12 @@
    self)
   )
 
-(setf (get triangulation_msg::master_list :md5sum-) "cf7b414f4c61d1db6ce0d1fd4a255466")
+(setf (get triangulation_msg::master_list :md5sum-) "7221ac257d3cfe640d16dee9b326535d")
 (setf (get triangulation_msg::master_list :datatype-) "triangulation_msg/master_list")
 (setf (get triangulation_msg::master_list :definition-)
       "bool start_ptp_sync
 bool start_burst
+bool start_continiouse_mode
 uint32 burst_cycles
 uint32[] master_id_list
 
@@ -102,6 +114,6 @@ uint32[] master_id_list
 
 
 
-(provide :triangulation_msg/master_list "cf7b414f4c61d1db6ce0d1fd4a255466")
+(provide :triangulation_msg/master_list "7221ac257d3cfe640d16dee9b326535d")
 
 

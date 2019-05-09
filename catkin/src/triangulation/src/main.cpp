@@ -111,7 +111,7 @@ int main(int argc, char *argv[]) {
       cout << "\nsync was enabled\n";
       usleep(100000);
       modef.sync_enable = false;
-      ptp.update_time(modef.id == MASTER);
+      ptp.update_time(modef.id == MASTER);  //TODO MASTER zu current master
       cout << "\nCurrentSysTime: " << ptp.time_data.sys_time;
       cout << "\nCurrentClkCycleCntTime: " << ptp.time_data.cycle_cnt;
       cout << "\nCurrentSyncDivTime: " << ptp.time_data.sync_time_div;

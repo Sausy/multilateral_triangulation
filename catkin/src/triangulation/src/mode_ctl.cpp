@@ -163,6 +163,10 @@ void fpga_mode::master_ctl(const triangulation_msg::master_list::ConstPtr& msg){
   sync_enable = msg->start_ptp_sync;
   pctl->piezo_set_burst_cycles(msg->burst_cycles);
   burst_enable = msg->start_burst;
+  if(msg->start_continiouse_mode)
+    pctl->start_US_out();
+  else
+    pctl->stop_US_out();
 
   //TODO readout list
   //master_list = msg->master_id_list;
