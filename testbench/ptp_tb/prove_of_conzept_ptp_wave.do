@@ -18,7 +18,7 @@ add wave -noupdate -radix decimal /tb_write_on_avalon/time_slave
 add wave -noupdate -radix decimal /tb_write_on_avalon/time_master2
 add wave -noupdate -radix decimal /tb_write_on_avalon/time_slave2
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {247 ps} 0}
+WaveRestoreCursors {{Cursor 1} {743 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100

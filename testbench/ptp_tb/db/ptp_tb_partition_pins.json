@@ -404,6 +404,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "avalon_slave_address[14]",
+					"strict" : false
+				},
+				{
 					"name" : "avalon_slave_address[15]",
 					"strict" : false
 				},
@@ -428,10 +432,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "avalon_slave_address[14]",
-					"strict" : false
-				},
-				{
 					"name" : "clock",
 					"strict" : false
 				},
@@ -440,7 +440,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "avalon_slave_writedata[0]",
+					"name" : "piezo_interface_in",
+					"strict" : false
+				},
+				{
+					"name" : "avalon_slave_address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "avalon_slave_address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "avalon_slave_address[2]",
 					"strict" : false
 				},
 				{
@@ -465,22 +477,6 @@
 				},
 				{
 					"name" : "avalon_slave_write",
-					"strict" : false
-				},
-				{
-					"name" : "avalon_slave_address[2]",
-					"strict" : false
-				},
-				{
-					"name" : "avalon_slave_address[0]",
-					"strict" : false
-				},
-				{
-					"name" : "avalon_slave_address[1]",
-					"strict" : false
-				},
-				{
-					"name" : "piezo_interface_in",
 					"strict" : false
 				},
 				{
@@ -561,6 +557,10 @@
 				},
 				{
 					"name" : "avalon_slave_writedata[17]",
+					"strict" : false
+				},
+				{
+					"name" : "avalon_slave_writedata[0]",
 					"strict" : false
 				},
 				{

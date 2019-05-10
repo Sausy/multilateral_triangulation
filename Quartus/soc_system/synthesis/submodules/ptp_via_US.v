@@ -153,7 +153,7 @@ PTP_ctl ptpslave0(
 					8'h01: enable_time_sync_mode <= (avalon_slave_writedata!=0);
 					8'h02: hps_reset <= (avalon_slave_writedata!=0);
 					8'h03: start_ptp <=  avalon_slave_writedata[1:0];
-					8'h04: test_avalon <=  avalon_slave_writedata[0];
+					//8'h04: test_avalon <=  avalon_slave_writedata[0];
 				endcase
 			end
 
@@ -233,12 +233,15 @@ module PTP_ctl(
 							end
 					end
 					if(conv_cnt >= `CONV_CYCLES)begin
-							//conv_cnt 							<= 32'd0;
-							conv_finished_reg		<= 1;
-							travel_time_cnt_reg <= travel_time_cnt_reg;
+							conv_cnt 								<= `CONV_CYCLES;
+							conv_finished_reg			<= 1;
+							travel_time_cnt_reg 	<= travel_time_cnt_reg;
+							output_interface_reg 	<= 0;
+							FLAG_is_master 				<= 1;
 					end
 			end
 			if (delay_cnt == `MAX_WAIT_CYCLES) begin
+				output_interface_reg 	<= 0;
 				delay_cnt 								<= 32'd0;
 				output_interface_reg 	<= 0;
 			end	
