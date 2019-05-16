@@ -134,6 +134,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/sausy/Projects/multilateral_triangulation/catkin/build/triang_communication/triangulation_msg/cmake_install.cmake")
   include("/home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation/cmake_install.cmake")
   include("/home/sausy/Projects/multilateral_triangulation/catkin/build/triang_rosmaster/cmake_install.cmake")
+  include("/home/sausy/Projects/multilateral_triangulation/catkin/build/using_markers/cmake_install.cmake")
 
 endif()
 
