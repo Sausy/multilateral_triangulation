@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/triangulation_msg_generate_messages_eus"
-  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/time_sync_msg.l"
-  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/mode_msg.l"
-  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/time_msg.l"
-  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/system_ctl.l"
-  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/master_list.l"
-  "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/manifest.l"
+  "/home/sausy/Projects/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/time_msg.l"
+  "/home/sausy/Projects/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/time_sync_msg.l"
+  "/home/sausy/Projects/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/master_list.l"
+  "/home/sausy/Projects/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/system_ctl.l"
+  "/home/sausy/Projects/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/msg/mode_msg.l"
+  "/home/sausy/Projects/multilateral_triangulation/catkin/devel/share/roseus/ros/triangulation_msg/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

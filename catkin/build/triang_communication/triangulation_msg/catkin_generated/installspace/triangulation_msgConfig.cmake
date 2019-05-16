@@ -67,14 +67,14 @@ set(triangulation_msg_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(triangulation_msg_SOURCE_PREFIX /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg)
-  set(triangulation_msg_DEVEL_PREFIX /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel)
+  set(triangulation_msg_SOURCE_PREFIX /home/sausy/Projects/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg)
+  set(triangulation_msg_DEVEL_PREFIX /home/sausy/Projects/multilateral_triangulation/catkin/devel)
   set(triangulation_msg_INSTALL_PREFIX "")
   set(triangulation_msg_PREFIX ${triangulation_msg_DEVEL_PREFIX})
 else()
   set(triangulation_msg_SOURCE_PREFIX "")
   set(triangulation_msg_DEVEL_PREFIX "")
-  set(triangulation_msg_INSTALL_PREFIX /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/install)
+  set(triangulation_msg_INSTALL_PREFIX /home/sausy/Projects/multilateral_triangulation/catkin/install)
   set(triangulation_msg_PREFIX ${triangulation_msg_INSTALL_PREFIX})
 endif()
 
@@ -110,7 +110,7 @@ if(NOT "include " STREQUAL " ")
         message(FATAL_ERROR "Project 'triangulation_msg' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'triangulation_msg' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/install/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'triangulation_msg' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/sausy/Projects/multilateral_triangulation/catkin/install/${idir}'.  ${_report}")
     endif()
     _list_append_unique(triangulation_msg_INCLUDE_DIRS ${include})
   endforeach()
@@ -121,6 +121,8 @@ foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
     list(APPEND triangulation_msg_LIBRARIES ${library})
+  elseif(${library} MATCHES "^-l")
+    list(APPEND triangulation_msg_LIBRARIES ${library})
   elseif(TARGET ${library})
     list(APPEND triangulation_msg_LIBRARIES ${library})
   elseif(IS_ABSOLUTE ${library})
@@ -129,11 +131,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-<<<<<<< HEAD
     foreach(path /home/sausy/Projects/multilateral_triangulation/catkin/install/lib;/opt/ros/melodic/lib)
-=======
-    foreach(path /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/install/lib;/home/roboy/workspace/roboy_control/devel/lib;/home/roboy/DriverlessDriver/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
->>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

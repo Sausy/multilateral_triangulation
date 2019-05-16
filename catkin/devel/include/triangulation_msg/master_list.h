@@ -91,7 +91,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'geometry_msgs': ['/opt/ros/kinetic/share/geometry_msgs/cmake/../msg'], 'triangulation_msg': ['/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
+// {'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'triangulation_msg': ['/home/sausy/Projects/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg/msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
@@ -158,12 +158,12 @@ struct Definition< ::triangulation_msg::master_list_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "bool start_ptp_sync\n\
-bool start_burst\n\
-bool start_continiouse_mode\n\
-uint32 burst_cycles\n\
-uint32[] master_id_list\n\
-";
+    return "bool start_ptp_sync\n"
+"bool start_burst\n"
+"bool start_continiouse_mode\n"
+"uint32 burst_cycles\n"
+"uint32[] master_id_list\n"
+;
   }
 
   static const char* value(const ::triangulation_msg::master_list_<ContainerAllocator>&) { return value(); }
