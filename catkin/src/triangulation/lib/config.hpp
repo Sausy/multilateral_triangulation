@@ -1,6 +1,8 @@
 #ifndef CONFIG_HPP_
 #define CONFIG_HPP_
 
+#define BURSTCYCLE_OFFSET 2500
+
 #define FPGA_CLK_FRQ      50000000
 #define FPGA_CLK_T        (double)( 1. / FPGA_CLK_FRQ)
 

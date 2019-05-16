@@ -15,7 +15,7 @@ das die system clock cnt syncronisiert wird
 
 *)time_sync muss noch ein Warteflag hinzu gefuegt werden
  sowie add in quartus read enable flag to wait till ptp conv is finished
-
+*)Bzw es muss statt einer ros sub zu action server werden damit man sicher stellen kann das jeder user auf den input wartet
 
  *) Ueberpruefen ob der hdl code von ptp passt, denn bei der simulation
  gab es unterschiede zwischen master und slave sync um 2 cyclen
@@ -69,7 +69,6 @@ int main(int argc, char *argv[]) {
 
   piezo_ctl piezo_ctl(addr_base.virtual_base);
   rtc_ctl rtc_ctl(addr_base.rtc_base_addr);
-  rtc_ctl.piezo_set_burst_cycles(3);
   fpga_mode modef(addr_base.sw_base, &rtc_ctl);
   time_sync ptp(addr_base.ptp_base, modef.id);  //todo
 
@@ -94,21 +93,30 @@ int main(int argc, char *argv[]) {
   rtc_ctl.set_time(ptp.time_data.sys_time);
 
   cout << "\n\n=====================================";
-  cout << "\n\n  start loop";
+  cout << "\n\n  start loopy";
   cout << "\n\n=====================================";
 
+  char foo;
+
   while (1) {
+    ros::spinOnce();
+
     modef.start_conversation(); //only does something if master changes
-    modef.conversation();
+
+    if(modef.burst_enable)
+      modef.conversation();
 
     //ros tells the master to ptp sync
     if(modef.sync_enable){
+      cout << "\nsync was enabled\n";
+      usleep(100000);
       modef.sync_enable = false;
-      ptp.update_time(modef.id == MASTER);
+      ptp.update_time(modef.id == MASTER);  //TODO MASTER zu current master
+      cout << "\nCurrentSysTime: " << ptp.time_data.sys_time;
+      cout << "\nCurrentClkCycleCntTime: " << ptp.time_data.cycle_cnt;
+      cout << "\nCurrentSyncDivTime: " << ptp.time_data.sync_time_div;
     }
-    cout << "\nCurrentSysTime: " << ptp.time_data.sys_time;
-    cout << "\nCurrentClkCycleCntTime: " << ptp.time_data.cycle_cnt;
-    cout << "\nCurrentSyncDivTime: " << ptp.time_data.sync_time_div;
+
     /*distance = calc_distance(rtc_ctl.US_start_time,in_time);
 
     printf("\ncurrent distance is %lf", distance);

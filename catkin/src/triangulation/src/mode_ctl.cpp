@@ -15,6 +15,8 @@ fpga_mode::fpga_mode(int32_t *base_addr_,rtc_ctl *pctl_){
 
   printf("\nID: %d", id);
 
+  sync_enable = 0;
+
 
   if (!ros::isInitialized()) {
     int argc = 0;
@@ -43,12 +45,12 @@ fpga_mode::fpga_mode(int32_t *base_addr_,rtc_ctl *pctl_){
   //Todo it is useless if system is current master
   system_sub = nh->subscribe("/triangulation/" + std::to_string(current_master_id) + "ID/ctl", 1, &fpga_mode::get_syst_ctl, this);
   //start ptp time sync
-  time_sync_sub = nh->subscribe("/triangulation/all/master_list", 1, &fpga_mode::time_sync_enable, this);
+  time_sync_sub = nh->subscribe("/triangulation/all/master_list", 1, &fpga_mode::master_ctl, this);
 
   //TODO :: system sub soll sich die master liste von master_list.msg ziehen
   //system_sub = nh->subscribe("/triangulation/" + std::to_string(id) + "/mode", 1, &fpga_mode::get_mode, this);
 
-
+  pctl->piezo_set_burst_cycles(10000);
   pctl->stop_US_out();
 }
 
@@ -75,7 +77,7 @@ void fpga_mode::conversation(){
 //Init routins
 //==============================
 void fpga_mode::master_init(){
-  std::cout << "\n MASTER Init";
+  std::cout << "\nMASTER Init";
 
   fp_conv = &fpga_mode::master_conv;
   //for(uint8_t id_cnt = 0; id_cnt < MAX_CLIENTS; id_cnt++)
@@ -157,8 +159,15 @@ void fpga_mode::get_slav_time(const triangulation_msg::time_msg::ConstPtr& msg){
 void fpga_mode::get_syst_ctl(const triangulation_msg::system_ctl::ConstPtr& msg){
   std::cout << "\nmaster ID: " << msg->master_id;
 }
-void fpga_mode::time_sync_enable(const triangulation_msg::master_list::ConstPtr& msg){
+void fpga_mode::master_ctl(const triangulation_msg::master_list::ConstPtr& msg){
   sync_enable = msg->start_ptp_sync;
+  pctl->piezo_set_burst_cycles(msg->burst_cycles);
+  burst_enable = msg->start_burst;
+  if(msg->start_continiouse_mode)
+    pctl->start_US_out();
+  else
+    pctl->stop_US_out();
+
   //TODO readout list
   //master_list = msg->master_id_list;
 }

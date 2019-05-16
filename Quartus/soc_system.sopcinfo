@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="soc_system" kind="soc_system" version="1.0" fabric="QSYS">
  <!-- Format version 18.0 614 (Future versions may contain additional information.) -->
- <!-- 2019.04.17.11:18:44 -->
+ <!-- 2019.05.09.18:47:17 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1555492715</value>
+  <value>1557420428</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -75520,6 +75520,18 @@ parameters are a RESULT of the module parameters. -->
     <direction>Output</direction>
     <width>1</width>
     <role>piezo_interface_out</role>
+   </port>
+   <port>
+    <name>time_data_master</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>time_data_master</role>
+   </port>
+   <port>
+    <name>time_data_slave</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>time_data_slave</role>
    </port>
   </interface>
   <interface name="clock" kind="clock_sink" version="18.0">

@@ -13,9 +13,10 @@ void menu::print_init_header(){
 }
 
 void menu::print_menu(){
-  cout << "\n 1: Options\n";
-  cout << "\n 2: geather burst data\n";
-  cout << "\n 3: start ptp time sync\n";
+  cout << "\n 1: Options";
+  cout << "\n 2: start burst data";
+  cout << "\n 3: start ptp time sync";
+  cout << "\n 4: continouse burst";
 }
 uint8_t menu::select(){
   uint8_t ret;
@@ -24,14 +25,5 @@ uint8_t menu::select(){
   return ret;
 }
 void menu::options_menu(uint8_t option_key){
-  switch (option_key){
-    case 1:
-      break;
-    case 2:
-      break;
-    case 3:
-      break;
-    default:
-      break;
-  }
+
 }

@@ -2,12 +2,16 @@
 #define TIME_SYNC_HPP_
 #include <ros/ros.h>
 #include <vector>
+#include <stdio.h>
+#include <stdlib.h>
 #include <triangulation_msg/mode_msg.h>
 #include <triangulation_msg/system_ctl.h>
 #include <triangulation_msg/time_msg.h>
 #include <triangulation_msg/time_sync_msg.h>
 #include "mode_ctl.hpp"
 #include "config.hpp"
+
+#include <unistd.h>
 
 using namespace std;
 
@@ -32,7 +36,6 @@ class time_sync
     time_sync(int32_t *base_addr_ = nullptr, uint8_t id = 0);
 
     uint32_t start_time_sync(bool is_master_mode_);
-    uint32_t read_sync_data(bool is_master_mode_);
 
     Time time_data = {0,0,0};
 
@@ -48,6 +51,5 @@ class time_sync
 
   private:
     int32_t *time_sync_base;
-    void set_sync_mode(bool is_master_mode_);
 };
 #endif

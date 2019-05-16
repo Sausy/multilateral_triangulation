@@ -3,9 +3,9 @@
 -- ==========================
 --
 -- Board        : Terasic DE0-Nano-SoC
--- Author       : Léa Strobino
--- Revision     : 1.0
--- Last updated : Thu, 19 Apr 2018 18:17:51 +0200
+-- BASED ON : Léa Strobino's work
+-- Author       : Michael Sausmikat
+-- Revision     : 1.1
 -------------------------------------------------------------------------------
 
 library IEEE;
@@ -167,6 +167,8 @@ architecture rtl of DE0_Nano_SoC_top_level is
 		clock_divider_0_conduit_end_out_clk  : out   std_logic;                                        -- out_clk
 		ptp_piezo_interface0_piezo_interface_out         : out   std_logic;                                        -- us_interface_out
       ptp_piezo_interface0_piezo_interface_in          : in    std_logic                     := 'X';             -- us_interface_in
+		ptp_piezo_interface0_time_data_master         : out   std_logic_vector(31 downto 0);                    -- time_data_master
+		ptp_piezo_interface0_time_data_slave          : out   std_logic_vector(31 downto 0);                    -- time_data_slave
 		rtc_0_conduit_end_event_trigger               : in    std_logic                     := 'L';             -- event_trigger
 		rtc_0_conduit_end_event_trigger2              : in    std_logic                     := 'X';              -- event_trigger2
 		rtc_0_conduit_end_piezo_enable                : out   std_logic ;                                        -- piezo_enable
@@ -186,6 +188,8 @@ architecture rtl of DE0_Nano_SoC_top_level is
   signal piezo_enable_rtc	: std_logic;
   signal ptp_piezo_enable	: std_logic;
   signal piezo_enable : std_logic;
+  signal master_time_ptp: std_logic_vector(31 downto 0);
+  signal slave_time_ptp: std_logic_vector(31 downto 0);
 
 begin
 
@@ -277,6 +281,8 @@ begin
 	 clock_divider_0_conduit_end_out_clk  				=> clk_div,   --   clock_divider_0_conduit_end.out_clk
 	 ptp_piezo_interface0_piezo_interface_out         	=> ptp_piezo_enable,         --          ptp_piezo_interface0.us_interface_out
 	 ptp_piezo_interface0_piezo_interface_in          		=> RTC_TRIGGER,          --                              .us_interface_in
+	 ptp_piezo_interface0_time_data_master         => master_time_ptp,         --                              .time_data_master
+	 ptp_piezo_interface0_time_data_slave          => slave_time_ptp,          --                              .time_data_slave
 	 rtc_0_conduit_end_event_trigger  							=> RTC_TRIGGER, -- realtime_clock_controll_0_conduit_end.event_trigger
 	 rtc_0_conduit_end_event_trigger2              		=> RTC_TRIGGER2,      -- event_trigger2
 	 rtc_0_conduit_end_piezo_enable                		=> piezo_enable_rtc,     --.piezo_enable

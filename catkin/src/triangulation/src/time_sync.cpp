@@ -5,6 +5,11 @@
 time_sync::time_sync(int32_t *base_addr_, uint8_t id){
   time_sync_base=base_addr_;
 
+  //reset ptp sync
+  IOWR(time_sync_base, (uint32_t)(0x02<<8|0), 1);
+  IOWR(time_sync_base, (uint32_t)(0x04<<8|0), 0);
+
+
   if (!ros::isInitialized()) {
     int argc = 0;
     char **argv = NULL;
@@ -36,24 +41,26 @@ void time_sync::update_time(bool is_master_mode_){
 
 
 uint32_t time_sync::start_time_sync(bool is_master_mode_){
-  set_sync_mode(is_master_mode_);
-  IOWR(time_sync_base, (uint32_t)(0x00<<8|0), 0);
 
-  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  //TODO: add in quartus read enable flag to wait till ptp conv is finished
-  return (read_sync_data(is_master_mode_));
+  uint8_t interface_buffer = ((is_master_mode_ << 1)|(1))& 0xff;
+  uint32_t ret = 0;
 
-}
-uint32_t time_sync::read_sync_data(bool is_master_mode_){
-  if(is_master_mode_)
-    return (IORD(time_sync_base, (uint32_t)(0x00<<8|0)));
+  printf("\ninterface_buffer: %d", interface_buffer);
+  IOWR(time_sync_base, (uint32_t)(0x03<<8|0), interface_buffer);
+  cout << "\nstart sync";
 
-  return (IORD(time_sync_base, (uint32_t)(0x01<<8|0)));
-}
-void time_sync::set_sync_mode(bool is_master_mode_){
-  if(is_master_mode_)
-    IOWR(time_sync_base, (uint32_t)(0x00<<8|0), 1);
-  else
-    IOWR(time_sync_base, (uint32_t)(0x00<<8|0), 0);
+
+  interface_buffer = (0x02<< 8)|0;
+  ret = IORD(time_sync_base, (uint32_t)(interface_buffer));
+  printf("\nis ready: %d", ret);
+
+  interface_buffer = (0x00<< 8)|0;
+  ret = IORD(time_sync_base, (uint32_t)(interface_buffer));
+  printf("\nmaster count: %d", ret);
+
+  interface_buffer = (0x01 << 8)|0;
+  ret = IORD(time_sync_base, (uint32_t)(interface_buffer));
+  printf("\nslave count: %d", ret);
+  printf("\nslave count: %g", ret *FPGA_CLK_T);
+  return(ret);
 }

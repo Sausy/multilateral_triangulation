@@ -80,6 +80,8 @@ module soc_system (
 		output wire [2:0]  piezo_controller_piezo_status_export,          // piezo_controller_piezo_status.export
 		input  wire        ptp_piezo_interface0_piezo_interface_in,       //          ptp_piezo_interface0.piezo_interface_in
 		output wire        ptp_piezo_interface0_piezo_interface_out,      //                              .piezo_interface_out
+		output wire [31:0] ptp_piezo_interface0_time_data_master,         //                              .time_data_master
+		output wire [31:0] ptp_piezo_interface0_time_data_slave,          //                              .time_data_slave
 		input  wire        reset_reset_n,                                 //                         reset.reset_n
 		input  wire        rtc_0_conduit_end_event_trigger,               //             rtc_0_conduit_end.event_trigger
 		output wire        rtc_0_conduit_end_piezo_enable,                //                              .piezo_enable
@@ -341,6 +343,8 @@ module soc_system (
 		.avalon_slave_waitrequest (mm_interconnect_0_ptp_simple_us_0_avalon_slave_waitrequest), //             .waitrequest
 		.piezo_interface_in       (ptp_piezo_interface0_piezo_interface_in),                    //  conduit_end.piezo_interface_in
 		.piezo_interface_out      (ptp_piezo_interface0_piezo_interface_out),                   //             .piezo_interface_out
+		.time_data_master         (ptp_piezo_interface0_time_data_master),                      //             .time_data_master
+		.time_data_slave          (ptp_piezo_interface0_time_data_slave),                       //             .time_data_slave
 		.clock                    (clk_clk)                                                     //        clock.clk
 	);
 

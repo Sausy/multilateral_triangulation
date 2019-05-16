@@ -1,0 +1,8 @@
+- hosts: triang
+  remote_user: root
+  tasks:
+  - name: run binary on all nodes
+    raw: ./triangulation
+    become: true
+    become_method: su
+    become_user: root

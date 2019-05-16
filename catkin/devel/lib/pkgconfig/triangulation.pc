@@ -1,8 +1,8 @@
-prefix=/home/sausy/Projects/multilateral_triangulation/catkin/devel
+prefix=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel
 
 Name: triangulation
 Description: Description of triangulation
 Version: 0.0.1
 Cflags: 
-Libs: -L/home/sausy/Projects/multilateral_triangulation/catkin/devel/lib 
+Libs: -L/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib 
 Requires: message_runtime triangulation_msg

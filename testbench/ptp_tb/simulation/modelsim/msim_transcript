@@ -1,0 +1,60 @@
+# do ptp_tb_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying /home/roboy/intelFPGA/18.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb {/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:53:11 on May 09,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb" /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v 
+# -- Compiling module ptp_tb
+# -- Compiling module PTP_ctl
+# -- Compiling module tb_write_on_avalon
+# -- Compiling module tb_easy_acces
+# 
+# Top level modules:
+# 	tb_write_on_avalon
+# 	tb_easy_acces
+# End time: 18:53:11 on May 09,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.tb_easy_acces
+# vsim work.tb_easy_acces 
+# Start time: 18:53:13 on May 09,2019
+# Loading work.tb_easy_acces
+# Loading work.ptp_tb
+# Loading work.PTP_ctl
+# ** Warning: (vsim-3015) /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v(67): [PCDPC] - Port size (1) does not match connection size (32) for port 'mode_select'. The port definition is at: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v(163).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_easy_acces/DUT/ptpmaster0 File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v
+# ** Warning: (vsim-3015) /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v(76): [PCDPC] - Port size (1) does not match connection size (32) for port 'mode_select'. The port definition is at: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v(163).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_easy_acces/DUT/ptpslave0 File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v
+# ** Warning: (vsim-3015) /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v(67): [PCDPC] - Port size (1) does not match connection size (32) for port 'mode_select'. The port definition is at: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v(163).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_easy_acces/DUTT/ptpmaster0 File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v
+# ** Warning: (vsim-3015) /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v(76): [PCDPC] - Port size (1) does not match connection size (32) for port 'mode_select'. The port definition is at: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v(163).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_easy_acces/DUTT/ptpslave0 File: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/testbench/ptp_tb/ptp_tb.v
+add wave -position insertpoint  \
+sim:/tb_easy_acces/clock \
+sim:/tb_easy_acces/piezo_interface_out \
+sim:/tb_easy_acces/piezo_interface_in \
+sim:/tb_easy_acces/piezo_interface_out2 \
+sim:/tb_easy_acces/piezo_interface_in2
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: roboy  Hostname: roboy-base0  ProcessID: 25939
+#           Attempting to use alternate WLF file "./wlft02x53z".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft02x53z
+run
+# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.
+# End time: 18:58:13 on May 09,2019, Elapsed time: 0:05:00
+# Errors: 4, Warnings: 6
