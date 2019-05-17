@@ -1,0 +1,2 @@
+#!/bin/bash
+java  java ReverseByte MKRVIDOR4000.ttf app.hReverseByte MKRVIDOR4000.ttf app.h
