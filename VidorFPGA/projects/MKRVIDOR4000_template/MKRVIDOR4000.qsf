@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE 10CL016YU256C8G
 set_global_assignment -name FAMILY "Cyclone 10 LP"
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:50:11  FEBRUARY 05, 2018"
-set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -88,9 +88,10 @@ set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE PERFORMANCE"
 
 
 
-set_global_assignment -name SDC_FILE ../../constraints/MKRVIDOR4000/vidor_s.sdc
-set_global_assignment -name QIP_FILE ../../ip/SYSTEM_PLL/SYSTEM_PLL.qip
-set_global_assignment -name VERILOG_FILE MKRVIDOR4000_top.v
 set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name QIP_FILE ../../test_programm/test_programm/synthesis/test_programm.qip
+set_global_assignment -name QIP_FILE ../../ip/SYSTEM_PLL/SYSTEM_PLL.qip
+set_global_assignment -name SDC_FILE ../../constraints/MKRVIDOR4000/vidor_s.sdc
+set_global_assignment -name VERILOG_FILE MKRVIDOR4000_top.v
+set_global_assignment -name VERILOG_FILE ../../test_programm/SPISlave.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name IP_SEARCH_PATHS /home/sausy/Projects/multilateral_triangulation/VidorFPGA/ip

@@ -140,68 +140,11 @@ assign wVID_CLK   = wCLK24;
 assign wVID_CLKx5 = wCLK120;
 assign wCLK8      = iCLK;
 
-
-//=====================
-reg						PIEZO_enable_reg;
-reg 						PIEZO_out;
-wire						PIEZO_in;
-wire 	[3:0]	ID_select;
-
-//---SPI--
-reg [7:0] rFPGA_STATUS;
-reg [7:0] rREG1;
-reg [7:0] rREG2;
-
-wire [7:0] wSPI_RCV_BYTE;
-wire [7:0] wSPI_RCV_CMD;
-
-wire wSPI_INC_WRADDR;
-wire [4:0] wSPI_PERIPH_SLCT;
-wire wSPI_WRITE_SIG;
-//=====================
-
-
-    test_programm u0 (
-        .clk_clk                    							(iCLK),                    //       clk.clk
-        .reset_reset_n              				(iRESETn),              //     reset.reset_n
-        .spislave0_ispi_in          			(bMKR_D[8]),          // spislave0.ispi_in
-        .spislave0_ispi_send_byte 	(rFPGA_STATUS),   //          .ispi_send_byte
-        .spislave0_ispi_ss_n        		(iSAM_INT),        //          .ispi_ss_n
-        .spislave0_ospi_inc_wraddr	(wSPI_INC_WRADDR),  //          .ospi_inc_wraddr
-        .spislave0_ospi_out         		(bMKR_D[10]),         //          .ospi_out
-        .spislave0_ospi_periph_slct	(wSPI_PERIPH_SLCT), //          .ospi_periph_slct
-        .spislave0_ospi_rcv_byte    	(wSPI_RCV_BYTE),    //          .ospi_rcv_byte
-        .spislave0_ospi_rcv_cmd    	(wSPI_RCV_CMD),     //          .ospi_rcv_cmd
-        .spislave0_ospi_write_sig   	(wSPI_WRITE_SIG)    //          .ospi_write_sig
-    );
-	 
-// MAP -- IO's 
-assign bMKR_D[6] = PIEZO_enable_reg;
-	 
-	 
-always @(posedge wSPI_WRITE_SIG, posedge iRESETn)
-begin
-		if (iRESETn == 1) begin
-				PIEZO_enable_reg <= 1;
-		end else begin
-				if (wSPI_RCV_CMD[6:3] == 4'b0001)     begin
-					PIEZO_enable_reg <= 1;
-					if (wSPI_RCV_CMD[0] == 1'b0)  begin  
-								rREG1 <= wSPI_RCV_BYTE;
-					end else begin
-								rREG2 <= wSPI_RCV_BYTE;
-					end
-				end
-		end
-end
-
-
 // internal oscillator
 cyclone10lp_oscillator   osc
   ( 
   .clkout(wOSC_CLK),
-  .oscena(1'b1)
-  );
+  .oscena(1'b1));
 
 // system PLL
 SYSTEM_PLL PLL_inst(
@@ -213,8 +156,7 @@ SYSTEM_PLL PLL_inst(
    .c3(oSDRAM_CLK),
   .c4(wFLASH_CLK),
    
-  .locked()
-  );
+  .locked());
 
 
 reg [5:0] rRESETCNT;
