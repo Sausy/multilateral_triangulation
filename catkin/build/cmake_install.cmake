@@ -116,10 +116,18 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+<<<<<<< HEAD
+  include("/home/sausy/Projects/multilateral_triangulation/catkin/build/gtest/cmake_install.cmake")
+  include("/home/sausy/Projects/multilateral_triangulation/catkin/build/triang_communication/triangulation_msg/cmake_install.cmake")
+  include("/home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation/cmake_install.cmake")
+  include("/home/sausy/Projects/multilateral_triangulation/catkin/build/triang_rosmaster/cmake_install.cmake")
+  include("/home/sausy/Projects/multilateral_triangulation/catkin/build/using_markers/cmake_install.cmake")
+=======
   include("/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/gtest/cmake_install.cmake")
   include("/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triang_communication/triangulation_msg/cmake_install.cmake")
   include("/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triangulation/cmake_install.cmake")
   include("/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triang_rosmaster/cmake_install.cmake")
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
 
 endif()
 

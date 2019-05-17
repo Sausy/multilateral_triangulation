@@ -36,6 +36,8 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triangulation/catkin_generated/installspace/triangulation.pc")
 endif()
 
+<<<<<<< HEAD
+=======
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/triangulation/cmake" TYPE FILE FILES
     "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triangulation/catkin_generated/installspace/triangulationConfig.cmake"
@@ -71,3 +73,4 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/triangulation" TYPE FILE FILES "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/package.xml")
 endif()
 
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e

@@ -261,8 +261,17 @@ if __name__ == '__main__':
             print(e, file=sys.stderr)
             sys.exit(1)
 
+<<<<<<< HEAD
+        if not args.local:
+            # environment at generation time
+            CMAKE_PREFIX_PATH = '/opt/ros/melodic'.split(';')
+        else:
+            # don't consider any other prefix path than this one
+            CMAKE_PREFIX_PATH = []
+=======
         # environment at generation time
         CMAKE_PREFIX_PATH = '/home/roboy/workspace/roboy_control/devel;/home/roboy/DriverlessDriver/catkin_ws/devel;/opt/ros/kinetic'.split(';')
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
         # prepend current workspace if not already part of CPP
         base_path = os.path.dirname(__file__)
         if base_path not in CMAKE_PREFIX_PATH:

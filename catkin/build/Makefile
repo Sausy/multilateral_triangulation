@@ -816,6 +816,8 @@ triangulation_msg_geneus/fast:
 .PHONY : triangulation_msg_geneus/fast
 
 #=============================================================================
+<<<<<<< HEAD
+=======
 # Target rules for targets named triangulation
 
 # Build rule for target.
@@ -959,6 +961,7 @@ bond_generate_messages_nodejs/fast:
 .PHONY : bond_generate_messages_nodejs/fast
 
 #=============================================================================
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
 # Target rules for targets named triangulation_master
 
 # Build rule for target.
@@ -970,6 +973,84 @@ triangulation_master: cmake_check_build_system
 triangulation_master/fast:
 	$(MAKE) -f triang_rosmaster/CMakeFiles/triangulation_master.dir/build.make triang_rosmaster/CMakeFiles/triangulation_master.dir/build
 .PHONY : triangulation_master/fast
+
+#=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_eus
+
+# Build rule for target.
+visualization_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_eus
+.PHONY : visualization_msgs_generate_messages_eus
+
+# fast build rule for target.
+visualization_msgs_generate_messages_eus/fast:
+	$(MAKE) -f using_markers/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make using_markers/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
+.PHONY : visualization_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_cpp
+
+# Build rule for target.
+visualization_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_cpp
+.PHONY : visualization_msgs_generate_messages_cpp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f using_markers/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make using_markers/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
+.PHONY : visualization_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_lisp
+
+# Build rule for target.
+visualization_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_lisp
+.PHONY : visualization_msgs_generate_messages_lisp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f using_markers/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make using_markers/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
+.PHONY : visualization_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_py
+
+# Build rule for target.
+visualization_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_py
+.PHONY : visualization_msgs_generate_messages_py
+
+# fast build rule for target.
+visualization_msgs_generate_messages_py/fast:
+	$(MAKE) -f using_markers/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make using_markers/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
+.PHONY : visualization_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_nodejs
+
+# Build rule for target.
+visualization_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_nodejs
+.PHONY : visualization_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+visualization_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f using_markers/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make using_markers/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
+.PHONY : visualization_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named basic_shapes
+
+# Build rule for target.
+basic_shapes: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 basic_shapes
+.PHONY : basic_shapes
+
+# fast build rule for target.
+basic_shapes/fast:
+	$(MAKE) -f using_markers/CMakeFiles/basic_shapes.dir/build.make using_markers/CMakeFiles/basic_shapes.dir/build
+.PHONY : basic_shapes/fast
 
 # Help Target
 help:
@@ -1034,6 +1115,8 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... _triangulation_msg_generate_messages_check_deps_master_list"
 	@echo "... triangulation_msg_geneus"
+<<<<<<< HEAD
+=======
 	@echo "... triangulation"
 	@echo "... nodelet_generate_messages_lisp"
 	@echo "... bond_generate_messages_cpp"
@@ -1045,7 +1128,14 @@ help:
 	@echo "... bond_generate_messages_lisp"
 	@echo "... nodelet_generate_messages_py"
 	@echo "... bond_generate_messages_nodejs"
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
 	@echo "... triangulation_master"
+	@echo "... visualization_msgs_generate_messages_eus"
+	@echo "... visualization_msgs_generate_messages_cpp"
+	@echo "... visualization_msgs_generate_messages_lisp"
+	@echo "... visualization_msgs_generate_messages_py"
+	@echo "... visualization_msgs_generate_messages_nodejs"
+	@echo "... basic_shapes"
 .PHONY : help
 
 

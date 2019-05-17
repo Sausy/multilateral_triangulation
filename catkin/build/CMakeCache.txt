@@ -422,6 +422,15 @@ triangulation_msg_DIR:PATH=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_
 //Value Computed by CMake
 triangulation_msg_SOURCE_DIR:STATIC=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triang_communication/triangulation_msg
 
+//Value Computed by CMake
+using_markers_BINARY_DIR:STATIC=/home/sausy/Projects/multilateral_triangulation/catkin/build/using_markers
+
+//Value Computed by CMake
+using_markers_SOURCE_DIR:STATIC=/home/sausy/Projects/multilateral_triangulation/catkin/src/using_markers
+
+//The directory containing a CMake configuration file for visualization_msgs.
+visualization_msgs_DIR:PATH=/opt/ros/melodic/share/visualization_msgs/cmake
+
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
 
@@ -529,7 +538,11 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
+<<<<<<< HEAD
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+=======
 CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

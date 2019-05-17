@@ -1,2 +1,7 @@
+<<<<<<< HEAD
+triang_communication/triangulation_msg:triang_rosmaster:triangulation:using_markers
+-DCATKIN_DEVEL_PREFIX=/home/sausy/Projects/multilateral_triangulation/catkin/devel -DCMAKE_INSTALL_PREFIX=/home/sausy/Projects/multilateral_triangulation/catkin/install -G Unix Makefiles
+=======
 triang_communication/triangulation_msg:triang_rosmaster:triangulation
 -DCATKIN_DEVEL_PREFIX=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel -DCMAKE_INSTALL_PREFIX=/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/install -G Unix Makefiles
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e

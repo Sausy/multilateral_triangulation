@@ -129,7 +129,11 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
+<<<<<<< HEAD
+    foreach(path /home/sausy/Projects/multilateral_triangulation/catkin/devel/lib;/opt/ros/melodic/lib)
+=======
     foreach(path /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib;/home/roboy/workspace/roboy_control/devel/lib;/home/roboy/DriverlessDriver/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

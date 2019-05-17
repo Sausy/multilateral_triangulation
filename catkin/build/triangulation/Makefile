@@ -88,12 +88,19 @@ install/strip: preinstall
 # Special rule for the target install/strip
 install/strip/fast: install/strip
 
+<<<<<<< HEAD
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+=======
 .PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
 	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -116,6 +123,26 @@ test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
 	/usr/bin/ctest --force-new-ctest-process $(ARGS)
 .PHONY : test
+<<<<<<< HEAD
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+=======
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
 
 # Special rule for the target test
 test/fast: test
@@ -165,6 +192,8 @@ depend:
 	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+<<<<<<< HEAD
+=======
 # Convenience name for target.
 triangulation/CMakeFiles/triangulation.dir/rule:
 	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build && $(MAKE) -f CMakeFiles/Makefile2 triangulation/CMakeFiles/triangulation.dir/rule
@@ -396,6 +425,7 @@ src/trap.cpp.s:
 	cd /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.s
 .PHONY : src/trap.cpp.s
 
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -405,11 +435,18 @@ help:
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... install/strip"
+<<<<<<< HEAD
+=======
 	@echo "... triangulation"
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
 	@echo "... edit_cache"
 	@echo "... list_install_components"
 	@echo "... test"
 	@echo "... install/local"
+<<<<<<< HEAD
+	@echo "... rebuild_cache"
+	@echo "... install"
+=======
 	@echo "... src/fpga_interface.o"
 	@echo "... src/fpga_interface.i"
 	@echo "... src/fpga_interface.s"
@@ -434,6 +471,7 @@ help:
 	@echo "... src/trap.o"
 	@echo "... src/trap.i"
 	@echo "... src/trap.s"
+>>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
 .PHONY : help
 
 
