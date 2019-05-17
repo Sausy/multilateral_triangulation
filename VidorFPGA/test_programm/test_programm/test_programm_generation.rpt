@@ -1,0 +1,32 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/roboy/BikeToRikshaw/VidorFPGA/test_programm/test_programm.qsys --block-symbol-file --output-directory=/home/roboy/BikeToRikshaw/VidorFPGA/test_programm/test_programm --family="Cyclone 10 LP" --part=10CL016YU256C8G
+Progress: Loading test_programm/test_programm.qsys
+Progress: Reading input file
+Progress: Adding SPIslave_0 [SPIslave 1.0]
+Progress: Parameterizing module SPIslave_0
+Progress: Adding clk_0 [clock_source 18.0]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/roboy/BikeToRikshaw/VidorFPGA/test_programm/test_programm.qsys --synthesis=VERILOG --output-directory=/home/roboy/BikeToRikshaw/VidorFPGA/test_programm/test_programm/synthesis --family="Cyclone 10 LP" --part=10CL016YU256C8G
+Progress: Loading test_programm/test_programm.qsys
+Progress: Reading input file
+Progress: Adding SPIslave_0 [SPIslave 1.0]
+Progress: Parameterizing module SPIslave_0
+Progress: Adding clk_0 [clock_source 18.0]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: test_programm: Generating test_programm "test_programm" for QUARTUS_SYNTH
+Info: SPIslave_0: "test_programm" instantiated SPIslave "SPIslave_0"
+Info: test_programm: Done "test_programm" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

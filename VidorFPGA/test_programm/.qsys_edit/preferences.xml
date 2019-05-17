@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="63" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library,Library/Processors and Peripherals/Embedded Processors,Library/University Program/Clock,Library/University Program/Communications,Library/Processors and Peripherals/Hard Processor Systems,Library/Tri-State Components,Library/Processors and Peripherals/Hard Processor Components,Library/University Program/Generic IO,Library/University Program/Memory,Library/Processors and Peripherals/Peripherals,Library/Processors and Peripherals/Inter-Process Communication,Project,Library/University Program/Bridges,Library/Processors and Peripherals/Co-Processors,Library/Qsys Interconnect,Library/University Program/Audio &amp; Video,Library/Processors and Peripherals,Library/University Program" />
+ <window width="1920" height="1061" x="0" y="0" />
+ <hdlexample language="VERILOG" />
+</preferences>

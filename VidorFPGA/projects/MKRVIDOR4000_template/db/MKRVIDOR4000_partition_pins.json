@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "bMKR_D[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[8]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[10]",
+					"strict" : false
+				},
+				{
+					"name" : "iCLK",
+					"strict" : false
+				},
+				{
+					"name" : "iSAM_INT",
+					"strict" : false
+				},
+				{
+					"name" : "iRESETn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

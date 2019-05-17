@@ -1,0 +1,34 @@
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_TOOL_VERSION "18.0"
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "test_programm" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../test_programm.sopcinfo"]
+set_global_assignment -entity "test_programm" -library "test_programm" -name SLD_INFO "QSYS_NAME test_programm HAS_SOPCINFO 1 GENERATION_ID 1557499032"
+set_global_assignment -library "test_programm" -name MISC_FILE [file join $::quartus(qip_path) "../test_programm.cmp"]
+set_global_assignment -library "test_programm" -name SLD_FILE [file join $::quartus(qip_path) "test_programm.debuginfo"]
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_TARGETED_DEVICE_FAMILY "Cyclone 10 LP"
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_GENERATED_DEVICE_FAMILY "{Cyclone 10 LP}"
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_QSYS_MODE "SYSTEM"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "test_programm" -name MISC_FILE [file join $::quartus(qip_path) "../../test_programm.qsys"]
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_COMPONENT_NAME "dGVzdF9wcm9ncmFtbQ=="
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_COMPONENT_DISPLAY_NAME "dGVzdF9wcm9ncmFtbQ=="
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTU1NzQ5OTAzMg==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSAxMCBMUA==::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBDTDAxNllVMjU2QzhH::QXV0byBERVZJQ0U="
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::OA==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "test_programm" -library "test_programm" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "SPISlave" -library "test_programm" -name IP_COMPONENT_NAME "U1BJU2xhdmU="
+set_global_assignment -entity "SPISlave" -library "test_programm" -name IP_COMPONENT_DISPLAY_NAME "U1BJX3NsYXZl"
+set_global_assignment -entity "SPISlave" -library "test_programm" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "SPISlave" -library "test_programm" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "SPISlave" -library "test_programm" -name IP_COMPONENT_AUTHOR "TWljaGFlbCBTYXVzbWlrYXQ="
+set_global_assignment -entity "SPISlave" -library "test_programm" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "SPISlave" -library "test_programm" -name IP_COMPONENT_DESCRIPTION "QmFzZWQgb24gIlNQSVNsYXZlLnYiIGJ5IEF1dGhvcjogcGhpbGlwcGUgaHR0cHM6Ly9zeXN0ZW1lcy1lbWJhcnF1ZXMuZnIvd3AvYXJjaGl2ZXMvYXV0aG9yL3BoaWxpcHBlLw=="
+
+set_global_assignment -library "test_programm" -name VERILOG_FILE [file join $::quartus(qip_path) "test_programm.v"]
+set_global_assignment -library "test_programm" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/SPISlave.v"]
