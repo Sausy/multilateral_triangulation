@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "message_runtime;triangulation_msg".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "triangulation"
-PROJECT_SPACE_DIR = "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel"
+PROJECT_SPACE_DIR = "/home/sausy/Projects/multilateral_triangulation/catkin/devel"
 PROJECT_VERSION = "0.0.1"

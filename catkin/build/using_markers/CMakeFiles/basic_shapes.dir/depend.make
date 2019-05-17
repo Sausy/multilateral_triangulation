@@ -65,6 +65,7 @@ using_markers/CMakeFiles/basic_shapes.dir/src/basic_shapes.cpp.o: /opt/ros/melod
 using_markers/CMakeFiles/basic_shapes.dir/src/basic_shapes.cpp.o: /opt/ros/melodic/include/std_msgs/ColorRGBA.h
 using_markers/CMakeFiles/basic_shapes.dir/src/basic_shapes.cpp.o: /opt/ros/melodic/include/std_msgs/Header.h
 using_markers/CMakeFiles/basic_shapes.dir/src/basic_shapes.cpp.o: /opt/ros/melodic/include/visualization_msgs/Marker.h
+using_markers/CMakeFiles/basic_shapes.dir/src/basic_shapes.cpp.o: /opt/ros/melodic/include/visualization_msgs/MarkerArray.h
 using_markers/CMakeFiles/basic_shapes.dir/src/basic_shapes.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 using_markers/CMakeFiles/basic_shapes.dir/src/basic_shapes.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
 

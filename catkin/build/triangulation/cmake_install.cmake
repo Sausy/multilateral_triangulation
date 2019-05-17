@@ -1,8 +1,8 @@
-# Install script for directory: /home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation
+# Install script for directory: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/install")
+  set(CMAKE_INSTALL_PREFIX "/home/sausy/Projects/multilateral_triangulation/catkin/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,36 +32,39 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triangulation/catkin_generated/installspace/triangulation.pc")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-<<<<<<< HEAD
-=======
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation/catkin_generated/installspace/triangulation.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/triangulation/cmake" TYPE FILE FILES
-    "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triangulation/catkin_generated/installspace/triangulationConfig.cmake"
-    "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/build/triangulation/catkin_generated/installspace/triangulationConfig-version.cmake"
+    "/home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation/catkin_generated/installspace/triangulationConfig.cmake"
+    "/home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation/catkin_generated/installspace/triangulationConfig-version.cmake"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/triangulation" TYPE FILE FILES "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/package.xml")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/triangulation" TYPE FILE FILES "/home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/package.xml")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/triangulation/triangulation" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/triangulation/triangulation")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/triangulation/triangulation"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/triangulation" TYPE EXECUTABLE FILES "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/triangulation" TYPE EXECUTABLE FILES "/home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/triangulation/triangulation" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/triangulation/triangulation")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/triangulation/triangulation"
-         OLD_RPATH "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/arm/opt/ros/kinetic/lib:/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/arm/usr/lib/arm-linux-gnueabihf:/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/arm/lib/arm-linux-gnueabihf:"
+         OLD_RPATH "/home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/arm/opt/ros/kinetic/lib:/home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/arm/usr/lib/arm-linux-gnueabihf:/home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/arm/lib/arm-linux-gnueabihf:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/triangulation/triangulation")
@@ -69,8 +72,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   endif()
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/triangulation" TYPE FILE FILES "/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/catkin/src/triangulation/package.xml")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/triangulation" TYPE FILE FILES "/home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/package.xml")
 endif()
 
->>>>>>> f5c5d347ea491d5d2e681b04277e0476d00bba9e
