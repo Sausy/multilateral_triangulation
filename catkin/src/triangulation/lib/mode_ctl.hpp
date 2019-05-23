@@ -5,12 +5,14 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <vector>
-#include "time_controll.hpp"
+//#include "time_controll.hpp"
 #include <triangulation_msg/mode_msg.h>
 #include <triangulation_msg/system_ctl.h>
 #include <triangulation_msg/time_msg.h>
 #include <triangulation_msg/time_sync_msg.h>
 #include <triangulation_msg/master_list.h>
+
+#include "interface.hpp"
 
 using namespace std;
 
@@ -22,16 +24,9 @@ using namespace std;
 #define SYNC_MASTER 0
 #define SYNC_SLAVE 1
 
-#ifndef IORD
-  #define IORD(base, reg) (*(((volatile int32_t*)base)+reg))
-#endif
-#ifndef IOWR
-  #define IOWR(base, reg, data) (*(((volatile int32_t*)base)+reg)=data)
-#endif
-
 class fpga_mode{
   public:
-    fpga_mode(int32_t *base_addr_ = nullptr,rtc_ctl *pctl_ = nullptr);
+    fpga_mode(hardware_interface *hw_ = nullptr);
     uint8_t   current_master_id = 0;
     uint8_t   id, master_id;
     uint8_t   mode;
@@ -46,7 +41,8 @@ class fpga_mode{
     void conversation();
 
   private:
-    rtc_ctl *pctl;
+    //hw *pctl;
+    hardware_interface *hw;
 
     uint8_t mode_pub;
 

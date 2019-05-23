@@ -57,33 +57,9 @@ include triangulation/CMakeFiles/triangulation.dir/progress.make
 # Include the compile flags for this target's objects.
 include triangulation/CMakeFiles/triangulation.dir/flags.make
 
-triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o: triangulation/CMakeFiles/triangulation.dir/flags.make
-triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/fpga_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o -c /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/fpga_interface.cpp
-
-triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/triangulation.dir/src/fpga_interface.cpp.i"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/fpga_interface.cpp > CMakeFiles/triangulation.dir/src/fpga_interface.cpp.i
-
-triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/triangulation.dir/src/fpga_interface.cpp.s"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/fpga_interface.cpp -o CMakeFiles/triangulation.dir/src/fpga_interface.cpp.s
-
-triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o.requires:
-
-.PHONY : triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o.requires
-
-triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o.provides: triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o.requires
-	$(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o.provides.build
-.PHONY : triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o.provides
-
-triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o.provides.build: triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o
-
-
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: triangulation/CMakeFiles/triangulation.dir/flags.make
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o"
 	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/triangulation.dir/src/main.cpp.o -c /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/main.cpp
 
 triangulation/CMakeFiles/triangulation.dir/src/main.cpp.i: cmake_force
@@ -107,7 +83,7 @@ triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o.provides.build: triang
 
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: triangulation/CMakeFiles/triangulation.dir/flags.make
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/mode_ctl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o"
 	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o -c /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/mode_ctl.cpp
 
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.i: cmake_force
@@ -129,81 +105,9 @@ triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o.provides: triangul
 triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o.provides.build: triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o
 
 
-triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o: triangulation/CMakeFiles/triangulation.dir/flags.make
-triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/peripherals.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/triangulation.dir/src/peripherals.cpp.o -c /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/peripherals.cpp
-
-triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/triangulation.dir/src/peripherals.cpp.i"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/peripherals.cpp > CMakeFiles/triangulation.dir/src/peripherals.cpp.i
-
-triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/triangulation.dir/src/peripherals.cpp.s"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/peripherals.cpp -o CMakeFiles/triangulation.dir/src/peripherals.cpp.s
-
-triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o.requires:
-
-.PHONY : triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o.requires
-
-triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o.provides: triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o.requires
-	$(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o.provides.build
-.PHONY : triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o.provides
-
-triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o.provides.build: triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o
-
-
-triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o: triangulation/CMakeFiles/triangulation.dir/flags.make
-triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/piezo_ctl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o -c /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/piezo_ctl.cpp
-
-triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.i"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/piezo_ctl.cpp > CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.i
-
-triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.s"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/piezo_ctl.cpp -o CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.s
-
-triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o.requires:
-
-.PHONY : triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o.requires
-
-triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o.provides: triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o.requires
-	$(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o.provides.build
-.PHONY : triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o.provides
-
-triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o.provides.build: triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o
-
-
-triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o: triangulation/CMakeFiles/triangulation.dir/flags.make
-triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/time_controll.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/triangulation.dir/src/time_controll.cpp.o -c /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/time_controll.cpp
-
-triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/triangulation.dir/src/time_controll.cpp.i"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/time_controll.cpp > CMakeFiles/triangulation.dir/src/time_controll.cpp.i
-
-triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/triangulation.dir/src/time_controll.cpp.s"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/time_controll.cpp -o CMakeFiles/triangulation.dir/src/time_controll.cpp.s
-
-triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o.requires:
-
-.PHONY : triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o.requires
-
-triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o.provides: triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o.requires
-	$(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o.provides.build
-.PHONY : triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o.provides
-
-triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o.provides.build: triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o
-
-
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: triangulation/CMakeFiles/triangulation.dir/flags.make
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/time_sync.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o"
 	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/triangulation.dir/src/time_sync.cpp.o -c /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/time_sync.cpp
 
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.i: cmake_force
@@ -225,52 +129,44 @@ triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o.provides: triangu
 triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o.provides.build: triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o
 
 
-triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o: triangulation/CMakeFiles/triangulation.dir/flags.make
-triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/trap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/triangulation.dir/src/trap.cpp.o -c /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/trap.cpp
+triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o: triangulation/CMakeFiles/triangulation.dir/flags.make
+triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/hw/de0.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o"
+	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/triangulation.dir/hw/de0.cpp.o -c /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/hw/de0.cpp
 
-triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/triangulation.dir/src/trap.cpp.i"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/trap.cpp > CMakeFiles/triangulation.dir/src/trap.cpp.i
+triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/triangulation.dir/hw/de0.cpp.i"
+	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/hw/de0.cpp > CMakeFiles/triangulation.dir/hw/de0.cpp.i
 
-triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/triangulation.dir/src/trap.cpp.s"
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/src/trap.cpp -o CMakeFiles/triangulation.dir/src/trap.cpp.s
+triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/triangulation.dir/hw/de0.cpp.s"
+	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && /usr/bin/arm-linux-gnueabihf-g++-5 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/hw/de0.cpp -o CMakeFiles/triangulation.dir/hw/de0.cpp.s
 
-triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o.requires:
+triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o.requires:
 
-.PHONY : triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o.requires
+.PHONY : triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o.requires
 
-triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o.provides: triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o.requires
-	$(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o.provides.build
-.PHONY : triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o.provides
+triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o.provides: triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o.requires
+	$(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o.provides.build
+.PHONY : triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o.provides
 
-triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o.provides.build: triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o
+triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o.provides.build: triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o
 
 
 # Object files for target triangulation
 triangulation_OBJECTS = \
-"CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o" \
 "CMakeFiles/triangulation.dir/src/main.cpp.o" \
 "CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o" \
-"CMakeFiles/triangulation.dir/src/peripherals.cpp.o" \
-"CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o" \
-"CMakeFiles/triangulation.dir/src/time_controll.cpp.o" \
 "CMakeFiles/triangulation.dir/src/time_sync.cpp.o" \
-"CMakeFiles/triangulation.dir/src/trap.cpp.o"
+"CMakeFiles/triangulation.dir/hw/de0.cpp.o"
 
 # External object files for target triangulation
 triangulation_EXTERNAL_OBJECTS =
 
-/home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o
 /home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o
 /home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o
-/home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o
-/home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o
-/home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o
 /home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o
-/home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o
+/home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o
 /home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/build.make
 /home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/arm/opt/ros/kinetic/lib/librosconsole.so
 /home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/arm/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so
@@ -296,7 +192,7 @@ triangulation_EXTERNAL_OBJECTS =
 /home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/arm/lib/arm-linux-gnueabihf/libdl.so.2
 /home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: /home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/arm/usr/lib/arm-linux-gnueabihf/libtinyxml.so
 /home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation: triangulation/CMakeFiles/triangulation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable /home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable /home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation"
 	cd /home/sausy/Projects/multilateral_triangulation/catkin/build/triangulation && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/triangulation.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -304,14 +200,10 @@ triangulation/CMakeFiles/triangulation.dir/build: /home/sausy/Projects/multilate
 
 .PHONY : triangulation/CMakeFiles/triangulation.dir/build
 
-triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o.requires
 triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/main.cpp.o.requires
 triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o.requires
-triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o.requires
-triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o.requires
-triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o.requires
 triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.o.requires
-triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o.requires
+triangulation/CMakeFiles/triangulation.dir/requires: triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o.requires
 
 .PHONY : triangulation/CMakeFiles/triangulation.dir/requires
 

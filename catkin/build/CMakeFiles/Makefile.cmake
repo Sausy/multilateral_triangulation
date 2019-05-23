@@ -38,6 +38,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/sausy/Projects/multilateral_triangulation/catkin/src/triangulation/package.xml"
   "/home/sausy/Projects/multilateral_triangulation/catkin/src/using_markers/CMakeLists.txt"
   "/home/sausy/Projects/multilateral_triangulation/catkin/src/using_markers/package.xml"
+  "/home/sausy/Projects/multilateral_triangulation/catkin/src/vidor_catkin_test/CMakeLists.txt"
   "/opt/ros/melodic/share/bond/cmake/bond-msg-extras.cmake"
   "/opt/ros/melodic/share/bond/cmake/bondConfig-version.cmake"
   "/opt/ros/melodic/share/bond/cmake/bondConfig.cmake"
@@ -257,6 +258,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "triangulation/CMakeFiles/CMakeDirectoryInformation.cmake"
   "triang_rosmaster/CMakeFiles/CMakeDirectoryInformation.cmake"
   "using_markers/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "vidor_catkin_test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

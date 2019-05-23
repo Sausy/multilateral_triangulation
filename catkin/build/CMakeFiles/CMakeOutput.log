@@ -1,4 +1,4 @@
-The system is: Linux - 4.18.0-18-generic - x86_64
+The system is: Linux - 4.18.0-20-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/sausy/Projects/multilate
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_02ecc/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_02ecc.dir/build.make CMakeFiles/cmTC_02ecc.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_6a2c0/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_6a2c0.dir/build.make CMakeFiles/cmTC_6a2c0.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_02ecc.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_02ecc.dir/testCCompiler.c.o   -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_02ecc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02ecc.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_02ecc.dir/testCCompiler.c.o  -o cmTC_02ecc 
+Building C object CMakeFiles/cmTC_6a2c0.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_6a2c0.dir/testCCompiler.c.o   -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_6a2c0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a2c0.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_6a2c0.dir/testCCompiler.c.o  -o cmTC_6a2c0 
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_ca87e/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_ca87e.dir/build.make CMakeFiles/cmTC_ca87e.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_bc24c/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_bc24c.dir/build.make CMakeFiles/cmTC_bc24c.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ca87e.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_ca87e.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_ca87e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca87e.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_ca87e.dir/CMakeCCompilerABI.c.o  -o cmTC_ca87e 
+Building C object CMakeFiles/cmTC_bc24c.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_bc24c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_bc24c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc24c.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_bc24c.dir/CMakeCCompilerABI.c.o  -o cmTC_bc24c 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,9 +61,9 @@ Thread model: posix
 gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ca87e' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7bNbmk.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ca87e /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ca87e.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ca87e' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_bc24c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cczSoo4O.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_bc24c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_bc24c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_bc24c' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 
@@ -71,14 +71,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_ca87e/fast"]
-  ignore line: [/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_ca87e.dir/build.make CMakeFiles/cmTC_ca87e.dir/build]
+  ignore line: [Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_bc24c/fast"]
+  ignore line: [/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_bc24c.dir/build.make CMakeFiles/cmTC_bc24c.dir/build]
   ignore line: [make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_ca87e.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_ca87e.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_ca87e]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca87e.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_ca87e.dir/CMakeCCompilerABI.c.o  -o cmTC_ca87e ]
+  ignore line: [Building C object CMakeFiles/cmTC_bc24c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_bc24c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_bc24c]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc24c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_bc24c.dir/CMakeCCompilerABI.c.o  -o cmTC_bc24c ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ca87e' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7bNbmk.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ca87e /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ca87e.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_bc24c' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cczSoo4O.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_bc24c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_bc24c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc7bNbmk.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cczSoo4O.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -116,7 +116,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_ca87e] ==> ignore
+    arg [cmTC_bc24c] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -128,7 +128,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_ca87e.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_bc24c.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -160,14 +160,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_804eb/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_804eb.dir/build.make CMakeFiles/cmTC_804eb.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_87635/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_87635.dir/build.make CMakeFiles/cmTC_87635.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_804eb.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_804eb.dir/feature_tests.c.o   -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_804eb
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_804eb.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_804eb.dir/feature_tests.c.o  -o cmTC_804eb 
+Building C object CMakeFiles/cmTC_87635.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_87635.dir/feature_tests.c.o   -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_87635
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87635.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_87635.dir/feature_tests.c.o  -o cmTC_87635 
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 
@@ -180,14 +180,14 @@ make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catk
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_8d62d/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_8d62d.dir/build.make CMakeFiles/cmTC_8d62d.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_7fa8c/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_7fa8c.dir/build.make CMakeFiles/cmTC_7fa8c.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8d62d.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_8d62d.dir/feature_tests.c.o   -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_8d62d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d62d.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8d62d.dir/feature_tests.c.o  -o cmTC_8d62d 
+Building C object CMakeFiles/cmTC_7fa8c.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_7fa8c.dir/feature_tests.c.o   -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_7fa8c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7fa8c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_7fa8c.dir/feature_tests.c.o  -o cmTC_7fa8c 
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 
@@ -200,14 +200,14 @@ make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catk
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_da4fc/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_da4fc.dir/build.make CMakeFiles/cmTC_da4fc.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_5c18b/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_5c18b.dir/build.make CMakeFiles/cmTC_5c18b.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_da4fc.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_da4fc.dir/feature_tests.c.o   -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_da4fc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da4fc.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_da4fc.dir/feature_tests.c.o  -o cmTC_da4fc 
+Building C object CMakeFiles/cmTC_5c18b.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_5c18b.dir/feature_tests.c.o   -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_5c18b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c18b.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_5c18b.dir/feature_tests.c.o  -o cmTC_5c18b 
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 
@@ -218,28 +218,28 @@ make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catk
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_32c3c/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_32c3c.dir/build.make CMakeFiles/cmTC_32c3c.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_10d67/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_10d67.dir/build.make CMakeFiles/cmTC_10d67.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_32c3c.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_32c3c.dir/testCXXCompiler.cxx.o -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_32c3c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32c3c.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_32c3c.dir/testCXXCompiler.cxx.o  -o cmTC_32c3c 
+Building CXX object CMakeFiles/cmTC_10d67.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_10d67.dir/testCXXCompiler.cxx.o -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_10d67
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10d67.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_10d67.dir/testCXXCompiler.cxx.o  -o cmTC_10d67 
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_216b5/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_216b5.dir/build.make CMakeFiles/cmTC_216b5.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_0c442/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_0c442.dir/build.make CMakeFiles/cmTC_0c442.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_216b5.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_216b5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_216b5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_216b5.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_216b5.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_216b5 
+Building CXX object CMakeFiles/cmTC_0c442.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_0c442.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_0c442
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0c442.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_0c442.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_0c442 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -251,9 +251,9 @@ Thread model: posix
 gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_216b5' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTUyJzv.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_216b5 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_216b5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_216b5' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_0c442' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVVqb82.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0c442 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_0c442.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_0c442' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 
@@ -261,14 +261,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_216b5/fast"]
-  ignore line: [/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_216b5.dir/build.make CMakeFiles/cmTC_216b5.dir/build]
+  ignore line: [Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_0c442/fast"]
+  ignore line: [/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_0c442.dir/build.make CMakeFiles/cmTC_0c442.dir/build]
   ignore line: [make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_216b5.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_216b5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_216b5]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_216b5.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_216b5.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_216b5 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_0c442.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_0c442.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_0c442]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0c442.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_0c442.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_0c442 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -280,13 +280,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_216b5' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTUyJzv.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_216b5 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_216b5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_0c442' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVVqb82.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0c442 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_0c442.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccTUyJzv.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccVVqb82.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_216b5] ==> ignore
+    arg [cmTC_0c442] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -318,7 +318,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_216b5.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_0c442.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -346,14 +346,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_cfdb4/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_cfdb4.dir/build.make CMakeFiles/cmTC_cfdb4.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_69b34/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_69b34.dir/build.make CMakeFiles/cmTC_69b34.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cfdb4.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_cfdb4.dir/feature_tests.cxx.o -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_cfdb4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfdb4.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_cfdb4.dir/feature_tests.cxx.o  -o cmTC_cfdb4 
+Building CXX object CMakeFiles/cmTC_69b34.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_69b34.dir/feature_tests.cxx.o -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_69b34
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69b34.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_69b34.dir/feature_tests.cxx.o  -o cmTC_69b34 
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 
@@ -419,14 +419,14 @@ make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catk
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_1598a/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_1598a.dir/build.make CMakeFiles/cmTC_1598a.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_dd70b/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_dd70b.dir/build.make CMakeFiles/cmTC_dd70b.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1598a.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_1598a.dir/feature_tests.cxx.o -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_1598a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1598a.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_1598a.dir/feature_tests.cxx.o  -o cmTC_1598a 
+Building CXX object CMakeFiles/cmTC_dd70b.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_dd70b.dir/feature_tests.cxx.o -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_dd70b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dd70b.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_dd70b.dir/feature_tests.cxx.o  -o cmTC_dd70b 
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 
@@ -492,14 +492,14 @@ make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catk
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_1cf4b/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_1cf4b.dir/build.make CMakeFiles/cmTC_1cf4b.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_02aa3/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_02aa3.dir/build.make CMakeFiles/cmTC_02aa3.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1cf4b.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_1cf4b.dir/feature_tests.cxx.o -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_1cf4b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1cf4b.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_1cf4b.dir/feature_tests.cxx.o  -o cmTC_1cf4b 
+Building CXX object CMakeFiles/cmTC_02aa3.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_02aa3.dir/feature_tests.cxx.o -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_02aa3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02aa3.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_02aa3.dir/feature_tests.cxx.o  -o cmTC_02aa3 
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 
@@ -565,14 +565,14 @@ make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catk
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_48dd4/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_48dd4.dir/build.make CMakeFiles/cmTC_48dd4.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_df263/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_df263.dir/build.make CMakeFiles/cmTC_df263.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_48dd4.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_48dd4.dir/feature_tests.cxx.o -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_48dd4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48dd4.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_48dd4.dir/feature_tests.cxx.o  -o cmTC_48dd4 
+Building CXX object CMakeFiles/cmTC_df263.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_df263.dir/feature_tests.cxx.o -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_df263
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df263.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_df263.dir/feature_tests.cxx.o  -o cmTC_df263 
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 
@@ -636,28 +636,28 @@ make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catk
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_ea736/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_ea736.dir/build.make CMakeFiles/cmTC_ea736.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_a741b/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_a741b.dir/build.make CMakeFiles/cmTC_a741b.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ea736.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_ea736.dir/CheckIncludeFile.c.o   -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_ea736
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea736.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ea736.dir/CheckIncludeFile.c.o  -o cmTC_ea736 
+Building C object CMakeFiles/cmTC_a741b.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a741b.dir/CheckIncludeFile.c.o   -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_a741b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a741b.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a741b.dir/CheckIncludeFile.c.o  -o cmTC_a741b 
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_b493f/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_b493f.dir/build.make CMakeFiles/cmTC_b493f.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_0b706/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_0b706.dir/build.make CMakeFiles/cmTC_0b706.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b493f.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b493f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_b493f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b493f.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_b493f.dir/CheckFunctionExists.c.o  -o cmTC_b493f -lpthread 
+Building C object CMakeFiles/cmTC_0b706.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0b706.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0b706
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b706.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_0b706.dir/CheckFunctionExists.c.o  -o cmTC_0b706 -lpthread 
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
 
 

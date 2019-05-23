@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(triangulation)
 
+add_definitions(-DCOMPILE_DEVICE="de0")
+
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu99 -g")
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g")
@@ -10,8 +12,10 @@ if (DEFINED "ENV{SOCEDS_DEST_ROOT}")
     message(STATUS "cross compiling for arm")
     # we are cross compiling for arm (make sure to be in embedded_command_shell.sh)
     set(CMAKE_SYSTEM_NAME Linux)
-     
 
+    #==============================================================================
+    # ARM compiler
+    #==============================================================================
     set(compiler_path /usr/bin)
     set(CMAKE_C_COMPILER ${compiler_path}/arm-linux-gnueabihf-gcc-5)
     set(CMAKE_CXX_COMPILER ${compiler_path}/arm-linux-gnueabihf-g++-5)
@@ -46,6 +50,7 @@ if (DEFINED "ENV{SOCEDS_DEST_ROOT}")
     include_directories(
             include/
             lib/
+            hw/
             ${catkin_INCLUDE_DIRS}
             $ENV{SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/${ALT_DEVICE_FAMILY}
             $ENV{SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/include
@@ -55,13 +60,17 @@ if (DEFINED "ENV{SOCEDS_DEST_ROOT}")
     # Application
     #==============================================================================
     FILE(GLOB_RECURSE SRC_FILES "src/*.cpp")
+    FILE(GLOB_RECURSE SRC_FILES_HW "hw/*.cpp")
     #FILE(GLOB_RECURSE MAIN_SRC_FILES "*.cpp")
     FILE(GLOB_RECURSE INCLUDE_FILES "lib/*.h*")
+    FILE(GLOB_RECURSE INCLUDE_FILES_HW "hw/*.h*")
 
     add_executable( triangulation
         ${SRC_FILES}
+        ${SRC_FILES_HW}
         #${MAIN_SRC_FILES}
         ${INCLUDE_FILES}
+        ${INCLUDE_FILES_HW}
         )
     #add_dependencies(roboy_plexus triangulation_msg_gencpp)
     target_link_libraries( triangulation -lpthread -lrt -lm ${ros_LIBRARIES})

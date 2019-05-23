@@ -11,16 +11,12 @@
 #include "mode_ctl.hpp"
 #include "config.hpp"
 
+#include "interface.hpp"
+
 #include <unistd.h>
 
 using namespace std;
 
-#ifndef IORD
-  #define IORD(base, reg) (*(((volatile int32_t*)base)+reg))
-#endif
-#ifndef IOWR
-  #define IOWR(base, reg, data) (*(((volatile int32_t*)base)+reg)=data)
-#endif
 
 struct time {
     double    sync_time_div;
@@ -33,7 +29,7 @@ typedef struct time Time;
 class time_sync
 {
   public:
-    time_sync(int32_t *base_addr_ = nullptr, uint8_t id = 0);
+    time_sync(hardware_interface *hw_ = nullptr, uint8_t id = 0);
 
     uint32_t start_time_sync(bool is_master_mode_);
 
@@ -51,5 +47,6 @@ class time_sync
 
   private:
     int32_t *time_sync_base;
+    hardware_interface *hw;
 };
 #endif

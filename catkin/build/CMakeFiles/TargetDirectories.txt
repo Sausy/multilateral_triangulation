@@ -122,3 +122,10 @@
 /home/sausy/Projects/multilateral_triangulation/catkin/build/using_markers/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir
 /home/sausy/Projects/multilateral_triangulation/catkin/build/using_markers/CMakeFiles/install/strip.dir
 /home/sausy/Projects/multilateral_triangulation/catkin/build/using_markers/CMakeFiles/basic_shapes.dir
+/home/sausy/Projects/multilateral_triangulation/catkin/build/vidor_catkin_test/CMakeFiles/install/strip.dir
+/home/sausy/Projects/multilateral_triangulation/catkin/build/vidor_catkin_test/CMakeFiles/edit_cache.dir
+/home/sausy/Projects/multilateral_triangulation/catkin/build/vidor_catkin_test/CMakeFiles/list_install_components.dir
+/home/sausy/Projects/multilateral_triangulation/catkin/build/vidor_catkin_test/CMakeFiles/test.dir
+/home/sausy/Projects/multilateral_triangulation/catkin/build/vidor_catkin_test/CMakeFiles/install/local.dir
+/home/sausy/Projects/multilateral_triangulation/catkin/build/vidor_catkin_test/CMakeFiles/rebuild_cache.dir
+/home/sausy/Projects/multilateral_triangulation/catkin/build/vidor_catkin_test/CMakeFiles/install.dir

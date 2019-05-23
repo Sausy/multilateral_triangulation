@@ -1,20 +1,20 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_054cc/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_054cc.dir/build.make CMakeFiles/cmTC_054cc.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_5db2c/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_5db2c.dir/build.make CMakeFiles/cmTC_5db2c.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_054cc.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_054cc.dir/CheckSymbolExists.c.o   -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_054cc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_054cc.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_054cc.dir/CheckSymbolExists.c.o  -o cmTC_054cc 
-CMakeFiles/cmTC_054cc.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_5db2c.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_5db2c.dir/CheckSymbolExists.c.o   -c /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_5db2c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5db2c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_5db2c.dir/CheckSymbolExists.c.o  -o cmTC_5db2c 
+CMakeFiles/cmTC_5db2c.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_054cc.dir/build.make:98: cmTC_054cc] Error 1
+make[1]: *** [CMakeFiles/cmTC_5db2c.dir/build.make:98: cmTC_5db2c] Error 1
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:126: cmTC_054cc/fast] Error 2
+make: *** [Makefile:126: cmTC_5db2c/fast] Error 2
 
 File /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -34,18 +34,18 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_40419/fast"
-/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_40419.dir/build.make CMakeFiles/cmTC_40419.dir/build
+Run Build Command:"/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make" "cmTC_eadec/fast"
+/home/sausy/intelFPGA/18.1/embedded/ds-5/bin/make -f CMakeFiles/cmTC_eadec.dir/build.make CMakeFiles/cmTC_eadec.dir/build
 make[1]: Entering directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_40419.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_40419.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_40419
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40419.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_40419.dir/CheckFunctionExists.c.o  -o cmTC_40419 -lpthreads 
+Building C object CMakeFiles/cmTC_eadec.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_eadec.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_eadec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eadec.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_eadec.dir/CheckFunctionExists.c.o  -o cmTC_eadec -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_40419.dir/build.make:98: cmTC_40419] Error 1
+make[1]: *** [CMakeFiles/cmTC_eadec.dir/build.make:98: cmTC_eadec] Error 1
 make[1]: Leaving directory '/home/sausy/Projects/multilateral_triangulation/catkin/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:126: cmTC_40419/fast] Error 2
+make: *** [Makefile:126: cmTC_eadec/fast] Error 2
 
 

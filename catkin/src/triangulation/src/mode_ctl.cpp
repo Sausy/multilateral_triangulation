@@ -6,12 +6,14 @@ Testzwecke master ctl via ROS
 zu ueberlegen, auto master zu slave bzw slave zu master um schneller mehr daten zu bekommen
 */
 
-fpga_mode::fpga_mode(int32_t *base_addr_,rtc_ctl *pctl_){
+fpga_mode::fpga_mode(hardware_interface *hw_){ //hw *hw_){
 
-  id = (uint8_t)(IORD(base_addr_, (uint32_t)(0x00<<8|0)));
+  hw = hw_;
+
+  id = hw->getID();//(uint8_t)(IORD(base_addr_, (uint32_t)(0x00<<8|0)));
   mode_pub = id;
   mode = mode_pub + 1; //has to be different to init as new mode
-  pctl = pctl_;
+  //pctl = pctl_;
 
   printf("\nID: %d", id);
 
@@ -50,8 +52,8 @@ fpga_mode::fpga_mode(int32_t *base_addr_,rtc_ctl *pctl_){
   //TODO :: system sub soll sich die master liste von master_list.msg ziehen
   //system_sub = nh->subscribe("/triangulation/" + std::to_string(id) + "/mode", 1, &fpga_mode::get_mode, this);
 
-  pctl->piezo_set_burst_cycles(10000);
-  pctl->stop_US_out();
+  hw->piezo_set_burst_cycles(10000);
+  hw->stop_US_out();
 }
 
 //==============================
@@ -105,17 +107,17 @@ void fpga_mode::master_conv(){
   master_pub.publish(system_ctl_msg_pub);
   //TODO: wait for response over ROS;
   //...
-  //pctl->start_US_out();
-  pctl->piezo_burst_out();
+  //hw->start_US_out();
+  hw->piezo_burst_out();
 
-  push_vec(time_msg_pub.trigger_time, pctl->US_start_time);
+  push_vec(time_msg_pub.trigger_time, hw->US_start_time);
   push_vec(time_msg_pub.master_identifier, id); //master id
 
   system_pub.publish(time_msg_pub);
 
 
   usleep(10000);//Todo optimze this line
-  pctl->stop_US_out();
+  hw->stop_US_out();
 }
 
 //-------------------------------
@@ -125,13 +127,13 @@ void fpga_mode::slave_conv(){
   //TODO: wait till slave allow;
   //....
 
-  pctl->allow_input_trigger(); //TODO ... do it via ros
+  hw->allow_input_trigger(); //TODO ... do it via ros
   for(int time_out_cnt = 0; time_out_cnt <= 4294967294; time_out_cnt++){
-    if(pctl->rdy_to_read())
+    if(hw->rdy_to_read())
       break;
   }
 
-  push_vec(time_msg_pub.trigger_time, pctl->read_trigger_time());
+  push_vec(time_msg_pub.trigger_time, hw->read_trigger_time());
   push_vec(time_msg_pub.master_identifier, current_master_id); //master id
 
   system_pub.publish(time_msg_pub);
@@ -161,12 +163,12 @@ void fpga_mode::get_syst_ctl(const triangulation_msg::system_ctl::ConstPtr& msg)
 }
 void fpga_mode::master_ctl(const triangulation_msg::master_list::ConstPtr& msg){
   sync_enable = msg->start_ptp_sync;
-  pctl->piezo_set_burst_cycles(msg->burst_cycles);
+  hw->piezo_set_burst_cycles(msg->burst_cycles);
   burst_enable = msg->start_burst;
   if(msg->start_continiouse_mode)
-    pctl->start_US_out();
+    hw->start_US_out();
   else
-    pctl->stop_US_out();
+    hw->stop_US_out();
 
   //TODO readout list
   //master_list = msg->master_id_list;

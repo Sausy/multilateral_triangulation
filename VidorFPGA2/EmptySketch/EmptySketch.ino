@@ -1,4 +1,3 @@
-#include <arduino.h>
 #include <SPI.h>
 #include "jtag.h"
 
@@ -21,6 +20,11 @@
 // For MKR pinout assignments see : https://systemes-embarques.fr/wp/brochage-connecteur-mkr-vidor-4000/
 
 extern void enableFpgaClock(void);
+
+#define SPI_WRITE_COMMAND                 (1<<7)
+#define ADDR_PERIPH_PWM                   (1<<3)
+#define ADDR_SPI_REG_1                    0
+#define ADDR_SPI_REG_2                    1
 
 #define no_data    0xFF, 0xFF, 0xFF, 0xFF, \
           0xFF, 0xFF, 0xFF, 0xFF, \
@@ -50,6 +54,10 @@ const unsigned char bitstream[] = {
   #include "app.h"
 };
 
+const int slaveSelectPin = FPGA_MB_INT;
+
+unsigned char SPI_DATA;
+char SPI_IncDir;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -82,11 +90,57 @@ void setup() {
   // Configure other share pins as input too
   pinMode(FPGA_INT, INPUT);
 
+    // Positionne le SS de la liaison SPI vers le FPGA en sortie
+  pinMode (slaveSelectPin, OUTPUT);
+  
+  // initialise la liaison SPI
+  SPI.begin();
+
+  // Rapport cyclique
+  SPI_DATA = 0; 
+  // Increment / Decrement
+  SPI_IncDir = 1;
+
+  digitalWrite(slaveSelectPin, HIGH);
+
+  // ADDR_SPI_REG_2[7:0] = Rapport cyclique. Initialise a 0%
+  SPIFPGAWrite(SPI_WRITE_COMMAND | ADDR_PERIPH_PWM | ADDR_SPI_REG_2 , 0);
+
+     
+  // ADDR_SPI_REG_1[7] = PWM ON/OFF, ADDR_SPI_REG_1[3:0] = Prediviseur d'horloge
+  // Pour une frequence FPGA = 80Mhz (non fiable). Prediviseur =
+  // 0  : 156.25 Khz
+  // 1  : 78.125 Khz
+  // ...
+  // 15 : 4.77 Hz
+  SPIFPGAWrite(SPI_WRITE_COMMAND | ADDR_PERIPH_PWM | ADDR_SPI_REG_1, 128 + 1);   
+
 }
 
+
+void SPIFPGAWrite(int adresse, int valeur) {
+
+  digitalWrite(slaveSelectPin, LOW);
+  
+  //  Envoi la commande et la donnee
+  //  Avec la configuration actuelle du FPGA : 1 seule donnee
+  SPI.transfer(adresse);
+  SPI.transfer(valeur);
+
+  // Deselectionne le SS du FPGA
+  digitalWrite(slaveSelectPin, HIGH);
+}
 
 // the loop function runs over and over again forever
 void loop() {
 
-                     
+       delay(50);                     
+       SPI_DATA+= SPI_IncDir;
+       
+       // Change de direction a 75% de rapport cyclique
+       if ((SPI_DATA == 0) || (SPI_DATA==191)) SPI_IncDir *= -1;
+
+       // Ecriture du nouveau rapport cyclique
+       SPIFPGAWrite(SPI_WRITE_COMMAND | ADDR_PERIPH_PWM | ADDR_SPI_REG_2, SPI_DATA);   
+
 }

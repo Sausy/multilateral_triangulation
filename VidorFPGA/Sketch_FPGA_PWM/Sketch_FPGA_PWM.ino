@@ -1,5 +1,7 @@
 #include <SPI.h>
 #include "jtag.h"
+//#include <WiFi.h>
+#include <WiFiNINA.h>
 
 // For High level functions such as pinMode or digitalWrite, you have to use FPGA_xxx
 // Low level functions (in jtag.c file) use other kind of #define (TDI,TDO,TCK,TMS) with different values
@@ -59,9 +61,48 @@ const int slaveSelectPin = FPGA_MB_INT;
 unsigned char PWM_Puls;
 char PWM_IncDir;
 
+
+//NETWORKSETUP
+int status = WL_IDLE_STATUS;
+char ssid[] = "roboy";        // your network SSID (name)
+char pass[] = "wiihackroboy";    // your network password (use for WPA, or use as key for WEP)
+int keyIndex = 0;
+void wlan_setup();
+
+
+void wlan_setup(){
+   // check for the WiFi module:
+  if (WiFi.status() == WL_NO_MODULE) {
+    Serial.println("Communication with WiFi module failed!");
+    // don't continue
+    while (true);
+  }
+
+  String fv = WiFi.firmwareVersion();
+  if (fv < "1.0.0") {
+    Serial.println("Please upgrade the firmware");
+  }
+
+  // attempt to connect to Wifi network:
+  while (status != WL_CONNECTED) {
+    Serial.print("Attempting to connect to SSID: ");
+    Serial.println(ssid);
+    // Connect to WPA/WPA2 network. Change this line if using open or WEP network:
+    status = WiFi.begin(ssid, pass);
+
+    // wait 10 seconds for connection:
+    delay(10000);
+  }
+
+  Serial.println("Connected to wifi");
+  //printWifiStatus();
+
+
+}
+
 // the setup function runs once when you press reset or power the board
 void setup() {
-
+  Serial.println("Start setup");
   int ret;
   uint32_t ptr[1];
 
@@ -118,6 +159,8 @@ void setup() {
   // 15 : 4.77 Hz
   SPIFPGAWrite(SPI_WRITE_COMMAND | ADDR_PERIPH_PWM | ADDR_SPI_REG_1, 128 + 1);   
 
+  
+  wlan_setup();
 
 }
 
@@ -138,7 +181,7 @@ void SPIFPGAWrite(int adresse, int valeur) {
 
 // the loop function runs over and over again forever
 void loop() {
-
+        //Serial.println("random");
        delay(50);                     
        PWM_Puls+= PWM_IncDir;
        

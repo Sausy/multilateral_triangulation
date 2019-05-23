@@ -1,12 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o"
   "CMakeFiles/triangulation.dir/src/main.cpp.o"
   "CMakeFiles/triangulation.dir/src/mode_ctl.cpp.o"
-  "CMakeFiles/triangulation.dir/src/peripherals.cpp.o"
-  "CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o"
-  "CMakeFiles/triangulation.dir/src/time_controll.cpp.o"
   "CMakeFiles/triangulation.dir/src/time_sync.cpp.o"
-  "CMakeFiles/triangulation.dir/src/trap.cpp.o"
+  "CMakeFiles/triangulation.dir/hw/de0.cpp.o"
   "/home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation.pdb"
   "/home/sausy/Projects/multilateral_triangulation/catkin/devel/lib/triangulation/triangulation"
 )

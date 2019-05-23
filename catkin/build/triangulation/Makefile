@@ -182,32 +182,32 @@ triangulation/fast:
 	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/build
 .PHONY : triangulation/fast
 
-src/fpga_interface.o: src/fpga_interface.cpp.o
+hw/de0.o: hw/de0.cpp.o
 
-.PHONY : src/fpga_interface.o
+.PHONY : hw/de0.o
 
 # target to build an object file
-src/fpga_interface.cpp.o:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.o
-.PHONY : src/fpga_interface.cpp.o
+hw/de0.cpp.o:
+	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.o
+.PHONY : hw/de0.cpp.o
 
-src/fpga_interface.i: src/fpga_interface.cpp.i
+hw/de0.i: hw/de0.cpp.i
 
-.PHONY : src/fpga_interface.i
+.PHONY : hw/de0.i
 
 # target to preprocess a source file
-src/fpga_interface.cpp.i:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.i
-.PHONY : src/fpga_interface.cpp.i
+hw/de0.cpp.i:
+	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.i
+.PHONY : hw/de0.cpp.i
 
-src/fpga_interface.s: src/fpga_interface.cpp.s
+hw/de0.s: hw/de0.cpp.s
 
-.PHONY : src/fpga_interface.s
+.PHONY : hw/de0.s
 
 # target to generate assembly for a file
-src/fpga_interface.cpp.s:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/fpga_interface.cpp.s
-.PHONY : src/fpga_interface.cpp.s
+hw/de0.cpp.s:
+	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/hw/de0.cpp.s
+.PHONY : hw/de0.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -263,87 +263,6 @@ src/mode_ctl.cpp.s:
 	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/mode_ctl.cpp.s
 .PHONY : src/mode_ctl.cpp.s
 
-src/peripherals.o: src/peripherals.cpp.o
-
-.PHONY : src/peripherals.o
-
-# target to build an object file
-src/peripherals.cpp.o:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.o
-.PHONY : src/peripherals.cpp.o
-
-src/peripherals.i: src/peripherals.cpp.i
-
-.PHONY : src/peripherals.i
-
-# target to preprocess a source file
-src/peripherals.cpp.i:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.i
-.PHONY : src/peripherals.cpp.i
-
-src/peripherals.s: src/peripherals.cpp.s
-
-.PHONY : src/peripherals.s
-
-# target to generate assembly for a file
-src/peripherals.cpp.s:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/peripherals.cpp.s
-.PHONY : src/peripherals.cpp.s
-
-src/piezo_ctl.o: src/piezo_ctl.cpp.o
-
-.PHONY : src/piezo_ctl.o
-
-# target to build an object file
-src/piezo_ctl.cpp.o:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.o
-.PHONY : src/piezo_ctl.cpp.o
-
-src/piezo_ctl.i: src/piezo_ctl.cpp.i
-
-.PHONY : src/piezo_ctl.i
-
-# target to preprocess a source file
-src/piezo_ctl.cpp.i:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.i
-.PHONY : src/piezo_ctl.cpp.i
-
-src/piezo_ctl.s: src/piezo_ctl.cpp.s
-
-.PHONY : src/piezo_ctl.s
-
-# target to generate assembly for a file
-src/piezo_ctl.cpp.s:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/piezo_ctl.cpp.s
-.PHONY : src/piezo_ctl.cpp.s
-
-src/time_controll.o: src/time_controll.cpp.o
-
-.PHONY : src/time_controll.o
-
-# target to build an object file
-src/time_controll.cpp.o:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.o
-.PHONY : src/time_controll.cpp.o
-
-src/time_controll.i: src/time_controll.cpp.i
-
-.PHONY : src/time_controll.i
-
-# target to preprocess a source file
-src/time_controll.cpp.i:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.i
-.PHONY : src/time_controll.cpp.i
-
-src/time_controll.s: src/time_controll.cpp.s
-
-.PHONY : src/time_controll.s
-
-# target to generate assembly for a file
-src/time_controll.cpp.s:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/time_controll.cpp.s
-.PHONY : src/time_controll.cpp.s
-
 src/time_sync.o: src/time_sync.cpp.o
 
 .PHONY : src/time_sync.o
@@ -371,33 +290,6 @@ src/time_sync.cpp.s:
 	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/time_sync.cpp.s
 .PHONY : src/time_sync.cpp.s
 
-src/trap.o: src/trap.cpp.o
-
-.PHONY : src/trap.o
-
-# target to build an object file
-src/trap.cpp.o:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.o
-.PHONY : src/trap.cpp.o
-
-src/trap.i: src/trap.cpp.i
-
-.PHONY : src/trap.i
-
-# target to preprocess a source file
-src/trap.cpp.i:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.i
-.PHONY : src/trap.cpp.i
-
-src/trap.s: src/trap.cpp.s
-
-.PHONY : src/trap.s
-
-# target to generate assembly for a file
-src/trap.cpp.s:
-	cd /home/sausy/Projects/multilateral_triangulation/catkin/build && $(MAKE) -f triangulation/CMakeFiles/triangulation.dir/build.make triangulation/CMakeFiles/triangulation.dir/src/trap.cpp.s
-.PHONY : src/trap.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -412,30 +304,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... install"
-	@echo "... src/fpga_interface.o"
-	@echo "... src/fpga_interface.i"
-	@echo "... src/fpga_interface.s"
+	@echo "... hw/de0.o"
+	@echo "... hw/de0.i"
+	@echo "... hw/de0.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/mode_ctl.o"
 	@echo "... src/mode_ctl.i"
 	@echo "... src/mode_ctl.s"
-	@echo "... src/peripherals.o"
-	@echo "... src/peripherals.i"
-	@echo "... src/peripherals.s"
-	@echo "... src/piezo_ctl.o"
-	@echo "... src/piezo_ctl.i"
-	@echo "... src/piezo_ctl.s"
-	@echo "... src/time_controll.o"
-	@echo "... src/time_controll.i"
-	@echo "... src/time_controll.s"
 	@echo "... src/time_sync.o"
 	@echo "... src/time_sync.i"
 	@echo "... src/time_sync.s"
-	@echo "... src/trap.o"
-	@echo "... src/trap.i"
-	@echo "... src/trap.s"
 .PHONY : help
 
 

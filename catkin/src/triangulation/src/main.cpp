@@ -42,13 +42,15 @@ das die system clock cnt syncronisiert wird
 #include <stdlib.h>
 #include <string.h>
 #include <ros/ros.h>
-#include "piezo_ctl.hpp"
-#include "fpga_interface.hpp"
-#include "time_controll.hpp"
+//#include "piezo_ctl.hpp"
+//#include "fpga_interface.hpp"
+//#include "time_controll.hpp"
 #include "time_sync.hpp"
 #include <math.h>
 
 #include <unistd.h>
+
+#include "interface.hpp"
 
 using namespace std;
 
@@ -65,12 +67,17 @@ int main(int argc, char *argv[]) {
   uint32_t in_time, trave_time;
   double distance;
 
-  addr_base addr_base;
+  /*addr_base addr_base;
 
   piezo_ctl piezo_ctl(addr_base.virtual_base);
-  rtc_ctl rtc_ctl(addr_base.rtc_base_addr);
-  fpga_mode modef(addr_base.sw_base, &rtc_ctl);
+  hw hw(addr_base.rtc_base_addr);
+  fpga_mode modef(addr_base.sw_base, &hw);
   time_sync ptp(addr_base.ptp_base, modef.id);  //todo
+  */
+
+  hardware_interface hw;
+  fpga_mode modef(&hw);
+  time_sync ptp(&hw);
 
   //void (fpga_mode::*start_conversation) () = modef.fpga_mode::start_conversation;
   //void (fpga_mode::*conversation) () =  modef.fpga_mode::conversation;
@@ -85,12 +92,12 @@ int main(int argc, char *argv[]) {
   ros::Rate loop_rate(10);
 
 
-  piezo_ctl.stop_piezo_out();
+  //piezo_ctl.stop_piezo_out();
 
   //init time should be given via ntp ...
   ptp.time_data.sys_time = 100;
   printf("set rtc to ini\n\n");
-  rtc_ctl.set_time(ptp.time_data.sys_time);
+  hw.set_time(ptp.time_data.sys_time);
 
   cout << "\n\n=====================================";
   cout << "\n\n  start loopy";
@@ -117,7 +124,7 @@ int main(int argc, char *argv[]) {
       cout << "\nCurrentSyncDivTime: " << ptp.time_data.sync_time_div;
     }
 
-    /*distance = calc_distance(rtc_ctl.US_start_time,in_time);
+    /*distance = calc_distance(hw.US_start_time,in_time);
 
     printf("\ncurrent distance is %lf", distance);
     printf("\ncurrent distance is %g\n", distance);
