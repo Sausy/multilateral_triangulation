@@ -1,0 +1,76 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi.asmi2_inst_qspi_ctrl.asmi2_qspi_interface_0 -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.tspi_0 -pg 1 -lvl 3 -y 1710
+preplace inst MKRVIDOR4000_peripherals_lite_sys.tspi_1 -pg 1 -lvl 3 -y 1830
+preplace inst MKRVIDOR4000_peripherals_lite_sys.NEOPIXEL_0 -pg 1 -lvl 3 -y 970
+preplace inst MKRVIDOR4000_peripherals_lite_sys.wm_pio -pg 1 -lvl 3 -y 2310
+preplace inst MKRVIDOR4000_peripherals_lite_sys.tspi_2 -pg 1 -lvl 3 -y 1950
+preplace inst MKRVIDOR4000_peripherals_lite_sys.sam_pio -pg 1 -lvl 3 -y 1210
+preplace inst MKRVIDOR4000_peripherals_lite_sys.flash_clk -pg 1 -lvl 2 -y 2500
+preplace inst MKRVIDOR4000_peripherals_lite_sys -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst MKRVIDOR4000_peripherals_lite_sys.tspi_3 -pg 1 -lvl 3 -y 2070
+preplace inst MKRVIDOR4000_peripherals_lite_sys.timer_0 -pg 1 -lvl 3 -y 1310
+preplace inst MKRVIDOR4000_peripherals_lite_sys.nios2_gen2_0.cpu -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.i2c_0 -pg 1 -lvl 3 -y 250
+preplace inst MKRVIDOR4000_peripherals_lite_sys.JTAG_BRIDGE -pg 1 -lvl 2 -y 1190
+preplace inst MKRVIDOR4000_peripherals_lite_sys.tspi_4 -pg 1 -lvl 3 -y 2190
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi.asmi2_inst_qspi_ctrl.reset_bridge -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi.asmi2_inst_qspi_ctrl.csr_controller -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.nios2_gen2_0.reset_bridge -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.nios2_gen2_0 -pg 1 -lvl 2 -y 1320
+preplace inst MKRVIDOR4000_peripherals_lite_sys.nina_spi -pg 1 -lvl 3 -y 730
+preplace inst MKRVIDOR4000_peripherals_lite_sys.i2c_1 -pg 1 -lvl 3 -y 370
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi.addr_adaption_1 -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi.asmi2_inst_qspi_ctrl.merlin_demultiplexer_0 -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi.asmi2_inst_qspi_ctrl -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi.clk -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.onchip_memory2_0 -pg 1 -lvl 3 -y 1510
+preplace inst MKRVIDOR4000_peripherals_lite_sys.i2c_2 -pg 1 -lvl 3 -y 490
+preplace inst MKRVIDOR4000_peripherals_lite_sys.i2c_3 -pg 1 -lvl 3 -y 610
+preplace inst MKRVIDOR4000_peripherals_lite_sys.sdram -pg 1 -lvl 3 -y 1610
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi.asmi2_inst_qspi_ctrl.asmi2_cmd_generator_0 -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi.asmi2_inst_qspi_ctrl.xip_controller -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.pex_pio -pg 1 -lvl 3 -y 870
+preplace inst MKRVIDOR4000_peripherals_lite_sys.nios2_gen2_0.clock_bridge -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.mb -pg 1 -lvl 3 -y 1090
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi.asmi2_inst_qspi_ctrl.multiplexer -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi.asmi2_inst_qspi_ctrl.clk_bridge -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi.reset -pg 1
+preplace inst MKRVIDOR4000_peripherals_lite_sys.sam_pwm -pg 1 -lvl 3 -y 1410
+preplace inst MKRVIDOR4000_peripherals_lite_sys.clk -pg 1 -lvl 1 -y 1340
+preplace inst MKRVIDOR4000_peripherals_lite_sys.QUAD_ENCODER_0 -pg 1 -lvl 3 -y 30
+preplace inst MKRVIDOR4000_peripherals_lite_sys.qspi -pg 1 -lvl 3 -y 2440
+preplace inst MKRVIDOR4000_peripherals_lite_sys.flash_spi -pg 1 -lvl 3 -y 130
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)MKRVIDOR4000_peripherals_lite_sys.i2c3,(SLAVE)i2c_3.conduit_start) 1 0 3 NJ 680 NJ 680 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)i2c_2.conduit_start,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.i2c2) 1 0 3 NJ 560 NJ 560 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)qspi.atom_ports,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.qspi) 1 0 3 NJ 2450 NJ 2450 NJ
+preplace netloc FAN_OUT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)mb.clock_sink,(SLAVE)tspi_0.clk,(SLAVE)i2c_0.clock_sink,(SLAVE)timer_0.clk,(SLAVE)flash_spi.clk,(SLAVE)JTAG_BRIDGE.clock,(SLAVE)onchip_memory2_0.clk1,(SLAVE)QUAD_ENCODER_0.clock_sink,(SLAVE)sdram.clk,(SLAVE)tspi_4.clk,(SLAVE)tspi_1.clk,(SLAVE)i2c_1.clock_sink,(SLAVE)NEOPIXEL_0.clock,(SLAVE)pex_pio.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)tspi_2.clk,(MASTER)clk.clk,(SLAVE)nina_spi.clk,(SLAVE)sam_pwm.clock_sink,(SLAVE)sam_pio.clk,(SLAVE)wm_pio.clk,(SLAVE)i2c_2.clock_sink,(SLAVE)i2c_3.clock_sink,(SLAVE)tspi_3.clk) 1 1 2 300 1180 640
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)tspi_3.spi,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.spi3) 1 0 3 NJ 2160 NJ 2160 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)tspi_0.spi,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.spi0) 1 0 3 NJ 1800 NJ 1800 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)MKRVIDOR4000_peripherals_lite_sys.clk_0,(SLAVE)flash_clk.clk_in) 1 0 2 NJ 2510 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)MKRVIDOR4000_peripherals_lite_sys.spi1,(SLAVE)tspi_1.spi) 1 0 3 NJ 1920 NJ 1920 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)MKRVIDOR4000_peripherals_lite_sys.sdram,(SLAVE)sdram.wire) 1 0 3 NJ 1680 NJ 1680 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)i2c_1.conduit_start,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.i2c1) 1 0 3 NJ 440 NJ 440 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)MKRVIDOR4000_peripherals_lite_sys.spi2,(SLAVE)tspi_2.spi) 1 0 3 NJ 2040 NJ 2040 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)clk.clk_in,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)MKRVIDOR4000_peripherals_lite_sys.mb,(SLAVE)mb.conduit_end) 1 0 3 NJ 1120 NJ 1120 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)sam_pio.pio,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.sam_pio) 1 0 3 NJ 1140 NJ 1140 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)clk.clk_in_reset,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)MKRVIDOR4000_peripherals_lite_sys.flash_spi,(SLAVE)flash_spi.spi) 1 0 3 NJ 220 NJ 220 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)QUAD_ENCODER_0.encoder,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.encoder) 1 0 3 NJ 80 NJ 80 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)NEOPIXEL_0.pixel,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.pixel) 1 0 3 NJ 1040 NJ 1040 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)MKRVIDOR4000_peripherals_lite_sys.i2c0,(SLAVE)i2c_0.conduit_start) 1 0 3 NJ 320 NJ 320 NJ
+preplace netloc POINT_TO_POINT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)mb.mst,(MASTER)JTAG_BRIDGE.avalon_master) 1 2 1 620
+preplace netloc FAN_OUT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)QUAD_ENCODER_0.reset_sink,(SLAVE)tspi_3.reset,(SLAVE)pex_pio.reset,(SLAVE)sam_pio.reset,(SLAVE)JTAG_BRIDGE.reset,(SLAVE)i2c_3.clock_sink_reset,(SLAVE)flash_spi.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)sam_pwm.reset_sink,(SLAVE)sdram.reset,(SLAVE)i2c_1.clock_sink_reset,(MASTER)clk.clk_reset,(SLAVE)i2c_0.clock_sink_reset,(SLAVE)timer_0.reset,(SLAVE)NEOPIXEL_0.reset,(SLAVE)wm_pio.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)tspi_0.reset,(SLAVE)mb.reset_sink,(SLAVE)qspi.reset,(SLAVE)tspi_2.reset,(SLAVE)i2c_2.clock_sink_reset,(SLAVE)nina_spi.reset,(SLAVE)tspi_4.reset,(SLAVE)tspi_1.reset) 1 1 2 280 1160 680
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)wm_pio.pio,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.wm_pio) 1 0 3 NJ 2340 NJ 2340 NJ
+preplace netloc INTERCONNECT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)i2c_0.avalon_slave_0,(MASTER)NEOPIXEL_0.data,(SLAVE)QUAD_ENCODER_0.avalon_slave_0,(SLAVE)tspi_2.d,(SLAVE)mb.slv,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)tspi_3.d,(SLAVE)qspi.avl_csr,(SLAVE)i2c_2.avalon_slave_0,(SLAVE)tspi_4.d,(MASTER)nios2_gen2_0.data_master,(SLAVE)sdram.s1,(SLAVE)sam_pwm.avalon_slave_0,(SLAVE)qspi.avl_mem,(SLAVE)pex_pio.s1,(SLAVE)sam_pio.s1,(SLAVE)i2c_3.avalon_slave_0,(SLAVE)tspi_1.d,(SLAVE)nina_spi.d,(SLAVE)flash_spi.d,(SLAVE)wm_pio.s1,(SLAVE)tspi_0.d,(SLAVE)NEOPIXEL_0.csr,(SLAVE)onchip_memory2_0.s1,(SLAVE)i2c_1.avalon_slave_0,(SLAVE)timer_0.s1,(SLAVE)onchip_memory2_0.s2) 1 2 2 660 860 950
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)sam_pwm.conduit_end,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.sam_pwm) 1 0 3 NJ 1460 NJ 1460 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)MKRVIDOR4000_peripherals_lite_sys.spi4,(SLAVE)tspi_4.spi) 1 0 3 NJ 2280 NJ 2280 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)MKRVIDOR4000_peripherals_lite_sys.reset_0,(SLAVE)flash_clk.clk_in_reset) 1 0 2 NJ 2530 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)pex_pio.pio,(SLAVE)MKRVIDOR4000_peripherals_lite_sys.pex_pio) 1 0 3 NJ 900 NJ 900 NJ
+preplace netloc EXPORT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(SLAVE)MKRVIDOR4000_peripherals_lite_sys.nina_spi,(SLAVE)nina_spi.spi) 1 0 3 NJ 820 NJ 820 NJ
+preplace netloc POINT_TO_POINT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(MASTER)flash_clk.clk,(SLAVE)qspi.clock_sink) 1 2 1 N
+preplace netloc POINT_TO_POINT<net_container>MKRVIDOR4000_peripherals_lite_sys</net_container>(MASTER)nios2_gen2_0.irq,(SLAVE)timer_0.irq) 1 2 1 700
+levelinfo -pg 1 0 70 990
+levelinfo -hier MKRVIDOR4000_peripherals_lite_sys 80 110 360 820 970

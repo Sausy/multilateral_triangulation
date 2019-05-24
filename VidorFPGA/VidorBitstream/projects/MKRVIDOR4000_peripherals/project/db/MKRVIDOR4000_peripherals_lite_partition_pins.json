@@ -1,0 +1,477 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "oSAM_INT",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_ADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_ADDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_ADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_ADDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_ADDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_ADDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_ADDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_ADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_ADDR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_BA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_BA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_CASn",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_CSn",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_DQM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_DQM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_RASn",
+					"strict" : false
+				},
+				{
+					"name" : "oSDRAM_WEn",
+					"strict" : false
+				},
+				{
+					"name" : "oFLASH_SCK",
+					"strict" : false
+				},
+				{
+					"name" : "oFLASH_CS",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "bSDRAM_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_AREF",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_A[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_A[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[7]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[8]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[9]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[10]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[11]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[12]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[13]",
+					"strict" : false
+				},
+				{
+					"name" : "bMKR_D[14]",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_RST",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN6",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN8",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN10",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN12",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN14",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN16",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN20",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN28",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN30",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN32",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN42",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN44",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN45",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN46",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN47",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN48",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN49",
+					"strict" : false
+				},
+				{
+					"name" : "bPEX_PIN51",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO1",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO2",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO3",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO4",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO5",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO7",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO8",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO18",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO20",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO21",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO27",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO28",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO29",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO31",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO34",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO35",
+					"strict" : false
+				},
+				{
+					"name" : "bWM_PIO36",
+					"strict" : false
+				},
+				{
+					"name" : "oWM_RX",
+					"strict" : false
+				},
+				{
+					"name" : "oWM_RESET",
+					"strict" : false
+				},
+				{
+					"name" : "oFLASH_MOSI",
+					"strict" : false
+				},
+				{
+					"name" : "iFLASH_MISO",
+					"strict" : false
+				},
+				{
+					"name" : "oFLASH_HOLD",
+					"strict" : false
+				},
+				{
+					"name" : "oFLASH_WP",
+					"strict" : false
+				},
+				{
+					"name" : "iPEX_PIN31",
+					"strict" : false
+				},
+				{
+					"name" : "iPEX_PIN25",
+					"strict" : false
+				},
+				{
+					"name" : "iPEX_PIN23",
+					"strict" : false
+				},
+				{
+					"name" : "iPEX_PIN13",
+					"strict" : false
+				},
+				{
+					"name" : "iPEX_PIN11",
+					"strict" : false
+				},
+				{
+					"name" : "iWM_PIO32",
+					"strict" : false
+				},
+				{
+					"name" : "iWM_TX",
+					"strict" : false
+				},
+				{
+					"name" : "iPEX_PIN33",
+					"strict" : false
+				},
+				{
+					"name" : "iSAM_INT",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

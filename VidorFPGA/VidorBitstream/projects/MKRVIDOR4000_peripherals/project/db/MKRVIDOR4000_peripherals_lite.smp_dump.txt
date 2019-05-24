@@ -1,0 +1,176 @@
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|MKRVIDOR4000_peripherals_lite_sys_mm_interconnect_1:mm_interconnect_1|altera_merlin_burst_adapter:sdram_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|tiny_spi:tspi_4|spi_seq
+Name spi_seq.IDLE spi_seq.PHASE2 spi_seq.PHASE1 
+spi_seq.IDLE 0 0 0 
+spi_seq.PHASE1 1 0 1 
+spi_seq.PHASE2 1 1 0 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|tiny_spi:tspi_3|spi_seq
+Name spi_seq.IDLE spi_seq.PHASE2 spi_seq.PHASE1 
+spi_seq.IDLE 0 0 0 
+spi_seq.PHASE1 1 0 1 
+spi_seq.PHASE2 1 1 0 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|tiny_spi:tspi_2|spi_seq
+Name spi_seq.IDLE spi_seq.PHASE2 spi_seq.PHASE1 
+spi_seq.IDLE 0 0 0 
+spi_seq.PHASE1 1 0 1 
+spi_seq.PHASE2 1 1 0 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|tiny_spi:tspi_1|spi_seq
+Name spi_seq.IDLE spi_seq.PHASE2 spi_seq.PHASE1 
+spi_seq.IDLE 0 0 0 
+spi_seq.PHASE1 1 0 1 
+spi_seq.PHASE2 1 1 0 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|tiny_spi:tspi_0|spi_seq
+Name spi_seq.IDLE spi_seq.PHASE2 spi_seq.PHASE1 
+spi_seq.IDLE 0 0 0 
+spi_seq.PHASE1 1 0 1 
+spi_seq.PHASE2 1 1 0 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|MKRVIDOR4000_peripherals_lite_sys_sdram:sdram|m_next
+Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
+m_next.000000001 0 0 0 0 
+m_next.000001000 0 0 1 1 
+m_next.000010000 0 1 0 1 
+m_next.010000000 1 0 0 1 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|MKRVIDOR4000_peripherals_lite_sys_sdram:sdram|m_state
+Name m_state.100000000 m_state.010000000 m_state.001000000 m_state.000100000 m_state.000010000 m_state.000001000 m_state.000000100 m_state.000000010 m_state.000000001 
+m_state.000000001 0 0 0 0 0 0 0 0 0 
+m_state.000000010 0 0 0 0 0 0 0 1 1 
+m_state.000000100 0 0 0 0 0 0 1 0 1 
+m_state.000001000 0 0 0 0 0 1 0 0 1 
+m_state.000010000 0 0 0 0 1 0 0 0 1 
+m_state.000100000 0 0 0 1 0 0 0 0 1 
+m_state.001000000 0 0 1 0 0 0 0 0 1 
+m_state.010000000 0 1 0 0 0 0 0 0 1 
+m_state.100000000 1 0 0 0 0 0 0 0 1 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|MKRVIDOR4000_peripherals_lite_sys_sdram:sdram|i_next
+Name i_next.111 i_next.101 i_next.010 i_next.000 
+i_next.000 0 0 0 0 
+i_next.010 0 0 1 1 
+i_next.101 0 1 0 1 
+i_next.111 1 0 0 1 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|MKRVIDOR4000_peripherals_lite_sys_sdram:sdram|i_state
+Name i_state.111 i_state.101 i_state.011 i_state.010 i_state.001 i_state.000 
+i_state.000 0 0 0 0 0 0 
+i_state.001 0 0 0 0 1 1 
+i_state.010 0 0 0 1 0 1 
+i_state.011 0 0 1 0 0 1 
+i_state.101 0 1 0 0 0 1 
+i_state.111 1 0 0 0 0 1 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|MKRVIDOR4000_peripherals_lite_sys_qspi:qspi|MKRVIDOR4000_peripherals_lite_sys_qspi_asmi2_inst_qspi_ctrl:asmi2_inst_qspi_ctrl|arduino_asmi2_qspi_interface:asmi2_qspi_interface_0|current_state
+Name current_state.STATE_COMPLETE current_state.STATE_PRE_COMPLETE current_state.STATE_LOAD_RDATA current_state.STATE_RDATA current_state.STATE_SWITCH_OE current_state.STATE_DUMMY_CLK current_state.STATE_LOAD_DATA current_state.STATE_WDATA current_state.STATE_FIRST_DATA current_state.STATE_OPCODE current_state.STATE_IDLE 
+current_state.STATE_IDLE 0 0 0 0 0 0 0 0 0 0 0 
+current_state.STATE_OPCODE 0 0 0 0 0 0 0 0 0 1 1 
+current_state.STATE_FIRST_DATA 0 0 0 0 0 0 0 0 1 0 1 
+current_state.STATE_WDATA 0 0 0 0 0 0 0 1 0 0 1 
+current_state.STATE_LOAD_DATA 0 0 0 0 0 0 1 0 0 0 1 
+current_state.STATE_DUMMY_CLK 0 0 0 0 0 1 0 0 0 0 1 
+current_state.STATE_SWITCH_OE 0 0 0 0 1 0 0 0 0 0 1 
+current_state.STATE_RDATA 0 0 0 1 0 0 0 0 0 0 1 
+current_state.STATE_LOAD_RDATA 0 0 1 0 0 0 0 0 0 0 1 
+current_state.STATE_PRE_COMPLETE 0 1 0 0 0 0 0 0 0 0 1 
+current_state.STATE_COMPLETE 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|MKRVIDOR4000_peripherals_lite_sys_qspi:qspi|MKRVIDOR4000_peripherals_lite_sys_qspi_asmi2_inst_qspi_ctrl:asmi2_inst_qspi_ctrl|altera_asmi2_cmd_generator:asmi2_cmd_generator_0|state
+Name state.ST_COMPLETE state.ST_SEND_DUMMY_RSP state.ST_WAIT_BUFFER state.ST_WAIT_RSP state.ST_SEND_DATA state.ST_SEND_ADDR state.ST_SEND_OPCODE state.ST_IDLE 
+state.ST_IDLE 0 0 0 0 0 0 0 0 
+state.ST_SEND_OPCODE 0 0 0 0 0 0 1 1 
+state.ST_SEND_ADDR 0 0 0 0 0 1 0 1 
+state.ST_SEND_DATA 0 0 0 0 1 0 0 1 
+state.ST_WAIT_RSP 0 0 0 1 0 0 0 1 
+state.ST_WAIT_BUFFER 0 0 1 0 0 0 0 1 
+state.ST_SEND_DUMMY_RSP 0 1 0 0 0 0 0 1 
+state.ST_COMPLETE 1 0 0 0 0 0 0 1 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|MKRVIDOR4000_peripherals_lite_sys_qspi:qspi|MKRVIDOR4000_peripherals_lite_sys_qspi_asmi2_inst_qspi_ctrl:asmi2_inst_qspi_ctrl|altera_asmi2_xip_controller:xip_controller|current_state
+Name current_state.STATE_COMPLETE current_state.STATE_READ_DATA current_state.STATE_READ_CMD current_state.STATE_READ_NVCR_RSP current_state.STATE_READ_NVCR_CMD current_state.STATE_POLL_RSP current_state.STATE_POLL_CMD current_state.STATE_WR_DATA current_state.STATE_WR_CMD current_state.STATE_WRENABLE_RSP current_state.STATE_WRENABLE_CMD current_state.STATE_STATUS_RSP current_state.STATE_STATUS_CMD current_state.STATE_IDLE 
+current_state.STATE_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.STATE_STATUS_CMD 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.STATE_STATUS_RSP 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.STATE_WRENABLE_CMD 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.STATE_WRENABLE_RSP 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.STATE_WR_CMD 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.STATE_WR_DATA 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.STATE_POLL_CMD 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.STATE_POLL_RSP 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.STATE_READ_NVCR_CMD 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.STATE_READ_NVCR_RSP 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.STATE_READ_CMD 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.STATE_READ_DATA 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.STATE_COMPLETE 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|MKRVIDOR4000_peripherals_lite_sys_qspi:qspi|MKRVIDOR4000_peripherals_lite_sys_qspi_asmi2_inst_qspi_ctrl:asmi2_inst_qspi_ctrl|MKRVIDOR4000_peripherals_lite_sys_qspi_asmi2_inst_qspi_ctrl_csr_controller:csr_controller|state
+Name state.ST_WAIT_RSP state.ST_SEND_DATA state.ST_SEND_HEADER state.ST_IDLE 
+state.ST_IDLE 0 0 0 0 
+state.ST_SEND_HEADER 0 0 1 1 
+state.ST_SEND_DATA 0 1 0 1 
+state.ST_WAIT_RSP 1 0 0 1 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|tiny_spi:nina_spi|spi_seq
+Name spi_seq.IDLE spi_seq.PHASE2 spi_seq.PHASE1 
+spi_seq.IDLE 0 0 0 
+spi_seq.PHASE1 1 0 1 
+spi_seq.PHASE2 1 1 0 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|o_i2c_master:i2c_3|i2c_master_top:i2c_top_inst|i2c_master_byte_ctrl:byte_controller|c_state
+Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 
+c_state.ST_IDLE 0 0 0 0 0 0 
+c_state.ST_START 1 0 0 0 0 1 
+c_state.ST_READ 1 0 0 0 1 0 
+c_state.ST_WRITE 1 0 0 1 0 0 
+c_state.ST_ACK 1 0 1 0 0 0 
+c_state.ST_STOP 1 1 0 0 0 0 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|o_i2c_master:i2c_2|i2c_master_top:i2c_top_inst|i2c_master_byte_ctrl:byte_controller|c_state
+Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 
+c_state.ST_IDLE 0 0 0 0 0 0 
+c_state.ST_START 1 0 0 0 0 1 
+c_state.ST_READ 1 0 0 0 1 0 
+c_state.ST_WRITE 1 0 0 1 0 0 
+c_state.ST_ACK 1 0 1 0 0 0 
+c_state.ST_STOP 1 1 0 0 0 0 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|o_i2c_master:i2c_1|i2c_master_top:i2c_top_inst|i2c_master_byte_ctrl:byte_controller|c_state
+Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 
+c_state.ST_IDLE 0 0 0 0 0 0 
+c_state.ST_START 1 0 0 0 0 1 
+c_state.ST_READ 1 0 0 0 1 0 
+c_state.ST_WRITE 1 0 0 1 0 0 
+c_state.ST_ACK 1 0 1 0 0 0 
+c_state.ST_STOP 1 1 0 0 0 0 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|o_i2c_master:i2c_0|i2c_master_top:i2c_top_inst|i2c_master_byte_ctrl:byte_controller|c_state
+Name c_state.ST_IDLE c_state.ST_STOP c_state.ST_ACK c_state.ST_WRITE c_state.ST_READ c_state.ST_START 
+c_state.ST_IDLE 0 0 0 0 0 0 
+c_state.ST_START 1 0 0 0 0 1 
+c_state.ST_READ 1 0 0 0 1 0 
+c_state.ST_WRITE 1 0 0 1 0 0 
+c_state.ST_ACK 1 0 1 0 0 0 
+c_state.ST_STOP 1 1 0 0 0 0 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|tiny_spi:flash_spi|spi_seq
+Name spi_seq.IDLE spi_seq.PHASE2 spi_seq.PHASE1 
+spi_seq.IDLE 0 0 0 
+spi_seq.PHASE1 1 0 1 
+spi_seq.PHASE2 1 1 0 
+
+State Machine - |MKRVIDOR4000_peripherals_top|MKRVIDOR4000_peripherals_lite_sys:u0|NEOPIXEL:neopixel_0|rINT_STATE
+Name rINT_STATE.eST_RESETTING rINT_STATE.eST_SHIFTING rINT_STATE.eST_PRELOAD rINT_STATE.eST_IDLE 
+rINT_STATE.eST_IDLE 0 0 0 0 
+rINT_STATE.eST_PRELOAD 0 0 1 1 
+rINT_STATE.eST_SHIFTING 0 1 0 1 
+rINT_STATE.eST_RESETTING 1 0 0 1 

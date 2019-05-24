@@ -1,0 +1,349 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/sausy/Projects/VidorBitstream/projects/MKRVIDOR4000_peripherals/project/MKRVIDOR4000_peripherals_lite_sys.qsys --block-symbol-file --output-directory=/home/sausy/Projects/VidorBitstream/projects/MKRVIDOR4000_peripherals/project/MKRVIDOR4000_peripherals_lite_sys --family="Cyclone 10 LP" --part=10CL016YU256C8G
+Progress: Loading project/MKRVIDOR4000_peripherals_lite_sys.qsys
+Progress: Reading input file
+Progress: Adding JTAG_BRIDGE [JTAG_BRIDGE 1.0]
+Progress: Parameterizing module JTAG_BRIDGE
+Progress: Adding NEOPIXEL_0 [NEOPIXEL 1.0]
+Progress: Parameterizing module NEOPIXEL_0
+Progress: Adding QUAD_ENCODER_0 [QUAD_ENCODER 1.0]
+Progress: Parameterizing module QUAD_ENCODER_0
+Progress: Adding clk [clock_source 18.1]
+Progress: Parameterizing module clk
+Progress: Adding dpram [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module dpram
+Progress: Adding flash_clk [clock_source 18.1]
+Progress: Parameterizing module flash_clk
+Progress: Adding flash_spi [tiny_spi 1.0]
+Progress: Parameterizing module flash_spi
+Progress: Adding i2c_0 [o_i2c_master 1.0]
+Progress: Parameterizing module i2c_0
+Progress: Adding i2c_1 [o_i2c_master 1.0]
+Progress: Parameterizing module i2c_1
+Progress: Adding i2c_2 [o_i2c_master 1.0]
+Progress: Parameterizing module i2c_2
+Progress: Adding i2c_3 [o_i2c_master 1.0]
+Progress: Parameterizing module i2c_3
+Progress: Adding irq [altera_avalon_pio 18.1]
+Progress: Parameterizing module irq
+Progress: Adding mb [MAILBOX 1.0]
+Progress: Parameterizing module mb
+Progress: Adding nina_spi [tiny_spi 1.0]
+Progress: Parameterizing module nina_spi
+Progress: Adding nina_uart [arduino_16550_uart 18.1]
+Warning: nina_uart: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module nina_uart
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pex_pio [PIO 1.0]
+Progress: Parameterizing module pex_pio
+Progress: Adding qspi [arduino_generic_quad_spi_controller2 18.1]
+Progress: Parameterizing module qspi
+Progress: Adding sam_pio [PIO 1.0]
+Progress: Parameterizing module sam_pio
+Progress: Adding sam_pwm [PWM 1.0]
+Progress: Parameterizing module sam_pwm
+Progress: Adding sdram [altera_avalon_new_sdram_controller 18.1]
+Progress: Parameterizing module sdram
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
+Progress: Adding tspi_0 [tiny_spi 1.0]
+Progress: Parameterizing module tspi_0
+Progress: Adding tspi_1 [tiny_spi 1.0]
+Progress: Parameterizing module tspi_1
+Progress: Adding tspi_2 [tiny_spi 1.0]
+Progress: Parameterizing module tspi_2
+Progress: Adding tspi_3 [tiny_spi 1.0]
+Progress: Parameterizing module tspi_3
+Progress: Adding tspi_4 [tiny_spi 1.0]
+Progress: Parameterizing module tspi_4
+Progress: Adding uart_0 [arduino_16550_uart 18.1]
+Warning: uart_0: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_0
+Progress: Adding uart_1 [arduino_16550_uart 18.1]
+Warning: uart_1: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_1
+Progress: Adding uart_2 [arduino_16550_uart 18.1]
+Warning: uart_2: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_2
+Progress: Adding uart_3 [arduino_16550_uart 18.1]
+Warning: uart_3: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_3
+Progress: Adding uart_4 [arduino_16550_uart 18.1]
+Warning: uart_4: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_4
+Progress: Adding uart_5 [arduino_16550_uart 18.1]
+Warning: uart_5: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_5
+Progress: Adding uart_6 [arduino_16550_uart 18.1]
+Warning: uart_6: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_6
+Progress: Adding uart_7 [arduino_16550_uart 18.1]
+Warning: uart_7: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_7
+Progress: Adding vid [altera_clock_bridge 18.1]
+Progress: Parameterizing module vid
+Progress: Adding wm_pio [PIO 1.0]
+Progress: Parameterizing module wm_pio
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: MKRVIDOR4000_peripherals_lite_sys.nios2_gen2_0: No Debugger.  You will not be able to download or debug programs
+Info: MKRVIDOR4000_peripherals_lite_sys.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Warning: MKRVIDOR4000_peripherals_lite_sys.JTAG_BRIDGE: Interrupt sender JTAG_BRIDGE.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.NEOPIXEL_0: Interrupt sender NEOPIXEL_0.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.flash_spi: Interrupt sender flash_spi.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.i2c_0: Interrupt sender i2c_0.interrupt_sender is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.i2c_1: Interrupt sender i2c_1.interrupt_sender is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.i2c_2: Interrupt sender i2c_2.interrupt_sender is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.i2c_3: Interrupt sender i2c_3.interrupt_sender is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.nina_spi: Interrupt sender nina_spi.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.qspi: Interrupt sender qspi.interrupt_sender is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.tspi_0: Interrupt sender tspi_0.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.tspi_1: Interrupt sender tspi_1.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.tspi_2: Interrupt sender tspi_2.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.tspi_3: Interrupt sender tspi_3.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.tspi_4: Interrupt sender tspi_4.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.JTAG_BRIDGE: JTAG_BRIDGE.event must be connected to an Avalon-MM master
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/sausy/Projects/VidorBitstream/projects/MKRVIDOR4000_peripherals/project/MKRVIDOR4000_peripherals_lite_sys.qsys --synthesis=VERILOG --output-directory=/home/sausy/Projects/VidorBitstream/projects/MKRVIDOR4000_peripherals/project/MKRVIDOR4000_peripherals_lite_sys/synthesis --family="Cyclone 10 LP" --part=10CL016YU256C8G
+Progress: Loading project/MKRVIDOR4000_peripherals_lite_sys.qsys
+Progress: Reading input file
+Progress: Adding JTAG_BRIDGE [JTAG_BRIDGE 1.0]
+Progress: Parameterizing module JTAG_BRIDGE
+Progress: Adding NEOPIXEL_0 [NEOPIXEL 1.0]
+Progress: Parameterizing module NEOPIXEL_0
+Progress: Adding QUAD_ENCODER_0 [QUAD_ENCODER 1.0]
+Progress: Parameterizing module QUAD_ENCODER_0
+Progress: Adding clk [clock_source 18.1]
+Progress: Parameterizing module clk
+Progress: Adding dpram [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module dpram
+Progress: Adding flash_clk [clock_source 18.1]
+Progress: Parameterizing module flash_clk
+Progress: Adding flash_spi [tiny_spi 1.0]
+Progress: Parameterizing module flash_spi
+Progress: Adding i2c_0 [o_i2c_master 1.0]
+Progress: Parameterizing module i2c_0
+Progress: Adding i2c_1 [o_i2c_master 1.0]
+Progress: Parameterizing module i2c_1
+Progress: Adding i2c_2 [o_i2c_master 1.0]
+Progress: Parameterizing module i2c_2
+Progress: Adding i2c_3 [o_i2c_master 1.0]
+Progress: Parameterizing module i2c_3
+Progress: Adding irq [altera_avalon_pio 18.1]
+Progress: Parameterizing module irq
+Progress: Adding mb [MAILBOX 1.0]
+Progress: Parameterizing module mb
+Progress: Adding nina_spi [tiny_spi 1.0]
+Progress: Parameterizing module nina_spi
+Progress: Adding nina_uart [arduino_16550_uart 18.1]
+Warning: nina_uart: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module nina_uart
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pex_pio [PIO 1.0]
+Progress: Parameterizing module pex_pio
+Progress: Adding qspi [arduino_generic_quad_spi_controller2 18.1]
+Progress: Parameterizing module qspi
+Progress: Adding sam_pio [PIO 1.0]
+Progress: Parameterizing module sam_pio
+Progress: Adding sam_pwm [PWM 1.0]
+Progress: Parameterizing module sam_pwm
+Progress: Adding sdram [altera_avalon_new_sdram_controller 18.1]
+Progress: Parameterizing module sdram
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
+Progress: Adding tspi_0 [tiny_spi 1.0]
+Progress: Parameterizing module tspi_0
+Progress: Adding tspi_1 [tiny_spi 1.0]
+Progress: Parameterizing module tspi_1
+Progress: Adding tspi_2 [tiny_spi 1.0]
+Progress: Parameterizing module tspi_2
+Progress: Adding tspi_3 [tiny_spi 1.0]
+Progress: Parameterizing module tspi_3
+Progress: Adding tspi_4 [tiny_spi 1.0]
+Progress: Parameterizing module tspi_4
+Progress: Adding uart_0 [arduino_16550_uart 18.1]
+Warning: uart_0: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_0
+Progress: Adding uart_1 [arduino_16550_uart 18.1]
+Warning: uart_1: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_1
+Progress: Adding uart_2 [arduino_16550_uart 18.1]
+Warning: uart_2: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_2
+Progress: Adding uart_3 [arduino_16550_uart 18.1]
+Warning: uart_3: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_3
+Progress: Adding uart_4 [arduino_16550_uart 18.1]
+Warning: uart_4: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_4
+Progress: Adding uart_5 [arduino_16550_uart 18.1]
+Warning: uart_5: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_5
+Progress: Adding uart_6 [arduino_16550_uart 18.1]
+Warning: uart_6: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_6
+Progress: Adding uart_7 [arduino_16550_uart 18.1]
+Warning: uart_7: Component type arduino_16550_uart is not in the library
+Progress: Parameterizing module uart_7
+Progress: Adding vid [altera_clock_bridge 18.1]
+Progress: Parameterizing module vid
+Progress: Adding wm_pio [PIO 1.0]
+Progress: Parameterizing module wm_pio
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: MKRVIDOR4000_peripherals_lite_sys.nios2_gen2_0: No Debugger.  You will not be able to download or debug programs
+Info: MKRVIDOR4000_peripherals_lite_sys.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Warning: MKRVIDOR4000_peripherals_lite_sys.JTAG_BRIDGE: Interrupt sender JTAG_BRIDGE.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.NEOPIXEL_0: Interrupt sender NEOPIXEL_0.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.flash_spi: Interrupt sender flash_spi.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.i2c_0: Interrupt sender i2c_0.interrupt_sender is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.i2c_1: Interrupt sender i2c_1.interrupt_sender is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.i2c_2: Interrupt sender i2c_2.interrupt_sender is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.i2c_3: Interrupt sender i2c_3.interrupt_sender is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.nina_spi: Interrupt sender nina_spi.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.qspi: Interrupt sender qspi.interrupt_sender is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.tspi_0: Interrupt sender tspi_0.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.tspi_1: Interrupt sender tspi_1.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.tspi_2: Interrupt sender tspi_2.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.tspi_3: Interrupt sender tspi_3.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.tspi_4: Interrupt sender tspi_4.irq is not connected to an interrupt receiver
+Warning: MKRVIDOR4000_peripherals_lite_sys.JTAG_BRIDGE: JTAG_BRIDGE.event must be connected to an Avalon-MM master
+Info: MKRVIDOR4000_peripherals_lite_sys: Generating MKRVIDOR4000_peripherals_lite_sys "MKRVIDOR4000_peripherals_lite_sys" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master JTAG_BRIDGE.avalon_master and slave mb.mst because the master has address signal 32 bit wide, but the slave is 9 bit wide.
+Info: Interconnect is inserted between master JTAG_BRIDGE.avalon_master and slave mb.mst because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master JTAG_BRIDGE.avalon_master and slave mb.mst because the master has readdatavalid signal 1 bit wide, but the slave is 0 bit wide.
+Info: Inserting clock-crossing logic between cmd_demux_001.src7 and cmd_mux_007.sink0
+Info: Inserting clock-crossing logic between cmd_demux_001.src8 and cmd_mux_008.sink0
+Info: Inserting clock-crossing logic between cmd_demux_002.src0 and cmd_mux_008.sink1
+Info: Inserting clock-crossing logic between rsp_demux_007.src0 and rsp_mux_001.sink7
+Info: Inserting clock-crossing logic between rsp_demux_008.src0 and rsp_mux_001.sink8
+Info: Inserting clock-crossing logic between rsp_demux_008.src1 and rsp_mux_002.sink0
+Info: JTAG_BRIDGE: "MKRVIDOR4000_peripherals_lite_sys" instantiated JTAG_BRIDGE "JTAG_BRIDGE"
+Info: NEOPIXEL_0: "MKRVIDOR4000_peripherals_lite_sys" instantiated NEOPIXEL "NEOPIXEL_0"
+Info: QUAD_ENCODER_0: "MKRVIDOR4000_peripherals_lite_sys" instantiated QUAD_ENCODER "QUAD_ENCODER_0"
+Info: flash_spi: "MKRVIDOR4000_peripherals_lite_sys" instantiated tiny_spi "flash_spi"
+Info: i2c_0: "MKRVIDOR4000_peripherals_lite_sys" instantiated o_i2c_master "i2c_0"
+Info: mb: "MKRVIDOR4000_peripherals_lite_sys" instantiated MAILBOX "mb"
+Info: nios2_gen2_0: "MKRVIDOR4000_peripherals_lite_sys" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'MKRVIDOR4000_peripherals_lite_sys_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec /home/sausy/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/sausy/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/sausy/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/sausy/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/sausy/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=MKRVIDOR4000_peripherals_lite_sys_onchip_memory2_0 --dir=/tmp/alt8040_6456970505395229700.dir/0008_onchip_memory2_0_gen/ --quartus_dir=/home/sausy/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8040_6456970505395229700.dir/0008_onchip_memory2_0_gen//MKRVIDOR4000_peripherals_lite_sys_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'MKRVIDOR4000_peripherals_lite_sys_onchip_memory2_0'
+Info: onchip_memory2_0: "MKRVIDOR4000_peripherals_lite_sys" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: pex_pio: "MKRVIDOR4000_peripherals_lite_sys" instantiated PIO "pex_pio"
+Info: qspi: "MKRVIDOR4000_peripherals_lite_sys" instantiated arduino_generic_quad_spi_controller2 "qspi"
+Info: sam_pwm: "MKRVIDOR4000_peripherals_lite_sys" instantiated PWM "sam_pwm"
+Info: sdram: Starting RTL generation for module 'MKRVIDOR4000_peripherals_lite_sys_sdram'
+Info: sdram:   Generation command is [exec /home/sausy/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/sausy/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/sausy/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/sausy/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/sausy/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=MKRVIDOR4000_peripherals_lite_sys_sdram --dir=/tmp/alt8040_6456970505395229700.dir/0011_sdram_gen/ --quartus_dir=/home/sausy/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8040_6456970505395229700.dir/0011_sdram_gen//MKRVIDOR4000_peripherals_lite_sys_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram: Done RTL generation for module 'MKRVIDOR4000_peripherals_lite_sys_sdram'
+Info: sdram: "MKRVIDOR4000_peripherals_lite_sys" instantiated altera_avalon_new_sdram_controller "sdram"
+Info: timer_0: Starting RTL generation for module 'MKRVIDOR4000_peripherals_lite_sys_timer_0'
+Info: timer_0:   Generation command is [exec /home/sausy/intelFPGA_lite/18.1/quartus/linux64//perl/bin/perl -I /home/sausy/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/sausy/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/sausy/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/sausy/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=MKRVIDOR4000_peripherals_lite_sys_timer_0 --dir=/tmp/alt8040_6456970505395229700.dir/0012_timer_0_gen/ --quartus_dir=/home/sausy/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt8040_6456970505395229700.dir/0012_timer_0_gen//MKRVIDOR4000_peripherals_lite_sys_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0: Done RTL generation for module 'MKRVIDOR4000_peripherals_lite_sys_timer_0'
+Info: timer_0: "MKRVIDOR4000_peripherals_lite_sys" instantiated altera_avalon_timer "timer_0"
+Info: mm_interconnect_0: "MKRVIDOR4000_peripherals_lite_sys" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_013: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_014: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_015: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_016: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_017: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_018: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_019: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_020: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_021: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_022: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_023: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "MKRVIDOR4000_peripherals_lite_sys" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: irq_mapper: "MKRVIDOR4000_peripherals_lite_sys" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "MKRVIDOR4000_peripherals_lite_sys" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'MKRVIDOR4000_peripherals_lite_sys_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec /home/sausy/intelFPGA_lite/18.1/quartus/linux64//eperlcmd -I /home/sausy/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/sausy/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/sausy/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/sausy/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/sausy/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=MKRVIDOR4000_peripherals_lite_sys_nios2_gen2_0_cpu --dir=/tmp/alt8040_6456970505395229700.dir/0015_cpu_gen/ --quartus_bindir=/home/sausy/intelFPGA_lite/18.1/quartus/linux64/ --verilog --config=/tmp/alt8040_6456970505395229700.dir/0015_cpu_gen//MKRVIDOR4000_peripherals_lite_sys_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2019.05.24 10:24:52 (*) Starting Nios II generation
+Info: cpu: # 2019.05.24 10:24:52 (*)   Checking for plaintext license.
+Info: cpu: # 2019.05.24 10:24:53 (*)   Couldn't query license setup in Quartus directory /home/sausy/intelFPGA_lite/18.1/quartus/linux64/
+Info: cpu: # 2019.05.24 10:24:53 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2019.05.24 10:24:53 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2019.05.24 10:24:53 (*)   Plaintext license not found.
+Info: cpu: # 2019.05.24 10:24:53 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2019.05.24 10:24:53 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2019.05.24 10:24:53 (*)   Creating all objects for CPU
+Info: cpu: # 2019.05.24 10:24:53 (*)   Generating RTL from CPU objects
+Info: cpu: # 2019.05.24 10:24:53 (*)   Creating plain-text RTL
+Info: cpu: # 2019.05.24 10:24:53 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'MKRVIDOR4000_peripherals_lite_sys_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: asmi2_inst_qspi_ctrl: "qspi" instantiated arduino_asmi_parallel2 "asmi2_inst_qspi_ctrl"
+Info: addr_adaption_1: "qspi" instantiated altera_qspi_address_adaption "addr_adaption_1"
+Info: JTAG_BRIDGE_avalon_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "JTAG_BRIDGE_avalon_master_translator"
+Info: mb_mst_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "mb_mst_translator"
+Info: NEOPIXEL_0_data_agent: "mm_interconnect_1" instantiated altera_merlin_master_agent "NEOPIXEL_0_data_agent"
+Info: sdram_s1_agent: "mm_interconnect_1" instantiated altera_merlin_slave_agent "sdram_s1_agent"
+Info: sdram_s1_agent_rsp_fifo: "mm_interconnect_1" instantiated altera_avalon_sc_fifo "sdram_s1_agent_rsp_fifo"
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_1" instantiated altera_merlin_router "router_003"
+Info: router_004: "mm_interconnect_1" instantiated altera_merlin_router "router_004"
+Info: router_011: "mm_interconnect_1" instantiated altera_merlin_router "router_011"
+Info: router_026: "mm_interconnect_1" instantiated altera_merlin_router "router_026"
+Info: sdram_s1_burst_adapter: "mm_interconnect_1" instantiated altera_merlin_burst_adapter "sdram_s1_burst_adapter"
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_demux_002: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux_002"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file /home/sausy/Projects/VidorBitstream/projects/MKRVIDOR4000_peripherals/project/MKRVIDOR4000_peripherals_lite_sys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux_007: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux_007"
+Info: rsp_demux_008: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux_008"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/sausy/Projects/VidorBitstream/projects/MKRVIDOR4000_peripherals/project/MKRVIDOR4000_peripherals_lite_sys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file /home/sausy/Projects/VidorBitstream/projects/MKRVIDOR4000_peripherals/project/MKRVIDOR4000_peripherals_lite_sys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_002: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux_002"
+Info: Reusing file /home/sausy/Projects/VidorBitstream/projects/MKRVIDOR4000_peripherals/project/MKRVIDOR4000_peripherals_lite_sys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: sdram_s1_rsp_width_adapter: "mm_interconnect_1" instantiated altera_merlin_width_adapter "sdram_s1_rsp_width_adapter"
+Info: Reusing file /home/sausy/Projects/VidorBitstream/projects/MKRVIDOR4000_peripherals/project/MKRVIDOR4000_peripherals_lite_sys/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/sausy/Projects/VidorBitstream/projects/MKRVIDOR4000_peripherals/project/MKRVIDOR4000_peripherals_lite_sys/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: crosser: "mm_interconnect_1" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file /home/sausy/Projects/VidorBitstream/projects/MKRVIDOR4000_peripherals/project/MKRVIDOR4000_peripherals_lite_sys/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: avalon_st_adapter: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: csr_controller: "asmi2_inst_qspi_ctrl" instantiated altera_asmi2_csr_controller "csr_controller"
+Info: avst_fifo: "Generating: avst_fifo"
+Info: xip_controller: "asmi2_inst_qspi_ctrl" instantiated altera_asmi2_xip_controller "xip_controller"
+Info: merlin_demultiplexer_0: "asmi2_inst_qspi_ctrl" instantiated altera_merlin_demultiplexer "merlin_demultiplexer_0"
+Info: multiplexer: "asmi2_inst_qspi_ctrl" instantiated altera_merlin_multiplexer "multiplexer"
+Info: Reusing file /home/sausy/Projects/VidorBitstream/projects/MKRVIDOR4000_peripherals/project/MKRVIDOR4000_peripherals_lite_sys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: asmi2_cmd_generator_0: "asmi2_inst_qspi_ctrl" instantiated altera_asmi2_cmd_generator "asmi2_cmd_generator_0"
+Info: asmi2_qspi_interface_0: "asmi2_inst_qspi_ctrl" instantiated arduino_asmi2_qspi_interface "asmi2_qspi_interface_0"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
+Info: avst_fifo: "xip_controller" instantiated altera_asmi2_xip_controller "avst_fifo"
+Info: MKRVIDOR4000_peripherals_lite_sys: Done "MKRVIDOR4000_peripherals_lite_sys" with 57 modules, 83 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

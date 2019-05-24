@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri May 24 10:50:59 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : MKRVIDOR4000_peripherals_lite
+Top-level Entity Name : MKRVIDOR4000_peripherals_top
+Family : Cyclone 10 LP
+Total logic elements : 10,616
+    Total combinational functions : 7,615
+    Dedicated logic registers : 6,248
+Total registers : 6248
+Total pins : 117
+Total virtual pins : 0
+Total memory bits : 281,664
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
