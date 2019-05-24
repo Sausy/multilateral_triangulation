@@ -520,4 +520,6 @@ assign wPEX_PIN_OUT[i] =
 end
 endgenerate
 
+always @(posedge) 
+
 endmodule
