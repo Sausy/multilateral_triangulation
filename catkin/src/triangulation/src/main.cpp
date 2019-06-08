@@ -41,7 +41,6 @@ das die system clock cnt syncronisiert wird
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ros/ros.h>
 //#include "piezo_ctl.hpp"
 //#include "fpga_interface.hpp"
 //#include "time_controll.hpp"
@@ -106,7 +105,7 @@ int main(int argc, char *argv[]) {
   char foo;
 
   while (1) {
-    ros::spinOnce();
+    ros::spinOnce(); // TODO: replace with mqtt
 
     modef.start_conversation(); //only does something if master changes
 

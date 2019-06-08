@@ -1,7 +1,0 @@
-/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles/install/strip.dir
-/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles/rebuild_cache.dir
-/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles/accustic_levi.dir
-/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles/install.dir
-/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles/install/local.dir
-/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles/list_install_components.dir
-/home/roboy/BikeToRikshaw/old_git_stuff/multilateral_triangulation/Cpp/build/CMakeFiles/edit_cache.dir

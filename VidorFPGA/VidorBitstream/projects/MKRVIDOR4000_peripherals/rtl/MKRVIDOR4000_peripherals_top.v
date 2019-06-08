@@ -110,6 +110,13 @@ module MKRVIDOR4000_peripherals_top
 
 // signal declaration
 
+//=====================
+reg	PIEZO_enable_reg;
+reg 	PIEZO_out;
+wire	PIEZO_in;
+wire 	[3:0]	ID_select;
+//=====================
+
 wire        wOSC_CLK;
 
 wire        wCLK8,wCLK24, wCLK64, wCLK120;

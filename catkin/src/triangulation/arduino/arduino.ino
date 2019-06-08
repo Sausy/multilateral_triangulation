@@ -11,22 +11,59 @@
     - Power supply V+ connected to 5V+ Neopixel;
     - pin A6 connected to the Neopixel control Pin D0.
 
-  created 25 July 2018
+  created 25 July 2018ll
   by Riccardo Rizzo
 */
 
 #include "VidorPeripherals.h"
-#include "Vidor_NeoPixel.h"
 #include <WiFiNINA.h>
 //#include <WiFiUdp.h>
+#include "mqtt_test.hpp"
 
 int status = WL_IDLE_STATUS;
 ///////please enter your sensitive data in the Secret tab/arduino_secrets.h
 char ssid[] = "roboy";        // your network SSID (name)
 char pass[] = "wiihackroboy";    // your network password (use for WPA, or use as key for WEP)
 
+MQTTClient client;
+WiFiClient net;
+unsigned long lastMillis = 0;
+
+void connect();
+void printWifiStatus();
+void messageReceived(String &topic, String &payload);
 
 
+void setup() {
+  Serial.begin(115200);
+
+  if (!FPGA.begin()) {
+    Serial.println("Initialization failed!");
+    while (1) {}
+  }
+  connect();
+}
+
+void loop()  {
+  client.loop();
+
+  if (!client.connected()) {
+    connect();
+  }
+
+  // publish a message roughly every second.
+  if (millis() - lastMillis > 1000) {
+    lastMillis = millis();
+    client.publish("/hello", "world");
+  }
+}
+
+//=========================================================
+void messageReceived(String &topic, String &payload) {
+  Serial.println("incoming: " + topic + " - " + payload);
+}
+
+//=========================================================
 void printWifiStatus() {
   // print the SSID of the network you're attached to:
   Serial.print("SSID: ");
@@ -44,22 +81,8 @@ void printWifiStatus() {
   Serial.println(" dBm");
 }
 
-Vidor_NeoPixel np(256, A6); // The constructor allows you to set the control pin and the number of the LED's.
-int count = 0;
-void setup() {
-  Serial.begin(115200);
-
-  if (!FPGA.begin()) {
-    Serial.println("Initialization failed!");
-    while (1) {}
-  }
-  Serial.println("Initialization Done!");
-  for (int j = 0; j < 256; j++) {
-    np.setPixelColor(j, 0, 0, 0, 0); // The function setPixelColor(led,red,green,blue,white) sets the desired color to a particular LED.
-  }
-  np.setBrightness(20); // The np.setBrightness(int) function sets the brightness of all the LED's on the strip
-  np.show(); //The np.show() function send the commands to the strips
-
+//=========================================================
+void connect() {
   // check for the WiFi module:
   if (WiFi.status() == WL_NO_MODULE) {
     Serial.println("Communication with WiFi module failed!");
@@ -76,13 +99,18 @@ void setup() {
   }
   Serial.println("Connected to wifi");
   printWifiStatus();
-}
 
-void loop()  {
-  for (int i = 0; i < 256; i++) {
-    np.setPixelColor(i, 80, 125 % i, 180 % i, 1);
-    np.show();
-    delay(100);
+  client.begin("broker.shiftr.io", net);
+  client.onMessage(messageReceived);
+
+  Serial.print("\nconnecting...");
+  while (!client.connect("arduino", "try", "try")) {
+    Serial.print(".");
+    delay(1000);
   }
-  while (1);
+
+  Serial.println("\nconnected!");
+
+  client.subscribe("/hello");
+  // client.unsubscribe("/hello");
 }

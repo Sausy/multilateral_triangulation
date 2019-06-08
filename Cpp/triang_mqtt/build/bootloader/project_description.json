@@ -1,0 +1,18 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/home/sausy/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/home/sausy/Projects/multilateral_triangulation/Cpp/triang_mqtt/build/bootloader",
+    "config_file":        "/home/sausy/Projects/multilateral_triangulation/Cpp/triang_mqtt/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.0-dev-621-g81ca1c013",
+    "phy_data_partition": "",
+    "monitor_baud" : "115200",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/home/sausy/esp/esp-idf/components/app_trace/Kconfig;/home/sausy/esp/esp-idf/components/bt/Kconfig;/home/sausy/esp/esp-idf/components/driver/Kconfig;/home/sausy/esp/esp-idf/components/efuse/Kconfig;/home/sausy/esp/esp-idf/components/esp32/Kconfig;/home/sausy/esp/esp-idf/components/esp_adc_cal/Kconfig;/home/sausy/esp/esp-idf/components/esp_common/Kconfig;/home/sausy/esp/esp-idf/components/esp_event/Kconfig;/home/sausy/esp/esp-idf/components/esp_http_client/Kconfig;/home/sausy/esp/esp-idf/components/esp_http_server/Kconfig;/home/sausy/esp/esp-idf/components/esp_https_ota/Kconfig;/home/sausy/esp/esp-idf/components/esp_wifi/Kconfig;/home/sausy/esp/esp-idf/components/espcoredump/Kconfig;/home/sausy/esp/esp-idf/components/ethernet/Kconfig;/home/sausy/esp/esp-idf/components/fatfs/Kconfig;/home/sausy/esp/esp-idf/components/freemodbus/Kconfig;/home/sausy/esp/esp-idf/components/freertos/Kconfig;/home/sausy/esp/esp-idf/components/heap/Kconfig;/home/sausy/esp/esp-idf/components/libsodium/Kconfig;/home/sausy/esp/esp-idf/components/log/Kconfig;/home/sausy/esp/esp-idf/components/lwip/Kconfig;/home/sausy/esp/esp-idf/components/mbedtls/Kconfig;/home/sausy/esp/esp-idf/components/mdns/Kconfig;/home/sausy/esp/esp-idf/components/mqtt/Kconfig;/home/sausy/esp/esp-idf/components/newlib/Kconfig;/home/sausy/esp/esp-idf/components/nvs_flash/Kconfig;/home/sausy/esp/esp-idf/components/openssl/Kconfig;/home/sausy/esp/esp-idf/components/pthread/Kconfig;/home/sausy/esp/esp-idf/components/spi_flash/Kconfig;/home/sausy/esp/esp-idf/components/spiffs/Kconfig;/home/sausy/esp/esp-idf/components/tcpip_adapter/Kconfig;/home/sausy/esp/esp-idf/components/unity/Kconfig;/home/sausy/esp/esp-idf/components/vfs/Kconfig;/home/sausy/esp/esp-idf/components/wear_levelling/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/sausy/esp/esp-idf/components/app_update/Kconfig.projbuild;/home/sausy/esp/esp-idf/components/bootloader/Kconfig.projbuild;/home/sausy/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/home/sausy/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_rom", "esptool_py", "log", "main", "micro-ecc", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/home/sausy/esp/esp-idf/components/bootloader", "/home/sausy/esp/esp-idf/components/bootloader_support", "/home/sausy/esp/esp-idf/components/efuse", "/home/sausy/esp/esp-idf/components/esp32", "/home/sausy/esp/esp-idf/components/esp_common", "/home/sausy/esp/esp-idf/components/esp_rom", "/home/sausy/esp/esp-idf/components/esptool_py", "/home/sausy/esp/esp-idf/components/log", "/home/sausy/esp/esp-idf/components/bootloader/subproject/main", "/home/sausy/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/home/sausy/esp/esp-idf/components/partition_table", "/home/sausy/esp/esp-idf/components/soc", "/home/sausy/esp/esp-idf/components/spi_flash", "/home/sausy/esp/esp-idf/components/xtensa", "" ]
+}
