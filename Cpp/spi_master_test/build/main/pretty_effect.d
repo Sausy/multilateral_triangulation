@@ -1,5 +1,5 @@
 pretty_effect.o: \
- /home/sausy/Projects/multilateral_triangulation/Cpp/spi_master_test/main/pretty_effect.c \
+ /home/sausy/Projects/multilateral_triangulation/Cpp/spi_master_test/main/pretty_effect.cpp \
  /home/sausy/esp/esp-idf/components/newlib/include/math.h \
  /home/sausy/esp/esp-idf/components/newlib/include/sys/reent.h \
  /home/sausy/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -13,7 +13,7 @@ pretty_effect.o: \
  /home/sausy/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/sausy/esp/esp-idf/components/newlib/include/sys/lock.h \
  /home/sausy/esp/esp-idf/components/newlib/include/_ansi.h \
- /home/sausy/Projects/multilateral_triangulation/Cpp/spi_master_test/main/pretty_effect.h \
+ /home/sausy/Projects/multilateral_triangulation/Cpp/spi_master_test/main/pretty_effect.hpp \
  /home/sausy/esp/esp-idf/components/newlib/include/stdint.h \
  /home/sausy/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/sausy/esp/esp-idf/components/esp_common/include/esp_err.h \
@@ -29,7 +29,7 @@ pretty_effect.o: \
  /home/sausy/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/sausy/esp/esp-idf/components/newlib/include/alloca.h \
  /home/sausy/esp/esp-idf/components/newlib/include/assert.h \
- /home/sausy/Projects/multilateral_triangulation/Cpp/spi_master_test/main/decode_image.h
+ /home/sausy/Projects/multilateral_triangulation/Cpp/spi_master_test/main/decode_image.hpp
 
 /home/sausy/esp/esp-idf/components/newlib/include/math.h:
 
@@ -57,7 +57,7 @@ pretty_effect.o: \
 
 /home/sausy/esp/esp-idf/components/newlib/include/_ansi.h:
 
-/home/sausy/Projects/multilateral_triangulation/Cpp/spi_master_test/main/pretty_effect.h:
+/home/sausy/Projects/multilateral_triangulation/Cpp/spi_master_test/main/pretty_effect.hpp:
 
 /home/sausy/esp/esp-idf/components/newlib/include/stdint.h:
 
@@ -89,5 +89,5 @@ pretty_effect.o: \
 
 /home/sausy/esp/esp-idf/components/newlib/include/assert.h:
 
-/home/sausy/Projects/multilateral_triangulation/Cpp/spi_master_test/main/decode_image.h:
-/home/sausy/Projects/multilateral_triangulation/Cpp/spi_master_test/main/./pretty_effect.c:
+/home/sausy/Projects/multilateral_triangulation/Cpp/spi_master_test/main/decode_image.hpp:
+/home/sausy/Projects/multilateral_triangulation/Cpp/spi_master_test/main/./pretty_effect.cpp:

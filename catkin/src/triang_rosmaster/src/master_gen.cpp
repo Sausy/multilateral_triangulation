@@ -6,7 +6,7 @@ master_gen::master_gen(uint8_t member_amount){
   master_list.start_burst = false;
   master_list.burst_cycles = 3;
   master_list.start_continiouse_mode = false;
-  for(uint8_t cnt=0; cnt <= member_amount-1; cnt++){
+  for(uint8_t cnt=0; cnt <= member_amount-1; cnt++){ 
     master_list.master_id_list.push_back(cnt);
   }
 

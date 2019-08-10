@@ -161,11 +161,11 @@ class spi_interface{
     unsigned char response_packet_buffer[PACKET_BUFFER_LENGTH];
     #endif
 
-    //#ifdef STATIC_MEMORY_ALLOC	/* Buffer size allocated is sufficient for up to 1K data transaction only */
-    //#define TRANSACTION_BUFFER_LENGTH 1032	/* 1K data + Header length 8 */
-    //unsigned char transaction_buffer[TRANSACTION_BUFFER_LENGTH];
-    //unsigned char response_buffer_[TRANSACTION_BUFFER_LENGTH];
-    //#endif
+    #ifdef STATIC_MEMORY_ALLOC	/* Buffer size allocated is sufficient for up to 1K data transaction only */
+    #define TRANSACTION_BUFFER_LENGTH 1032	/* 1K data + Header length 8 */
+    unsigned char transaction_buffer[TRANSACTION_BUFFER_LENGTH];
+    unsigned char response_buffer_[TRANSACTION_BUFFER_LENGTH];
+    #endif
 
 
 
